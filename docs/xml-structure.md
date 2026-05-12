@@ -7,11 +7,16 @@ The MT Rankings prototype uses a manually maintainable XML file for fighter and 
 The XML model supports:
 
 - organisations
-- weight classes
+- organisation-specific weight classes
 - fighters
 - ranking entries
 
 This structure is simple enough to edit manually during the prototype phase, but still structured enough to support automatic extraction from external ranking websites later.
+
+Later sample data should be based on these sources:
+
+- RWS rankings: `https://rank.rajadamnern.com/rankings`
+- WBC Muay Thai male rankings: `https://www.wbcmuaythai.com/male`
 
 ## Main XML Sections
 
@@ -19,8 +24,7 @@ The root element is `<mtRankings>`.
 
 Recommended main sections:
 
-- `<organisations>` contains all ranking organisations.
-- `<weightClasses>` contains reusable weight class definitions.
+- `<organisations>` contains all ranking organisations and their own weight classes.
 - `<fighters>` contains fighter master data.
 - `<rankings>` contains ranking lists grouped by organisation and weight class.
 
@@ -33,10 +37,11 @@ Each organisation needs:
 - `id`: unique organisation ID
 - `name`: organisation name
 - `website`: optional source or official website URL
+- `weightClasses`: weight classes that belong to this organisation
 
 ### Weight Class
 
-Each weight class needs:
+Each weight class belongs to exactly one organisation and needs:
 
 - `id`: unique weight class ID
 - `name`: display name
@@ -68,53 +73,70 @@ Each ranking list also needs:
 
 ## Example XML Snippet
 
+This is a simplified structure example. It shows the intended XML shape and references between sections. The actual real sample XML data will be created in Issue #3 and should be checked against the source websites.
+
 ```xml
 <mtRankings>
   <organisations>
     <organisation id="org-rws">
       <name>RWS</name>
-      <website>https://rajadamnern.com/</website>
+      <website>https://rank.rajadamnern.com/rankings</website>
+      <weightClasses>
+        <weightClass id="rws-middleweight">
+          <name>Middleweight</name>
+        </weightClass>
+        <weightClass id="rws-class-2">
+          <name>RWS Example Weight Class 2</name>
+        </weightClass>
+        <weightClass id="rws-class-3">
+          <name>RWS Example Weight Class 3</name>
+        </weightClass>
+      </weightClasses>
     </organisation>
+
     <organisation id="org-wbc">
       <name>WBC Muay Thai</name>
-      <website>https://www.wbcmuaythai.com/</website>
+      <website>https://www.wbcmuaythai.com/male</website>
+      <weightClasses>
+        <weightClass id="wbc-middleweight">
+          <name>Middleweight</name>
+          <limit unit="lb">160</limit>
+        </weightClass>
+        <weightClass id="wbc-super-welterweight">
+          <name>Super Welterweight</name>
+          <limit unit="lb">154</limit>
+        </weightClass>
+        <weightClass id="wbc-welterweight">
+          <name>Welterweight</name>
+          <limit unit="lb">147</limit>
+        </weightClass>
+      </weightClasses>
     </organisation>
   </organisations>
 
-  <weightClasses>
-    <weightClass id="wc-featherweight">
-      <name>Featherweight</name>
-      <limit unit="lb">126</limit>
-    </weightClass>
-    <weightClass id="wc-lightweight">
-      <name>Lightweight</name>
-      <limit unit="lb">135</limit>
-    </weightClass>
-  </weightClasses>
-
   <fighters>
-    <fighter id="fighter-smith">
-      <name>Alex Smith</name>
-      <country>United Kingdom</country>
-      <record>25-4-1</record>
+    <fighter id="fighter-example-a">
+      <name>Example Fighter A</name>
+      <country>Thailand</country>
+      <record>20-3-0</record>
     </fighter>
-    <fighter id="fighter-sato">
-      <name>Ren Sato</name>
-      <country>Japan</country>
-      <record>18-2-0</record>
+    <fighter id="fighter-example-b">
+      <name>Example Fighter B</name>
+      <country>France</country>
+      <record>18-4-1</record>
     </fighter>
   </fighters>
 
   <rankings>
-    <ranking organisationId="org-rws" weightClassId="wc-featherweight" updatedAt="2026-05-01">
-      <sourceUrl>https://example.com/rws-featherweight-ranking</sourceUrl>
-      <entry position="1" fighterId="fighter-smith" />
-      <entry position="2" fighterId="fighter-sato" />
+    <ranking organisationId="org-rws" weightClassId="rws-middleweight" updatedAt="2026-05-01">
+      <sourceUrl>https://rank.rajadamnern.com/rankings</sourceUrl>
+      <entry position="1" fighterId="fighter-example-a" />
+      <entry position="2" fighterId="fighter-example-b" />
     </ranking>
 
-    <ranking organisationId="org-wbc" weightClassId="wc-lightweight" updatedAt="2026-05-01">
-      <sourceUrl>https://example.com/wbc-lightweight-ranking</sourceUrl>
-      <entry position="3" fighterId="fighter-smith" />
+    <ranking organisationId="org-wbc" weightClassId="wbc-super-welterweight" updatedAt="2026-05-01">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="3" fighterId="fighter-example-a" />
     </ranking>
   </rankings>
 </mtRankings>
@@ -127,9 +149,11 @@ Fighter master data is separated from ranking entries to avoid duplicate fighter
 This is important because one fighter can appear:
 
 - in multiple organisations
-- in different weight classes depending on the organisation
+- in the same or different weight classes depending on the organisation
 - in multiple ranking lists over time
 
 With this structure, updating a fighter's name, country, or record only needs to happen once. Ranking entries remain focused on ranking-specific data such as organisation, weight class, position, source URL, and update date.
 
 The separation also makes future automated extraction easier. External ranking pages can be parsed into ranking entries, while fighter matching and fighter master data can be handled separately.
+
+Weight classes are kept inside their organisation because different organisations can use different names, limits, and definitions. Even if two organisations use a similar class name, each class should have its own organisation-specific ID.
