@@ -1,8 +1,25 @@
-import { DB_NAME, DB_URI } from '$env/static/private';
+import { DB_URI, DB_NAME } from '$env/static/private';
 import { MongoClient } from 'mongodb';
 
 let client;
 let clientPromise;
+
+const getMongoHostname = () => {
+	if (!DB_URI || DB_URI === 'your-real-mongodb-uri-here') {
+		return '';
+	}
+
+	try {
+		return new URL(DB_URI).hostname;
+	} catch {
+		return 'invalid-uri';
+	}
+};
+
+export const getMongoDebugInfo = () => ({
+	dbUriExists: Boolean(DB_URI && DB_URI !== 'your-real-mongodb-uri-here'),
+	dbName: DB_NAME || 'mt-rankings'
+});
 
 const getClient = () => {
 	if (!DB_URI || DB_URI === 'your-real-mongodb-uri-here') {

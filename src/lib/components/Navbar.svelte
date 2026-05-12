@@ -1,5 +1,5 @@
 <script>
-	let { isLoggedIn = false } = $props();
+	let { user = null } = $props();
 
 	const publicLinks = [
 		{ href: '/', label: 'Home' },
@@ -10,6 +10,8 @@
 		{ href: '/login', label: 'Login' },
 		{ href: '/register', label: 'Register' }
 	];
+
+	const isLoggedIn = $derived(Boolean(user));
 </script>
 
 <nav class="navbar" aria-label="Main navigation">
@@ -22,8 +24,11 @@
 
 		{#if isLoggedIn}
 			<a href="/favorites">Favorites</a>
+			<span class="user-email">{user.email}</span>
+			<form method="POST" action="/logout">
+				<button type="submit">Logout</button>
+			</form>
 		{:else}
-			<span class="disabled-link" title="Login required">Favorites</span>
 			{#each authLinks as link}
 				<a href={link.href}>{link.label}</a>
 			{/each}
@@ -59,7 +64,8 @@
 	}
 
 	a,
-	.disabled-link {
+	.user-email,
+	button {
 		color: #f4efe4;
 		font-size: 0.95rem;
 		text-decoration: none;
@@ -69,9 +75,24 @@
 		color: #d6a33d;
 	}
 
-	.disabled-link {
-		cursor: not-allowed;
-		opacity: 0.45;
+	form {
+		margin: 0;
+	}
+
+	button {
+		background: transparent;
+		border: 0;
+		cursor: pointer;
+		font: inherit;
+		padding: 0;
+	}
+
+	button:hover {
+		color: #d6a33d;
+	}
+
+	.user-email {
+		color: #bdb4a1;
 	}
 
 	@media (max-width: 640px) {

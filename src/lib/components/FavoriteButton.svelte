@@ -1,5 +1,12 @@
 <script>
-	let { disabled = true, message = 'Log in to save favorites' } = $props();
+	let {
+		isLoggedIn = false,
+		message = isLoggedIn
+			? 'Favorites saving will be connected in the next step.'
+			: 'Log in to save favorites'
+	} = $props();
+
+	const disabled = $derived(!isLoggedIn);
 </script>
 
 <div class="favorite-card">

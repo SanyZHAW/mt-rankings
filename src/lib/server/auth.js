@@ -1,0 +1,95 @@
+import { scryptSync, randomBytes, timingSafeEqual } from 'node:crypto';
+import { ObjectId } from 'mongodb';
+import { getUsersCollection } from './db.js';
+
+export const SESSION_COOKIE = 'mt_rankings_user';
+
+const hashPassword = (password) => {
+	const salt = randomBytes(16).toString('hex');
+	const hash = scryptSync(password.trim(), salt, 64).toString('hex');
+	return `${salt}:${hash}`;
+};
+
+const verifyPassword = (password, storedPassword) => {
+	if (!storedPassword) {
+		return false;
+	}
+
+	const [salt, storedHash] = storedPassword.split(':');
+
+	if (!salt || !storedHash) {
+		return false;
+	}
+
+	const hash = scryptSync(password.trim(), salt, 64);
+	const storedHashBuffer = Buffer.from(storedHash, 'hex');
+
+	return storedHashBuffer.length === hash.length && timingSafeEqual(storedHashBuffer, hash);
+};
+
+const normalizeEmail = (email) => email.trim().toLowerCase();
+
+const toPublicUser = (user) => ({
+	id: user._id.toString(),
+	email: user.email
+});
+
+export const getSessionCookieOptions = () => ({
+	httpOnly: true,
+	path: '/',
+	sameSite: 'lax',
+	secure: process.env.NODE_ENV === 'production',
+	maxAge: 60 * 60 * 24 * 7
+});
+
+export const createUser = async ({ email, password }) => {
+	const users = await getUsersCollection();
+	const normalizedEmail = normalizeEmail(email);
+
+	await users.createIndex({ email: 1 }, { unique: true });
+
+	const result = await users.insertOne({
+		email: normalizedEmail,
+		passwordHash: hashPassword(password),
+		createdAt: new Date()
+	});
+
+	return {
+		id: result.insertedId.toString(),
+		email: normalizedEmail
+	};
+};
+
+export const verifyUser = async ({ email, password }) => {
+	const users = await getUsersCollection();
+	const user = await users.findOne({ email: normalizeEmail(email) });
+
+	if (!user || !verifyPassword(password, user.passwordHash)) {
+		return null;
+	}
+
+	return toPublicUser(user);
+};
+
+export const getLoginDebugInfo = async (email) => {
+	const users = await getUsersCollection();
+	const user = await users.findOne({ email: normalizeEmail(email) });
+	const passwordHash = user?.passwordHash;
+
+	return {
+		userExists: Boolean(user),
+		hasPasswordHash: Boolean(passwordHash),
+		passwordHashFormatLooksValid: typeof passwordHash === 'string' && passwordHash.split(':').length === 2
+	};
+};
+
+export const getUserById = async (userId) => {
+	if (!ObjectId.isValid(userId)) {
+		return null;
+	}
+
+	const users = await getUsersCollection();
+	const user = await users.findOne({ _id: new ObjectId(userId) });
+
+	return user ? toPublicUser(user) : null;
+};

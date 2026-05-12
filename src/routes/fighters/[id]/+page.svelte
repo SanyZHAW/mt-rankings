@@ -31,7 +31,7 @@
 			</div>
 
 			<aside>
-				<FavoriteButton />
+				<FavoriteButton isLoggedIn={Boolean(data.user)} />
 			</aside>
 		</div>
 	{:else}

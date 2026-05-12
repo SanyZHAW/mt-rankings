@@ -3,9 +3,7 @@
 	import Navbar from '$lib/components/Navbar.svelte';
 	import favicon from '$lib/assets/favicon.svg';
 
-	let { children } = $props();
-
-	const isLoggedIn = false;
+	let { children, data } = $props();
 </script>
 
 <svelte:head>
@@ -13,7 +11,7 @@
 </svelte:head>
 
 <div class="app-shell">
-	<Navbar {isLoggedIn} />
+	<Navbar user={data.user} />
 	<main>
 		{@render children()}
 	</main>
