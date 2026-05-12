@@ -5,7 +5,7 @@
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import StatusMessage from '$lib/components/StatusMessage.svelte';
 
-	let { data } = $props();
+	let { data, form } = $props();
 </script>
 
 <section class="fighter-page">
@@ -16,6 +16,10 @@
 			type="error"
 			message="The XML ranking data contains invalid references. Please check the parser output."
 		/>
+	{/if}
+
+	{#if form?.message}
+		<StatusMessage type={form.message.includes('saved') ? 'success' : 'warning'} message={form.message} />
 	{/if}
 
 	{#if data.fighter}
@@ -31,7 +35,7 @@
 			</div>
 
 			<aside>
-				<FavoriteButton isLoggedIn={Boolean(data.user)} />
+				<FavoriteButton isLoggedIn={Boolean(data.user)} isFavorite={data.isFavorite} />
 			</aside>
 		</div>
 	{:else}

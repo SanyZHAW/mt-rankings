@@ -1,18 +1,21 @@
 <script>
 	let {
 		isLoggedIn = false,
+		isFavorite = false,
 		message = isLoggedIn
-			? 'Favorites saving will be connected in the next step.'
+			? isFavorite
+				? 'This fighter is already in your favorites.'
+				: 'Save this fighter to your personal favorites.'
 			: 'Log in to save favorites'
 	} = $props();
 
-	const disabled = $derived(!isLoggedIn);
+	const disabled = $derived(!isLoggedIn || isFavorite);
 </script>
 
-<div class="favorite-card">
-	<button type="button" {disabled}>Save favorite</button>
+<form class="favorite-card" method="POST" action="?/favorite">
+	<button type="submit" {disabled}>{isFavorite ? 'Saved favorite' : 'Save favorite'}</button>
 	<p>{message}</p>
-</div>
+</form>
 
 <style>
 	.favorite-card {
