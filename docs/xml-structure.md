@@ -55,7 +55,10 @@ Each fighter needs:
 - `id`: unique fighter ID used by ranking entries
 - `name`: fighter display name
 - `country`: optional country
+- `age`: optional age
 - `record`: optional fight record
+
+The `country`, `age`, and `record` fields may be empty if the source does not provide the value.
 
 ### Ranking Entry
 
@@ -118,11 +121,13 @@ This is a simplified structure example. It shows the intended XML shape and refe
     <fighter id="fighter-example-a">
       <name>Example Fighter A</name>
       <country>Thailand</country>
+      <age></age>
       <record>20-3-0</record>
     </fighter>
     <fighter id="fighter-example-b">
       <name>Example Fighter B</name>
       <country>France</country>
+      <age></age>
       <record>18-4-1</record>
     </fighter>
   </fighters>
@@ -152,7 +157,7 @@ This is important because one fighter can appear:
 - in the same or different weight classes depending on the organisation
 - in multiple ranking lists over time
 
-With this structure, updating a fighter's name, country, or record only needs to happen once. Ranking entries remain focused on ranking-specific data such as organisation, weight class, position, source URL, and update date.
+With this structure, updating a fighter's name, country, age, or record only needs to happen once. Ranking entries remain focused on ranking-specific data such as organisation, weight class, position, source URL, and update date.
 
 The separation also makes future automated extraction easier. External ranking pages can be parsed into ranking entries, while fighter matching and fighter master data can be handled separately.
 
