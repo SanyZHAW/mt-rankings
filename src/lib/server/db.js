@@ -1,0 +1,41 @@
+import { DB_NAME, DB_URI } from '$env/static/private';
+import { MongoClient } from 'mongodb';
+
+let client;
+let clientPromise;
+
+const getClient = () => {
+	if (!DB_URI || DB_URI === 'your-real-mongodb-uri-here') {
+		throw new Error('Missing MongoDB connection string. Set DB_URI in your local .env file.');
+	}
+
+	if (!clientPromise) {
+		client = new MongoClient(DB_URI);
+		clientPromise = client.connect();
+	}
+
+	return clientPromise;
+};
+
+export const getDb = async () => {
+	const connectedClient = await getClient();
+	return connectedClient.db(DB_NAME || 'mt-rankings');
+};
+
+export const getUsersCollection = async () => {
+	const db = await getDb();
+	return db.collection('users');
+};
+
+export const getFavoritesCollection = async () => {
+	const db = await getDb();
+	return db.collection('favorites');
+};
+
+export const closeDbConnection = async () => {
+	if (client) {
+		await client.close();
+		client = undefined;
+		clientPromise = undefined;
+	}
+};
