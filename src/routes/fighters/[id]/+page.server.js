@@ -3,7 +3,7 @@ import {
 	getRankingData,
 	getRankingEntriesByFighterId
 } from '$lib/server/rankingsXml.js';
-import { addFavorite, getFavoriteByUserAndFighter } from '$lib/server/favorites.js';
+import { getFavoriteByUserAndFighter, toggleFavorite } from '$lib/server/favorites.js';
 import { fail } from '@sveltejs/kit';
 
 export const load = async ({ locals, params }) => {
@@ -32,7 +32,7 @@ export const actions = {
 			});
 		}
 
-		const result = await addFavorite({
+		const result = await toggleFavorite({
 			userId: locals.user.id,
 			fighterId: params.id
 		});
@@ -44,7 +44,8 @@ export const actions = {
 		}
 
 		return {
-			message: 'Fighter saved to favorites.'
+			isFavorite: result.isFavorite,
+			message: result.message
 		};
 	}
 };

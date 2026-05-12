@@ -3,7 +3,7 @@
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import StatusMessage from '$lib/components/StatusMessage.svelte';
 
-	let { data } = $props();
+	let { data, form } = $props();
 </script>
 
 <section class="favorites-page">
@@ -12,10 +12,14 @@
 		subtitle="Your saved fighters are shown as cards because favorites have no ranking order."
 	/>
 
+	{#if form?.message}
+		<StatusMessage type="success" message={form.message} />
+	{/if}
+
 	{#if data.fighters.length > 0}
 		<div class="cards">
 			{#each data.fighters as fighter}
-				<FighterCard {fighter} />
+				<FighterCard {fighter} showRemove />
 			{/each}
 		</div>
 	{:else}

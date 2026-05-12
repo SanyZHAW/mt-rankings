@@ -37,6 +37,37 @@ export const addFavorite = async ({ userId, fighterId }) => {
 	return { ok: true };
 };
 
+export const removeFavorite = async ({ userId, fighterId }) => {
+	const favorites = await getFavoritesCollection();
+	await favorites.deleteOne({ userId, fighterId });
+	return { ok: true };
+};
+
+export const toggleFavorite = async ({ userId, fighterId }) => {
+	const existingFavorite = await getFavoriteByUserAndFighter({ userId, fighterId });
+
+	if (existingFavorite) {
+		await removeFavorite({ userId, fighterId });
+		return {
+			ok: true,
+			isFavorite: false,
+			message: 'Fighter removed from favorites.'
+		};
+	}
+
+	const result = await addFavorite({ userId, fighterId });
+
+	if (!result.ok) {
+		return result;
+	}
+
+	return {
+		ok: true,
+		isFavorite: true,
+		message: 'Fighter added to favorites.'
+	};
+};
+
 export const getFavoriteFightersByUser = async (userId) => {
 	const fighterIds = await getFavoriteFighterIdsByUser(userId);
 	const fighters = await Promise.all(fighterIds.map((fighterId) => getFighterById(fighterId)));

@@ -19,7 +19,10 @@
 	{/if}
 
 	{#if form?.message}
-		<StatusMessage type={form.message.includes('saved') ? 'success' : 'warning'} message={form.message} />
+		<StatusMessage
+			type={form.message.includes('added') || form.message.includes('removed') ? 'success' : 'warning'}
+			message={form.message}
+		/>
 	{/if}
 
 	{#if data.fighter}
@@ -35,7 +38,10 @@
 			</div>
 
 			<aside>
-				<FavoriteButton isLoggedIn={Boolean(data.user)} isFavorite={data.isFavorite} />
+				<FavoriteButton
+					isLoggedIn={Boolean(data.user)}
+					isFavorite={form?.isFavorite ?? data.isFavorite}
+				/>
 			</aside>
 		</div>
 	{:else}

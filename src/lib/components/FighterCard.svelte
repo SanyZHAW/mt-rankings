@@ -1,5 +1,5 @@
 <script>
-	let { fighter } = $props();
+	let { fighter, showRemove = false } = $props();
 </script>
 
 <article class="fighter-card">
@@ -14,7 +14,15 @@
 			<dd>{fighter.record || 'Not available'}</dd>
 		</div>
 	</dl>
-	<a href={`/fighters/${fighter.id}`}>View fighter</a>
+	<div class="actions">
+		<a href={`/fighters/${fighter.id}`}>View fighter</a>
+		{#if showRemove}
+			<form method="POST" action="?/remove">
+				<input type="hidden" name="fighterId" value={fighter.id} />
+				<button type="submit">Remove</button>
+			</form>
+		{/if}
+	</div>
 </article>
 
 <style>
@@ -51,14 +59,35 @@
 		margin: 0.2rem 0 0;
 	}
 
-	a {
+	.actions {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	a,
+	button {
 		color: #d6a33d;
+		font: inherit;
 		font-weight: 700;
 		text-decoration: none;
 		width: fit-content;
 	}
 
-	a:hover {
+	a:hover,
+	button:hover {
 		color: #efbf58;
+	}
+
+	form {
+		margin: 0;
+	}
+
+	button {
+		background: transparent;
+		border: 0;
+		cursor: pointer;
+		padding: 0;
 	}
 </style>

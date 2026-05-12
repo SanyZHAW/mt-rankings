@@ -4,16 +4,18 @@
 		isFavorite = false,
 		message = isLoggedIn
 			? isFavorite
-				? 'This fighter is already in your favorites.'
-				: 'Save this fighter to your personal favorites.'
+				? 'This fighter is in your favorites.'
+				: 'Add this fighter to your personal favorites.'
 			: 'Log in to save favorites'
 	} = $props();
 
-	const disabled = $derived(!isLoggedIn || isFavorite);
+	const disabled = $derived(!isLoggedIn);
 </script>
 
 <form class="favorite-card" method="POST" action="?/favorite">
-	<button type="submit" {disabled}>{isFavorite ? 'Saved favorite' : 'Save favorite'}</button>
+	<button class:remove={isFavorite} type="submit" {disabled}>
+		{isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+	</button>
 	<p>{message}</p>
 </form>
 
@@ -41,6 +43,12 @@
 	button:disabled {
 		cursor: not-allowed;
 		opacity: 0.45;
+	}
+
+	.remove {
+		background: #2b2415;
+		border: 1px solid #d6a33d;
+		color: #f4efe4;
 	}
 
 	p {
