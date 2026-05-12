@@ -32,6 +32,19 @@ export const getFavoritesCollection = async () => {
 	return db.collection('favorites');
 };
 
+export const testDbConnection = async () => {
+	const db = await getDb();
+	await db.command({ ping: 1 });
+	return {
+		ok: true,
+		database: db.databaseName,
+		collections: {
+			users: 'users',
+			favorites: 'favorites'
+		}
+	};
+};
+
 export const closeDbConnection = async () => {
 	if (client) {
 		await client.close();
