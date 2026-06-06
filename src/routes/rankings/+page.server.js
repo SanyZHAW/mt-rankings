@@ -18,7 +18,7 @@ export const load = async ({ url }) => {
 			: [];
 	const rankingData = await getRankingData();
 
-	return {
+	const result = {
 		organisations,
 		weightClasses,
 		rankings,
@@ -26,4 +26,13 @@ export const load = async ({ url }) => {
 		selectedWeightClassId,
 		validationErrors: rankingData.errors
 	};
+	console.log('[rankings/load]', {
+		orgCount: organisations.length,
+		orgs: organisations.map((o) => ({ id: o.id, name: o.name, wcCount: o.weightClasses?.length })),
+		wcCount: weightClasses.length,
+		rankingsCount: rankings.length,
+		selectedOrganisationId,
+		selectedWeightClassId
+	});
+	return result;
 };
