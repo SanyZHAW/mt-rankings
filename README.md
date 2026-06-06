@@ -265,8 +265,8 @@
 
 ### 3.5 Validate
 
-- **URL der getesteten Version:**  
-  https://muaythairankingssss.netlify.app/rankings  
+- **Getestete Version:**  
+  Die beim Usability-Test verwendete Version ist nicht mehr aktiv. Der getestete Stand ist in [docs/screenshots/](docs/screenshots/) dokumentiert.  
   *(Ältere Prototyp-Version – getestet vor Admin-Panel, Scraper und MongoDB-Migration; bewusst so gewählt, um den Grundworkflow ohne spätere Erweiterungen zu testen)*
 
 - **URL der finalen Abgabeversion:**  

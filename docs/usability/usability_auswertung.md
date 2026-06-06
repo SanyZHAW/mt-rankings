@@ -1,7 +1,7 @@
 # Usability Evaluation – Auswertung
 
 **Projekt:** MT Rankings  
-**Getestete Version / URL:** https://muaythairankingssss.netlify.app/rankings — Stand vor Admin-Panel, Scraper und MongoDB-Migration  
+**Getestete Version:** Nicht mehr aktiv; getesteter Stand dokumentiert in [docs/screenshots/](../screenshots/) — Stand vor Admin-Panel, Scraper und MongoDB-Migration  
 **Datum:** Juni 2026  
 **Anzahl Testpersonen:** 2  
 **Testleitung:** Saam Eymany
@@ -14,7 +14,7 @@ Der Test wurde moderiert und vor Ort durchgeführt. Beide Testpersonen nutzten e
 
 Getestet wurde folgende Version des Prototyps:
 
-https://muaythairankingssss.netlify.app/rankings
+Die ursprüngliche Test-URL ist nicht mehr aktiv. Der getestete Stand ist in [docs/screenshots/](../screenshots/) dokumentiert.
 
 ---
 
