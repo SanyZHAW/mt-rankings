@@ -27,7 +27,12 @@
 				<a href="/admin">Admin</a>
 				<a href="/admin/fighters">Fighters</a>
 			{/if}
-			<span class="user-email">{user.email}</span>
+			<a href="/account" class="account-icon" aria-label="Account">
+				<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<circle cx="12" cy="8" r="4" />
+					<path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+				</svg>
+			</a>
 			<form method="POST" action="/logout">
 				<button type="submit">Logout</button>
 			</form>
@@ -67,7 +72,6 @@
 	}
 
 	a,
-	.user-email,
 	button {
 		color: #f4efe4;
 		font-size: 0.95rem;
@@ -94,8 +98,15 @@
 		color: #d6a33d;
 	}
 
-	.user-email {
+	.account-icon {
+		align-items: center;
 		color: #bdb4a1;
+		display: flex;
+		line-height: 0;
+	}
+
+	.account-icon:hover {
+		color: #d6a33d;
 	}
 
 	@media (max-width: 640px) {

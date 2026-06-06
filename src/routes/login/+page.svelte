@@ -37,6 +37,7 @@
 	.auth-page {
 		display: grid;
 		gap: 1.25rem;
+		margin: 0 auto;
 		max-width: 560px;
 	}
 

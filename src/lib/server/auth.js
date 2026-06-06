@@ -125,6 +125,40 @@ export const getAllUsers = async () => {
 	}));
 };
 
+export const updateProfile = async (userId, fields) => {
+	if (!ObjectId.isValid(userId)) return { ok: false, message: 'Invalid user ID.' };
+	const users = await getUsersCollection();
+	const $set = {};
+
+	if (fields.firstName !== undefined) $set.firstName = fields.firstName.trim();
+	if (fields.lastName  !== undefined) $set.lastName  = fields.lastName.trim();
+	if (fields.email     !== undefined) $set.email      = normalizeEmail(fields.email);
+
+	if (fields.username !== undefined) {
+		const norm = normalizeUsername(fields.username);
+		const clash = await users.findOne({ username: norm, _id: { $ne: new ObjectId(userId) } });
+		if (clash) return { ok: false, field: 'username', message: 'Username is already taken.' };
+		$set.username = norm;
+	}
+
+	if (Object.keys($set).length === 0) return { ok: true };
+	await users.updateOne({ _id: new ObjectId(userId) }, { $set });
+	const updated = await users.findOne({ _id: new ObjectId(userId) });
+	return { ok: true, user: updated ? toPublicUser(updated) : null };
+};
+
+export const changePassword = async (userId, { currentPassword, newPassword }) => {
+	if (!ObjectId.isValid(userId)) return { ok: false, message: 'Invalid user ID.' };
+	const users = await getUsersCollection();
+	const user = await users.findOne({ _id: new ObjectId(userId) });
+	if (!user) return { ok: false, message: 'User not found.' };
+	if (!verifyPassword(currentPassword, user.passwordHash)) {
+		return { ok: false, message: 'Current password is incorrect.' };
+	}
+	await users.updateOne({ _id: new ObjectId(userId) }, { $set: { passwordHash: hashPassword(newPassword) } });
+	return { ok: true };
+};
+
 export const updateUser = async (userId, { email, role }) => {
 	if (!ObjectId.isValid(userId)) return null;
 	const users = await getUsersCollection();
