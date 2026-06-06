@@ -7,7 +7,7 @@
 	let scrapeLoading = $state(false);
 	let scrapeResult = $state(null);
 
-	async function runScrape() {
+	async function syncRankings() {
 		scrapeLoading = true;
 		scrapeResult = null;
 		try {
@@ -27,19 +27,24 @@
 	<div class="panel">
 		<div class="panel-header">
 			<span class="panel-title">WBC Rankings</span>
-			<button class="btn-scrape" onclick={runScrape} disabled={scrapeLoading}>
+			<button class="btn-scrape" onclick={syncRankings} disabled={scrapeLoading}>
 				{#if scrapeLoading}
 					<span class="spinner" aria-hidden="true"></span>
-					Updating…
+					Syncing…
 				{:else}
-					Update WBC Rankings
+					Sync Rankings from XML
 				{/if}
 			</button>
 		</div>
+		<p class="workflow-note">
+			To update rankings: run <code>python scripts/scrape_wbc.py</code> locally, commit
+			<code>static/data/wbc_rankings.xml</code>, then click <strong>Sync Rankings from XML</strong>
+			to push the changes to the database.
+		</p>
 		{#if scrapeResult?.success}
-			<StatusMessage type="success" message="Rankings updated — {scrapeResult.updatedAt} ({scrapeResult.fighters} fighters, {scrapeResult.rankings} weight classes)" />
+			<StatusMessage type="success" message="Synced — {scrapeResult.updatedAt} ({scrapeResult.fighters} fighters, {scrapeResult.rankings} weight classes)" />
 		{:else if scrapeResult?.error}
-			<StatusMessage type="error" message="Scrape failed: {scrapeResult.error}" />
+			<StatusMessage type="error" message="Sync failed: {scrapeResult.error}" />
 		{/if}
 	</div>
 
@@ -197,6 +202,26 @@
 		color: #d6a33d;
 		font-size: 0.9rem;
 		font-weight: 700;
+	}
+
+	.workflow-note {
+		color: #a09070;
+		font-size: 0.8rem;
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	.workflow-note code {
+		background: #1a1a1a;
+		border-radius: 3px;
+		color: #c8a84b;
+		font-family: monospace;
+		font-size: 0.78rem;
+		padding: 0.1em 0.35em;
+	}
+
+	.workflow-note strong {
+		color: #d6a33d;
 	}
 
 	.btn-scrape {

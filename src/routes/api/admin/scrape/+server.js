@@ -1,15 +1,8 @@
 import { json } from '@sveltejs/kit';
-import { execFile } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { promisify } from 'node:util';
 import { getFightersCollection, getRankingsCollection } from '$lib/server/db.js';
 
-const execFileAsync = promisify(execFile);
-
-// Override via PYTHON_BIN in .env if python3 is not on PATH (e.g. Windows)
-const PYTHON = process.env.PYTHON_BIN ?? 'python3';
-const SCRIPT = join(process.cwd(), 'static', 'scripts', 'scrape_wbc.py');
 const WBC_XML = join(process.cwd(), 'static', 'data', 'wbc_rankings.xml');
 
 // ── XML helpers ────────────────────────────────────────────────────────────────
@@ -91,24 +84,28 @@ export const POST = async ({ locals }) => {
 	if (!locals.user) return json({ error: 'Unauthorised.' }, { status: 401 });
 	if (locals.user.role !== 'admin') return json({ error: 'Forbidden.' }, { status: 403 });
 
+	// Phase 1: read the XML file committed to the repo
+	let xml;
 	try {
-		await execFileAsync(PYTHON, [SCRIPT], {
-			timeout: 120_000,
-			env: { ...process.env, PYTHONIOENCODING: 'utf-8' }
-		});
-
-		const xml = await readFile(WBC_XML, 'utf-8');
-		const { fighters, rankings } = await syncToMongo(xml);
-
-		return json({
-			success: true,
-			updatedAt: new Date().toISOString().slice(0, 10),
-			fighters,
-			rankings
-		});
+		xml = await readFile(WBC_XML, 'utf-8');
 	} catch (err) {
-		const message = (err.stderr || err.message || 'Unknown error').trim();
-		console.error('WBC scrape failed:', message);
-		return json({ error: message }, { status: 500 });
+		console.error('[scrape] Failed to read XML file:', { path: WBC_XML, message: err.message });
+		return json({ error: `Failed to read XML: ${err.message}` }, { status: 500 });
 	}
+
+	// Phase 2: parse XML and upsert into MongoDB
+	let counts;
+	try {
+		counts = await syncToMongo(xml);
+	} catch (err) {
+		console.error('[scrape] MongoDB sync failed:', err);
+		return json({ error: `Database sync failed: ${err.message}` }, { status: 500 });
+	}
+
+	return json({
+		success: true,
+		updatedAt: new Date().toISOString().slice(0, 10),
+		fighters: counts.fighters,
+		rankings: counts.rankings
+	});
 };

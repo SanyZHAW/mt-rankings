@@ -1,0 +1,1721 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mtRankings>
+  <organisations>
+    <organisation id="org-wbc">
+      <name>WBC Muay Thai</name>
+      <website>https://www.wbcmuaythai.com/male</website>
+      <weightClasses>
+        <weightClass id="wbc-heavyweight">
+          <name>Heavyweight</name>
+          <limit unit="lb">200</limit>
+          <limit unit="kg">91.0</limit>
+        </weightClass>
+        <weightClass id="wbc-cruiserweight">
+          <name>Cruiserweight</name>
+          <limit unit="lb">200</limit>
+          <limit unit="kg">90.719</limit>
+        </weightClass>
+        <weightClass id="wbc-lt-heavyweight">
+          <name>Lt. Heavyweight</name>
+          <limit unit="lb">175</limit>
+          <limit unit="kg">79.379</limit>
+        </weightClass>
+        <weightClass id="wbc-super-middleweight">
+          <name>Super Middleweight</name>
+          <limit unit="lb">168</limit>
+          <limit unit="kg">76.204</limit>
+        </weightClass>
+        <weightClass id="wbc-middleweight">
+          <name>Middleweight</name>
+          <limit unit="lb">160</limit>
+          <limit unit="kg">72.575</limit>
+        </weightClass>
+        <weightClass id="wbc-super-welterweight">
+          <name>Super Welterweight</name>
+          <limit unit="lb">154</limit>
+          <limit unit="kg">69.853</limit>
+        </weightClass>
+        <weightClass id="wbc-welterweight">
+          <name>Welterweight</name>
+          <limit unit="lb">147</limit>
+          <limit unit="kg">66.678</limit>
+        </weightClass>
+        <weightClass id="wbc-super-lightweight">
+          <name>Super Lightweight</name>
+          <limit unit="lb">140</limit>
+          <limit unit="kg">63.503</limit>
+        </weightClass>
+        <weightClass id="wbc-lightweight">
+          <name>Lightweight</name>
+          <limit unit="lb">135</limit>
+          <limit unit="kg">61.235</limit>
+        </weightClass>
+        <weightClass id="wbc-super-featherweight">
+          <name>Super Featherweight</name>
+          <limit unit="lb">130</limit>
+          <limit unit="kg">58.967</limit>
+        </weightClass>
+        <weightClass id="wbc-featherweight">
+          <name>Featherweight</name>
+          <limit unit="lb">126</limit>
+          <limit unit="kg">57.153</limit>
+        </weightClass>
+        <weightClass id="wbc-super-bantamweight">
+          <name>Super Bantamweight</name>
+          <limit unit="lb">122</limit>
+          <limit unit="kg">55.338</limit>
+        </weightClass>
+        <weightClass id="wbc-bantamweight">
+          <name>Bantamweight</name>
+          <limit unit="lb">118</limit>
+          <limit unit="kg">53.524</limit>
+        </weightClass>
+        <weightClass id="wbc-super-flyweight">
+          <name>Super Flyweight</name>
+          <limit unit="lb">115</limit>
+          <limit unit="kg">52.163</limit>
+        </weightClass>
+        <weightClass id="wbc-flyweight">
+          <name>Flyweight</name>
+          <limit unit="lb">112</limit>
+          <limit unit="kg">50.802</limit>
+        </weightClass>
+        <weightClass id="wbc-light-flyweight">
+          <name>Light Flyweight</name>
+          <limit unit="lb">108</limit>
+          <limit unit="kg">48.988</limit>
+        </weightClass>
+        <weightClass id="wbc-minimumweight">
+          <name>Minimumweight</name>
+          <limit unit="lb">105</limit>
+          <limit unit="kg">47.627</limit>
+        </weightClass>
+      </weightClasses>
+    </organisation>
+  </organisations>
+  <fighters>
+    <fighter id="fighter-gerardo-atti">
+      <name>Gerardo Atti</name>
+      <country>Germany</country>
+    </fighter>
+    <fighter id="fighter-faris-lukovic">
+      <name>Faris Lukovic</name>
+      <country>Malta</country>
+    </fighter>
+    <fighter id="fighter-lyndon-knowles">
+      <name>Lyndon Knowles</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-tomasz-utczinski">
+      <name>Tomasz Utczinski</name>
+      <country>Poland</country>
+    </fighter>
+    <fighter id="fighter-nathan-cook">
+      <name>Nathan Cook</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-oswaldo-duque">
+      <name>Oswaldo Duque</name>
+      <country>Mexico</country>
+    </fighter>
+    <fighter id="fighter-steve-walker">
+      <name>Steve Walker</name>
+      <country>USA</country>
+    </fighter>
+    <fighter id="fighter-alexandr-savin">
+      <name>Alexandr Savin</name>
+      <country>Italy/Moldova</country>
+    </fighter>
+    <fighter id="fighter-ben-mason">
+      <name>Ben Mason</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-simon-mendes">
+      <name>Simon Mendes</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-pierre-vodi">
+      <name>Pierre Vodi</name>
+      <country>Ivory Coast</country>
+    </fighter>
+    <fighter id="fighter-alex-roberts">
+      <name>Alex Roberts</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-hamid-reza-kordabadi">
+      <name>Hamid Reza Kordabadi</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="fighter-bensouna-sabih">
+      <name>Bensouna Sabih</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-vicente-rojas">
+      <name>Vicente Rojas</name>
+      <country>Chile</country>
+    </fighter>
+    <fighter id="fighter-dchamad-armstrong">
+      <name>Dchamad Armstrong</name>
+      <country>New Zealand</country>
+    </fighter>
+    <fighter id="fighter-guilaume-barnabe">
+      <name>Guilaume Barnabe</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-areta-gilbert">
+      <name>Areta Gilbert</name>
+      <country>New Zealand</country>
+    </fighter>
+    <fighter id="fighter-annas-nogch">
+      <name>Annas Nogch</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-stewart-graham">
+      <name>Stewart Graham</name>
+      <country>Scotland</country>
+    </fighter>
+    <fighter id="fighter-jesse-astill">
+      <name>Jesse Astill</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-ali-aliev">
+      <name>Ali Aliev</name>
+      <country>Dagestan</country>
+    </fighter>
+    <fighter id="fighter-sofiane-djelab">
+      <name>Sofiane Djelab</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-charlie-bubb">
+      <name>Charlie Bubb</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-chip-pollard">
+      <name>Chip Pollard</name>
+      <country>USA</country>
+    </fighter>
+    <fighter id="fighter-jayden-eynaud">
+      <name>Jayden Eynaud</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-mohammad-kia">
+      <name>Mohammad Kia</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="fighter-jakub-benko">
+      <name>Jakub Benko</name>
+      <country>Slovakia</country>
+    </fighter>
+    <fighter id="fighter-charles-sikwa">
+      <name>Charles Sikwa</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-scott-stewart">
+      <name>Scott Stewart</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-charlie-pearce">
+      <name>Charlie Pearce</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-ciarain-shanahan">
+      <name>Ciarain Shanahan</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-ali-el-ameri">
+      <name>Ali El Ameri</name>
+      <country>Spain/Morocco</country>
+    </fighter>
+    <fighter id="fighter-moses-murrietta">
+      <name>Moses Murrietta</name>
+      <country>USA</country>
+    </fighter>
+    <fighter id="fighter-matt-baker">
+      <name>Matt Baker</name>
+      <country>USA</country>
+    </fighter>
+    <fighter id="fighter-vincent-wiktora">
+      <name>Vincent Wiktora</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-martello-jones">
+      <name>Martello Jones</name>
+      <country>Canada</country>
+    </fighter>
+    <fighter id="fighter-bryann-mayaut">
+      <name>Bryann Mayaut</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-robert-stoll">
+      <name>Robert Stoll</name>
+      <country>Germany</country>
+    </fighter>
+    <fighter id="fighter-dimitri-salamatin">
+      <name>Dimitri Salamatin</name>
+      <country>Estonia</country>
+    </fighter>
+    <fighter id="fighter-martin-vemmelund">
+      <name>Martin Vemmelund</name>
+      <country>Denmark</country>
+    </fighter>
+    <fighter id="fighter-lorenzo-panaro">
+      <name>Lorenzo Panaro</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="fighter-mouhcine-chafi">
+      <name>Mouhcine Chafi</name>
+      <country>Spain/Morocco</country>
+    </fighter>
+    <fighter id="fighter-ramzi-nouainia">
+      <name>Ramzi Nouainia</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-younes-sadi">
+      <name>Younes Sadi</name>
+      <country>Algeria/Denmark</country>
+    </fighter>
+    <fighter id="fighter-lion-moonlanititthammantprompao">
+      <name>Lion Moonlanititthammantprompao</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-george-jarvis">
+      <name>George Jarvis</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-frederick-winter">
+      <name>Frederick Winter</name>
+      <country>Denmark</country>
+    </fighter>
+    <fighter id="fighter-joakim-hagg">
+      <name>Joakim Hagg</name>
+      <country>Sweden</country>
+    </fighter>
+    <fighter id="fighter-james-majok">
+      <name>James Majok</name>
+      <country>South Sudan</country>
+    </fighter>
+    <fighter id="fighter-mikael-benatar">
+      <name>Mikael Benatar</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-reda-oudgou">
+      <name>Reda Oudgou</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-dmitrii-salamatin">
+      <name>Dmitrii Salamatin</name>
+      <country>Estonia</country>
+    </fighter>
+    <fighter id="fighter-petchgantat-muden">
+      <name>Petchgantat MUDen</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-tim-schlapbach">
+      <name>Tim Schlapbach</name>
+      <country>Sitzerland</country>
+    </fighter>
+    <fighter id="fighter-jomkhon-kiatnongluang">
+      <name>Jomkhon Kiatnongluang</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-jack-bullock">
+      <name>Jack Bullock</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-charlie-o-neill">
+      <name>Charlie O’ Neill</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-thomas-wright">
+      <name>Thomas Wright</name>
+      <country>New Zealand</country>
+    </fighter>
+    <fighter id="fighter-marcus-sundin-liljeorff">
+      <name>Marcus Sundin Liljeorff</name>
+      <country>Sweden</country>
+    </fighter>
+    <fighter id="fighter-roman-mitjajev">
+      <name>Roman Mitjajev</name>
+      <country>Estonia</country>
+    </fighter>
+    <fighter id="fighter-jaxson-hayman">
+      <name>Jaxson Hayman</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-titus-proctor">
+      <name>Titus Proctor</name>
+      <country>New Zealand</country>
+    </fighter>
+    <fighter id="fighter-jamie-allison">
+      <name>Jamie Allison</name>
+      <country>Scotland</country>
+    </fighter>
+    <fighter id="fighter-tengneung-sitjaisairung">
+      <name>Tengneung Sitjaisairung</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-rungrawee-sitsongpeenong">
+      <name>Rungrawee Sitsongpeenong</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-josh-hill">
+      <name>Josh Hill</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-emerson-bento">
+      <name>Emerson Bento</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="fighter-youssef-assouik">
+      <name>Youssef Assouik</name>
+      <country>Denmark</country>
+    </fighter>
+    <fighter id="fighter-daniel-bonner">
+      <name>Daniel Bonner</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-nauzet-trujillo">
+      <name>Nauzet Trujillo</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-salimkahn-ibrahimov">
+      <name>Salimkahn Ibrahimov</name>
+      <country>Azerbaijan</country>
+    </fighter>
+    <fighter id="fighter-harry-purvis">
+      <name>Harry Purvis</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-dylan-meagher">
+      <name>Dylan Meagher</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-paavo-leinonen">
+      <name>Paavo Leinonen</name>
+      <country>Finland</country>
+    </fighter>
+    <fighter id="fighter-joe-welch">
+      <name>Joe Welch</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-ciaran-smith">
+      <name>Ciaran Smith</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-samuel-gonzalez">
+      <name>Samuel Gonzalez</name>
+      <country>Denmark/Spain</country>
+    </fighter>
+    <fighter id="fighter-ayoub-bahri">
+      <name>Ayoub Bahri</name>
+      <country>Algeria</country>
+    </fighter>
+    <fighter id="fighter-lamin-souayah">
+      <name>Lamin Souayah</name>
+      <country>Libya</country>
+    </fighter>
+    <fighter id="fighter-ibrahim-fettar">
+      <name>Ibrahim Fettar</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-jake-mc-cowatt">
+      <name>Jake Mc Cowatt</name>
+      <country>New Zealand</country>
+    </fighter>
+    <fighter id="fighter-leroy-luperon">
+      <name>Leroy Luperon</name>
+      <country>Switzerland</country>
+    </fighter>
+    <fighter id="fighter-charlie-guest">
+      <name>Charlie Guest</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-petchmorakot-petchyindee">
+      <name>Petchmorakot Petchyindee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-james-honey">
+      <name>James Honey</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-thananchai-sitsongpeenong">
+      <name>Thananchai Sitsongpeenong</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-garrett-smylie">
+      <name>Garrett Smylie</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-ruslan-naghiyev">
+      <name>Ruslan Naghiyev</name>
+      <country>Azerbaijan</country>
+    </fighter>
+    <fighter id="fighter-victor-hugo">
+      <name>Victor Hugo</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="fighter-tristan-stauffer">
+      <name>Tristan Stauffer</name>
+      <country>Switzerland</country>
+    </fighter>
+    <fighter id="fighter-kongjak-por-paoin">
+      <name>Kongjak Por Paoin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchmai-sorkor-lekthaweewattana">
+      <name>Petchmai SorKor Lekthaweewattana</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-martin-pranjkovic">
+      <name>Martin Pranjkovic</name>
+      <country>Germany/Croatia</country>
+    </fighter>
+    <fighter id="fighter-joe-craven">
+      <name>Joe Craven</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-david-pennimpede">
+      <name>David Pennimpede</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-michael-lynch">
+      <name>Michael Lynch</name>
+      <country>New Zealand</country>
+    </fighter>
+    <fighter id="fighter-jonathan-mayezo">
+      <name>Jonathan Mayezo</name>
+      <country>Reunion Islands</country>
+    </fighter>
+    <fighter id="fighter-nayanesh-ayman">
+      <name>Nayanesh Ayman</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-alex-bublea">
+      <name>Alex Bublea</name>
+      <country>Romania</country>
+    </fighter>
+    <fighter id="fighter-quinton-smith">
+      <name>Quinton Smith</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-abdallah-keita">
+      <name>Abdallah Keita</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-jackson-barkhouse">
+      <name>Jackson Barkhouse</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-dylan-salvador">
+      <name>Dylan Salvador</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-phuaeathai-sirilukmuaythai">
+      <name>Phuaeathai SirilukMuayThai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-daniel-rodrigues">
+      <name>Daniel Rodrigues</name>
+      <country>Switzerland</country>
+    </fighter>
+    <fighter id="fighter-boonlert-sor-boonmerit">
+      <name>Boonlert Sor Boonmerit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-nontachai-jitmuangnon">
+      <name>Nontachai Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-rittewada-petchyindee">
+      <name>Rittewada Petchyindee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-pentor-paedminburi">
+      <name>Pentor Paedminburi</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-mohammad-siasarani">
+      <name>Mohammad Siasarani</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="fighter-hercules-wor-jakawut">
+      <name>Hercules Wor Jakawut</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-jonathan-aiulu">
+      <name>Jonathan Aiulu</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-tom-keogh">
+      <name>Tom Keogh</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-james-kelly">
+      <name>James Kelly</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-levi-bailey">
+      <name>Levi Bailey</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-hakim-bah">
+      <name>Hakim Bah</name>
+      <country>Switzerland</country>
+    </fighter>
+    <fighter id="fighter-sam-fitzgerald">
+      <name>Sam Fitzgerald</name>
+      <country>New Zealand</country>
+    </fighter>
+    <fighter id="fighter-soufian-touti">
+      <name>Soufian Touti</name>
+      <country>Denmark</country>
+    </fighter>
+    <fighter id="fighter-daniel-matthews">
+      <name>Daniel Matthews</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-damien-cazambo">
+      <name>Damien Cazambo</name>
+      <country>France/Reunion</country>
+    </fighter>
+    <fighter id="fighter-quinn-wasylak">
+      <name>Quinn Wasylak</name>
+      <country>Canada</country>
+    </fighter>
+    <fighter id="fighter-finn-welch">
+      <name>Finn Welch</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-niall-mcgreevy">
+      <name>Niall McGreevy</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-elias-naji">
+      <name>Elias Naji</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-lee-walton">
+      <name>Lee Walton</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-tapaokaew-singmawyn">
+      <name>Tapaokaew Singmawyn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-capitan-petchyindee">
+      <name>Capitan Petchyindee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-pornpitak-tor-jakkasi">
+      <name>Pornpitak Tor Jakkasi</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-sajad-sattari">
+      <name>Sajad Sattari</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="fighter-nabil-anane">
+      <name>Nabil Anane</name>
+      <country>Algeria/Thailand</country>
+    </fighter>
+    <fighter id="fighter-khunhanlek-kiatcharoenchai">
+      <name>Khunhanlek Kiatcharoenchai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-yodiq-or-pimonsri">
+      <name>YodIQ Or Pimonsri</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-alessandro-sara">
+      <name>Alessandro Sara</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="fighter-julio-lobo">
+      <name>Julio Lobo</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="fighter-paulo-d-antoni">
+      <name>Paulo D’Antoni</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="fighter-dzmitry-varats">
+      <name>Dzmitry Varats</name>
+      <country>Belarus/USA</country>
+    </fighter>
+    <fighter id="fighter-max-mcvicker">
+      <name>Max McVicker</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-erik-hehir">
+      <name>Erik Hehir</name>
+      <country>Ireland/Sweden</country>
+    </fighter>
+    <fighter id="fighter-arjan-hajdari">
+      <name>Arjan Hajdari</name>
+      <country>Albania/Germany</country>
+    </fighter>
+    <fighter id="fighter-mo-abdurahman">
+      <name>Mo Abdurahman</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-daniel-zhou">
+      <name>Daniel Zhou</name>
+      <country>Canada</country>
+    </fighter>
+    <fighter id="fighter-louie-doherty">
+      <name>Louie Doherty</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-tayro-muru">
+      <name>Tayro Muru</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="fighter-karl-ryan">
+      <name>Karl Ryan</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-worapon-lukjaoporongtom">
+      <name>Worapon Lukjaoporongtom</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-kongsuk-sitsarawatsuea">
+      <name>Kongsuk Sitsarawatsuea</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchwichai-dechdechdo">
+      <name>Petchwichai Dechdechdo</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-duangsompong-jitmaungnon">
+      <name>Duangsompong Jitmaungnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-kimluay-wanhongohm">
+      <name>Kimluay Wanhongohm</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-dam-parunchai">
+      <name>Dam Parunchai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-maemot-sor-salacheap">
+      <name>Maemot Sor Salacheap</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-parahatnoi-sor-sommai">
+      <name>Parahatnoi Sor Sommai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-hamza-rachid">
+      <name>Hamza Rachid</name>
+      <country>Morocco</country>
+    </fighter>
+    <fighter id="fighter-tadhg-gannon">
+      <name>Tadhg Gannon</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-chadd-collins">
+      <name>Chadd Collins</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-majid-ahmadi">
+      <name>Majid Ahmadi</name>
+      <country>Germany</country>
+    </fighter>
+    <fighter id="fighter-mohammad-dahlan">
+      <name>Mohammad Dahlan</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-josh-king">
+      <name>Josh King</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-craig-coakley">
+      <name>Craig Coakley</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-yota-shigemori">
+      <name>Yota Shigemori</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-brooks-sowerby">
+      <name>Brooks Sowerby</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-sebastian-tello">
+      <name>Sebastian Tello</name>
+      <country>Chile</country>
+    </fighter>
+    <fighter id="fighter-federico-mazza">
+      <name>Federico Mazza</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="fighter-shimon-eiwasports">
+      <name>Shimon EiwaSports</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-samingdetch-bangmudklongton">
+      <name>Samingdetch Bangmudklongton</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-decho-por-borirak">
+      <name>Decho Por Borirak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-dedduanglek-tded99">
+      <name>Dedduanglek Tded99</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-jaradchai-maxjandee">
+      <name>Jaradchai Maxjandee</name>
+      <country>Thailad</country>
+    </fighter>
+    <fighter id="fighter-petchchonlaton-gor-adisak">
+      <name>Petchchonlaton Gor Adisak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-michael-savvas">
+      <name>Michael Savvas</name>
+      <country>Cyprus</country>
+    </fighter>
+    <fighter id="fighter-somraknoi-muayded789">
+      <name>Somraknoi Muayded789</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-nongbiew-jitmuangnon">
+      <name>Nongbiew Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-sangmanee-jitmangnon">
+      <name>Sangmanee Jitmangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-buakaew-sorsor-pakorn">
+      <name>Buakaew SorSor Pakorn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-alfie-pearse">
+      <name>Alfie Pearse</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-karl-tannion">
+      <name>Karl Tannion</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-craig-marshall">
+      <name>Craig Marshall</name>
+      <country>Scotland</country>
+    </fighter>
+    <fighter id="fighter-santiago-lalane">
+      <name>Santiago Lalane</name>
+      <country>Argentina</country>
+    </fighter>
+    <fighter id="fighter-tagir-khalilov">
+      <name>Tagir Khalilov</name>
+      <country>Azerbaijan</country>
+    </fighter>
+    <fighter id="fighter-jhonta-farias-silva">
+      <name>Jhonta Farias Silva</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="fighter-muga">
+      <name>Muga</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-renta-wor-wanchai">
+      <name>Renta Wor Wanchai</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-nico-antolinez">
+      <name>Nico Antolinez</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-miki-ghazali">
+      <name>Miki Ghazali</name>
+      <country>Malaysia/USA</country>
+    </fighter>
+    <fighter id="fighter-chaila-por-lakboon">
+      <name>Chaila Por Lakboon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-thongnoi-wor-sungprapai">
+      <name>Thongnoi Wor Sungprapai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-chalam-parunchai">
+      <name>Chalam Parunchai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-samingdaeng-sor-sonnatet">
+      <name>Samingdaeng Sor Sonnatet</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-wukong-sitcharoensub">
+      <name>Wukong Sitcharoensub</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-yodet-ptt-tongtawee">
+      <name>YodET PTT Tongtawee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-panpadetch-nf-luksuan">
+      <name>Panpadetch NF Luksuan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-plaipayak-sor-sommai">
+      <name>Plaipayak Sor Sommai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-ratchasai-golita-muaythai">
+      <name>Ratchasai Golita MuayThai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-failaeng-chor-haypayak">
+      <name>Failaeng Chor Haypayak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-jalil-barnes">
+      <name>Jalil Barnes</name>
+      <country>USA</country>
+    </fighter>
+    <fighter id="fighter-ubaid-hussain">
+      <name>Ubaid Hussain</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-stephen-irvine">
+      <name>Stephen Irvine</name>
+      <country>Scotland</country>
+    </fighter>
+    <fighter id="fighter-wanchaloem-sitshoothon">
+      <name>Wanchaloem Sitshoothon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-noelisson-silva">
+      <name>Noelisson Silva</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="fighter-maxi-caballero">
+      <name>Maxi Caballero</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-james-kostic">
+      <name>James Kostic</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="fighter-darren-roland">
+      <name>Darren Roland</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-mbaye-samb">
+      <name>Mbaye Samb</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-jacob-thomson">
+      <name>Jacob Thomson</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-dominic-reed">
+      <name>Dominic Reed</name>
+      <country>New Zealand</country>
+    </fighter>
+    <fighter id="fighter-antonio-orden">
+      <name>Antonio Orden</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-adam-messaoud">
+      <name>Adam Messaoud</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-tam-mccourt">
+      <name>Tam McCourt</name>
+      <country>Scotland</country>
+    </fighter>
+    <fighter id="fighter-pornsanae-sor-phumpat">
+      <name>Pornsanae Sor Phumpat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-takuma-ota">
+      <name>Takuma Ota</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-kritpetch-pk-saenchai">
+      <name>Kritpetch PK Saenchai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-chujai-sor-chomklin">
+      <name>Chujai Sor Chomklin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-chiebkad-por-phongsawang">
+      <name>Chiebkad Por Phongsawang</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchsiam-jor-pattreya">
+      <name>Petchsiam Jor Pattreya</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-khunsuknoi-boomdeksian">
+      <name>Khunsuknoi Boomdeksian</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-kaimookao-bestchauad">
+      <name>Kaimookao BestChauad</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-mangkonlek-pernnakorn">
+      <name>Mangkonlek Pernnakorn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-hikaru-furumura">
+      <name>Hikaru Furumura</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-pol-pascal">
+      <name>Pol Pascal</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-shanteng-lan">
+      <name>Shanteng Lan</name>
+      <country>China</country>
+    </fighter>
+    <fighter id="fighter-asahi-shinagawa">
+      <name>Asahi Shinagawa</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-owen-gillis">
+      <name>Owen Gillis</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-mario-alvarez">
+      <name>Mario Alvarez</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-kaito-fukuda">
+      <name>Kaito Fukuda</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-walid-snoussi">
+      <name>Walid Snoussi</name>
+      <country>USA</country>
+    </fighter>
+    <fighter id="fighter-saoaek-or-atchariya">
+      <name>Saoaek Or Atchariya</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-alex-usieto">
+      <name>Alex Usieto</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-dokmaipa-topfairtex">
+      <name>Dokmaipa TopFairtex</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-teerapong-kraisirapob">
+      <name>Teerapong Kraisirapob</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchthailand-or-kitkasem">
+      <name>Petchthailand Or Kitkasem</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchsila-auracha">
+      <name>Petchsila Auracha</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-kongtoranee-santiubon">
+      <name>Kongtoranee SantiUbon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-kohtao-golita-muaythai">
+      <name>Kohtao Golita MuayThai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchsaman-sor-samangarment">
+      <name>Petchsaman Sor Samangarment</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-atchai-kelasport">
+      <name>Atchai KelaSport</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-diontha-tobias">
+      <name>Diontha Tobias</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="fighter-issei-wor-wanchai">
+      <name>Issei Wor Wanchai</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-elmehdi-el-jamari">
+      <name>Elmehdi El Jamari</name>
+      <country>Morocco</country>
+    </fighter>
+    <fighter id="fighter-ryan-sheehan">
+      <name>Ryan Sheehan</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="fighter-che-bradley">
+      <name>Che Bradley</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-thai-barlow">
+      <name>Thai Barlow</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-mikel-fernandez">
+      <name>Mikel Fernandez</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-ikko-ota">
+      <name>Ikko Ota</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-akram-ouchibi">
+      <name>Akram Ouchibi</name>
+      <country>Morocco</country>
+    </fighter>
+    <fighter id="fighter-mario-fernandez">
+      <name>Mario Fernandez</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="fighter-ichi-saenchai-gym">
+      <name>Ichi Saenchai Gym</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-gianny-de-leu">
+      <name>Gianny De Leu</name>
+      <country>Belgium</country>
+    </fighter>
+    <fighter id="fighter-imrane-iklil">
+      <name>Imrane Iklil</name>
+      <country>Netherlands</country>
+    </fighter>
+    <fighter id="fighter-pangtor-por-lakboon">
+      <name>Pangtor Por Lakboon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-puenyai-por-lakboon">
+      <name>Puenyai Por Lakboon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchneung-petchmuaythai">
+      <name>Petchneung PetchMuayThai</name>
+      <country>Algeria</country>
+    </fighter>
+    <fighter id="fighter-methee-sorsor-toipidrew">
+      <name>Methee SorSor Toipidrew</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-paeyim-sor-boonmerit">
+      <name>Paeyim Sor Boonmerit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-charoensuk-boonlannamuaythai">
+      <name>Charoensuk BoonlannaMuayThai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petaek-singklongluang">
+      <name>Petaek Singklongluang</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-koko-mor-rattanabandit">
+      <name>KoKo Mor Rattanabandit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-fergus-smith">
+      <name>Fergus Smith</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-marc-campbell">
+      <name>Marc Campbell</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-sandro-bosi">
+      <name>Sandro Bosi</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="fighter-peyman-zolfaghari">
+      <name>Peyman Zolfaghari</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="fighter-andrii-mezentsev">
+      <name>Andrii Mezentsev</name>
+      <country>Ukraine</country>
+    </fighter>
+    <fighter id="fighter-tyree-stevens">
+      <name>Tyree Stevens</name>
+      <country>England</country>
+    </fighter>
+    <fighter id="fighter-patrick-padovani-biliato">
+      <name>Patrick Padovani Biliato</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="fighter-ryusei-matsuda">
+      <name>Ryusei Matsuda</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-ayoub-elamghari">
+      <name>Ayoub Elamghari</name>
+      <country>Morocco</country>
+    </fighter>
+    <fighter id="fighter-imad-salhi">
+      <name>Imad Salhi</name>
+      <country>Morocco/Spain</country>
+    </fighter>
+    <fighter id="fighter-takumi-hoshi">
+      <name>Takumi Hoshi</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-fung-tsz-yeung">
+      <name>Fung Tsz Yeung</name>
+      <country>Hong Kong/China</country>
+    </fighter>
+    <fighter id="fighter-pech-suanluang-rodyok">
+      <name>Pech Suanluang Rodyok</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchtechin-bangsaenfightclub">
+      <name>Petchtechin BangsaenFightClub</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-talumpuk-sor-sasiwat">
+      <name>Talumpuk Sor Sasiwat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-thapna-sor-prembut">
+      <name>Thapna Sor Prembut</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-davinci-luckymuaythai">
+      <name>Davinci LuckyMuayThai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchanuwat-taikubon">
+      <name>Petchanuwat Taikubon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchdetch-petchyindee">
+      <name>Petchdetch Petchyindee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-hern-nf-looksuan">
+      <name>Hern NF Looksuan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchniphon-bor-rungrot">
+      <name>Petchniphon Bor Rungrot</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-sontanong-tk-yuttana">
+      <name>Sontanong TK Yuttana</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-ryuya-okuwaki">
+      <name>Ryuya Okuwaki</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-nittikorn-jp-power">
+      <name>Nittikorn JP Power</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-singdam-kiatfufueng">
+      <name>Singdam Kiatfufueng</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-kampanthong-chor-haypayak">
+      <name>Kampanthong Chor Haypayak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-mankonpetch-saimaun-snookerclub">
+      <name>Mankonpetch Saimaun SnookerClub</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-yodpetchchake-boomdeksian">
+      <name>Yodpetchchake Boomdeksian</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-nuathoranee-jitmuangnon">
+      <name>Nuathoranee Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-detchphichai-navyandaman">
+      <name>Detchphichai Navyandaman</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchbaanrai-singmawyn">
+      <name>Petchbaanrai Singmawyn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-pek-krapaolinky">
+      <name>Pek Krapaolinky</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-suaphoom-teenoikachin">
+      <name>Suaphoom Teenoikachin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-wanpadetch-kaitkaonoi">
+      <name>Wanpadetch Kaitkaonoi</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-chikara-petchyindee">
+      <name>Chikara Petchyindee</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-domaifai-topfairygym">
+      <name>Domaifai TopFairyGym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-thapthai-sor-prembutd">
+      <name>Thapthai Sor Prembutd</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-plaitongkam-sitthailand">
+      <name>Plaitongkam Sitthailand</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchduet-golita-muaythai">
+      <name>Petchduet Golita MuayThai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchsam-petchmuaythai">
+      <name>Petchsam PetchMuayThai</name>
+      <country>Algeria</country>
+    </fighter>
+    <fighter id="fighter-phanaek-pk-saenchai">
+      <name>Phanaek PK Saenchai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-payak-saksatul">
+      <name>Payak Saksatul</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-duan99-tor-thanthai">
+      <name>Duan99 Tor Thanthai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-homura-abe">
+      <name>Homura Abe</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="fighter-wanheng-kaitchutthai">
+      <name>Wanheng Kaitchutthai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-yodpetchto-boomdeksian">
+      <name>Yodpetchto Boomdeksian</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petch25-tn-diamondhome">
+      <name>Petch25 TN Diamondhome</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-laostar-kiatthongyot">
+      <name>Laostar Kiatthongyot</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-monpraram-sitpetchchalukan">
+      <name>Monpraram Sitpetchchalukan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchmuangsing-tai-petchburi">
+      <name>Petchmuangsing Tai Petchburi</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-yodmanee-suanjakcafe">
+      <name>Yodmanee Suanjakcafe</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-singasurat-or-aodudon">
+      <name>Singasurat Or Aodudon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-jongangdam-singmawyn">
+      <name>Jongangdam Singmawyn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="fighter-petchkongfah-pk-saenchai-gym">
+      <name>Petchkongfah PK Saenchai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+  </fighters>
+  <rankings>
+    <ranking organisationId="org-wbc" weightClassId="wbc-heavyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-gerardo-atti" />
+      <entry position="European Champion" fighterId="fighter-faris-lukovic" />
+      <entry position="1" fighterId="fighter-lyndon-knowles" />
+      <entry position="2" fighterId="fighter-tomasz-utczinski" />
+      <entry position="3" fighterId="fighter-nathan-cook" />
+      <entry position="4" fighterId="fighter-oswaldo-duque" />
+      <entry position="5" fighterId="fighter-steve-walker" />
+      <entry position="6" fighterId="fighter-alexandr-savin" />
+      <entry position="7" fighterId="fighter-ben-mason" />
+      <entry position="8" fighterId="fighter-simon-mendes" />
+      <entry position="9" fighterId="fighter-pierre-vodi" />
+      <entry position="10" fighterId="fighter-alex-roberts" />
+      <entry position="11" fighterId="fighter-hamid-reza-kordabadi" />
+      <entry position="12" fighterId="fighter-bensouna-sabih" />
+      <entry position="13" fighterId="fighter-vicente-rojas" />
+      <entry position="14" fighterId="fighter-dchamad-armstrong" />
+      <entry position="15" fighterId="fighter-guilaume-barnabe" />
+      <entry position="16" fighterId="fighter-areta-gilbert" />
+      <entry position="17" fighterId="fighter-annas-nogch" />
+      <entry position="18" fighterId="fighter-stewart-graham" />
+      <entry position="19" fighterId="fighter-jesse-astill" />
+      <entry position="20" fighterId="fighter-faris-lukovic" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-cruiserweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-ali-aliev" />
+      <entry position="European Champion" fighterId="fighter-sofiane-djelab" />
+      <entry position="1" fighterId="fighter-charlie-bubb" />
+      <entry position="2" fighterId="fighter-chip-pollard" />
+      <entry position="3" fighterId="fighter-jayden-eynaud" />
+      <entry position="4" fighterId="fighter-mohammad-kia" />
+      <entry position="5" fighterId="fighter-jakub-benko" />
+      <entry position="6" fighterId="fighter-sofiane-djelab" />
+      <entry position="7" fighterId="fighter-charles-sikwa" />
+      <entry position="8" fighterId="fighter-scott-stewart" />
+      <entry position="9" fighterId="fighter-charlie-pearce" />
+      <entry position="10" fighterId="fighter-ciarain-shanahan" />
+      <entry position="11" fighterId="fighter-ali-el-ameri" />
+      <entry position="12" fighterId="fighter-moses-murrietta" />
+      <entry position="13" fighterId="fighter-matt-baker" />
+      <entry position="14" fighterId="fighter-vincent-wiktora" />
+      <entry position="15" fighterId="fighter-martello-jones" />
+      <entry position="16" fighterId="fighter-bryann-mayaut" />
+      <entry position="17" fighterId="fighter-robert-stoll" />
+      <entry position="18" fighterId="fighter-dimitri-salamatin" />
+      <entry position="19" fighterId="fighter-martin-vemmelund" />
+      <entry position="20" fighterId="fighter-lorenzo-panaro" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-lt-heavyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-mouhcine-chafi" />
+      <entry position="International Champion" fighterId="fighter-ramzi-nouainia" />
+      <entry position="European Champion" fighterId="fighter-younes-sadi" />
+      <entry position="1" fighterId="fighter-lion-moonlanititthammantprompao" />
+      <entry position="2" fighterId="fighter-george-jarvis" />
+      <entry position="3" fighterId="fighter-frederick-winter" />
+      <entry position="4" fighterId="fighter-younes-sadi" />
+      <entry position="5" fighterId="fighter-joakim-hagg" />
+      <entry position="6" fighterId="fighter-james-majok" />
+      <entry position="7" fighterId="fighter-ramzi-nouainia" />
+      <entry position="8" fighterId="fighter-mikael-benatar" />
+      <entry position="9" fighterId="fighter-reda-oudgou" />
+      <entry position="10" fighterId="fighter-dmitrii-salamatin" />
+      <entry position="11" fighterId="fighter-petchgantat-muden" />
+      <entry position="12" fighterId="fighter-tim-schlapbach" />
+      <entry position="13" fighterId="fighter-jomkhon-kiatnongluang" />
+      <entry position="14" fighterId="fighter-jack-bullock" />
+      <entry position="15" fighterId="fighter-charlie-o-neill" />
+      <entry position="16" fighterId="fighter-thomas-wright" />
+      <entry position="17" fighterId="fighter-marcus-sundin-liljeorff" />
+      <entry position="18" fighterId="fighter-roman-mitjajev" />
+      <entry position="19" fighterId="fighter-jaxson-hayman" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-super-middleweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-titus-proctor" />
+      <entry position="European Champion" fighterId="fighter-jamie-allison" />
+      <entry position="1" fighterId="fighter-jamie-allison" />
+      <entry position="2" fighterId="fighter-tengneung-sitjaisairung" />
+      <entry position="3" fighterId="fighter-rungrawee-sitsongpeenong" />
+      <entry position="4" fighterId="fighter-george-jarvis" />
+      <entry position="5" fighterId="fighter-josh-hill" />
+      <entry position="6" fighterId="fighter-emerson-bento" />
+      <entry position="7" fighterId="fighter-youssef-assouik" />
+      <entry position="8" fighterId="fighter-daniel-bonner" />
+      <entry position="9" fighterId="fighter-nauzet-trujillo" />
+      <entry position="10" fighterId="fighter-salimkahn-ibrahimov" />
+      <entry position="11" fighterId="fighter-harry-purvis" />
+      <entry position="12" fighterId="fighter-dylan-meagher" />
+      <entry position="13" fighterId="fighter-paavo-leinonen" />
+      <entry position="14" fighterId="fighter-joe-welch" />
+      <entry position="15" fighterId="fighter-ciaran-smith" />
+      <entry position="16" fighterId="fighter-samuel-gonzalez" />
+      <entry position="17" fighterId="fighter-ayoub-bahri" />
+      <entry position="18" fighterId="fighter-lamin-souayah" />
+      <entry position="19" fighterId="fighter-ibrahim-fettar" />
+      <entry position="20" fighterId="fighter-jake-mc-cowatt" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-middleweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="International Champion" fighterId="fighter-leroy-luperon" />
+      <entry position="European Champion" fighterId="fighter-charlie-guest" />
+      <entry position="1" fighterId="fighter-petchmorakot-petchyindee" />
+      <entry position="2" fighterId="fighter-james-honey" />
+      <entry position="3" fighterId="fighter-thananchai-sitsongpeenong" />
+      <entry position="4" fighterId="fighter-garrett-smylie" />
+      <entry position="5" fighterId="fighter-ruslan-naghiyev" />
+      <entry position="6" fighterId="fighter-victor-hugo" />
+      <entry position="7" fighterId="fighter-tristan-stauffer" />
+      <entry position="8" fighterId="fighter-leroy-luperon" />
+      <entry position="9" fighterId="fighter-kongjak-por-paoin" />
+      <entry position="10" fighterId="fighter-petchmai-sorkor-lekthaweewattana" />
+      <entry position="11" fighterId="fighter-martin-pranjkovic" />
+      <entry position="12" fighterId="fighter-joe-craven" />
+      <entry position="13" fighterId="fighter-david-pennimpede" />
+      <entry position="14" fighterId="fighter-michael-lynch" />
+      <entry position="15" fighterId="fighter-jonathan-mayezo" />
+      <entry position="16" fighterId="fighter-nayanesh-ayman" />
+      <entry position="17" fighterId="fighter-alex-bublea" />
+      <entry position="18" fighterId="fighter-quinton-smith" />
+      <entry position="19" fighterId="fighter-abdallah-keita" />
+      <entry position="20" fighterId="fighter-jackson-barkhouse" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-super-welterweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-dylan-salvador" />
+      <entry position="1" fighterId="fighter-phuaeathai-sirilukmuaythai" />
+      <entry position="2" fighterId="fighter-daniel-rodrigues" />
+      <entry position="3" fighterId="fighter-boonlert-sor-boonmerit" />
+      <entry position="4" fighterId="fighter-nontachai-jitmuangnon" />
+      <entry position="5" fighterId="fighter-rittewada-petchyindee" />
+      <entry position="6" fighterId="fighter-pentor-paedminburi" />
+      <entry position="7" fighterId="fighter-charlie-guest" />
+      <entry position="8" fighterId="fighter-mohammad-siasarani" />
+      <entry position="9" fighterId="fighter-hercules-wor-jakawut" />
+      <entry position="10" fighterId="fighter-jonathan-aiulu" />
+      <entry position="11" fighterId="fighter-tom-keogh" />
+      <entry position="12" fighterId="fighter-james-kelly" />
+      <entry position="13" fighterId="fighter-levi-bailey" />
+      <entry position="14" fighterId="fighter-hakim-bah" />
+      <entry position="15" fighterId="fighter-sam-fitzgerald" />
+      <entry position="16" fighterId="fighter-soufian-touti" />
+      <entry position="17" fighterId="fighter-daniel-matthews" />
+      <entry position="18" fighterId="fighter-damien-cazambo" />
+      <entry position="19" fighterId="fighter-quinn-wasylak" />
+      <entry position="20" fighterId="fighter-finn-welch" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-welterweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-niall-mcgreevy" />
+      <entry position="International Champion" fighterId="fighter-elias-naji" />
+      <entry position="European Champion" fighterId="fighter-lee-walton" />
+      <entry position="1" fighterId="fighter-tapaokaew-singmawyn" />
+      <entry position="2" fighterId="fighter-capitan-petchyindee" />
+      <entry position="3" fighterId="fighter-pornpitak-tor-jakkasi" />
+      <entry position="4" fighterId="fighter-sajad-sattari" />
+      <entry position="5" fighterId="fighter-nabil-anane" />
+      <entry position="6" fighterId="fighter-khunhanlek-kiatcharoenchai" />
+      <entry position="7" fighterId="fighter-yodiq-or-pimonsri" />
+      <entry position="8" fighterId="fighter-alessandro-sara" />
+      <entry position="9" fighterId="fighter-elias-naji" />
+      <entry position="10" fighterId="fighter-julio-lobo" />
+      <entry position="11" fighterId="fighter-paulo-d-antoni" />
+      <entry position="12" fighterId="fighter-dzmitry-varats" />
+      <entry position="13" fighterId="fighter-max-mcvicker" />
+      <entry position="14" fighterId="fighter-erik-hehir" />
+      <entry position="15" fighterId="fighter-arjan-hajdari" />
+      <entry position="16" fighterId="fighter-mo-abdurahman" />
+      <entry position="17" fighterId="fighter-lee-walton" />
+      <entry position="18" fighterId="fighter-daniel-zhou" />
+      <entry position="19" fighterId="fighter-louie-doherty" />
+      <entry position="20" fighterId="fighter-tayro-muru" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-super-lightweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="International Champion" fighterId="fighter-karl-ryan" />
+      <entry position="1" fighterId="fighter-worapon-lukjaoporongtom" />
+      <entry position="2" fighterId="fighter-kongsuk-sitsarawatsuea" />
+      <entry position="3" fighterId="fighter-petchwichai-dechdechdo" />
+      <entry position="4" fighterId="fighter-duangsompong-jitmaungnon" />
+      <entry position="5" fighterId="fighter-kimluay-wanhongohm" />
+      <entry position="6" fighterId="fighter-dam-parunchai" />
+      <entry position="7" fighterId="fighter-maemot-sor-salacheap" />
+      <entry position="8" fighterId="fighter-parahatnoi-sor-sommai" />
+      <entry position="9" fighterId="fighter-hamza-rachid" />
+      <entry position="10" fighterId="fighter-karl-ryan" />
+      <entry position="11" fighterId="fighter-tadhg-gannon" />
+      <entry position="12" fighterId="fighter-chadd-collins" />
+      <entry position="13" fighterId="fighter-majid-ahmadi" />
+      <entry position="14" fighterId="fighter-mohammad-dahlan" />
+      <entry position="15" fighterId="fighter-josh-king" />
+      <entry position="16" fighterId="fighter-craig-coakley" />
+      <entry position="17" fighterId="fighter-yota-shigemori" />
+      <entry position="18" fighterId="fighter-brooks-sowerby" />
+      <entry position="19" fighterId="fighter-sebastian-tello" />
+      <entry position="20" fighterId="fighter-federico-mazza" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-lightweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-shimon-eiwasports" />
+      <entry position="1" fighterId="fighter-samingdetch-bangmudklongton" />
+      <entry position="2" fighterId="fighter-decho-por-borirak" />
+      <entry position="3" fighterId="fighter-dedduanglek-tded99" />
+      <entry position="4" fighterId="fighter-jaradchai-maxjandee" />
+      <entry position="5" fighterId="fighter-petchchonlaton-gor-adisak" />
+      <entry position="6" fighterId="fighter-michael-savvas" />
+      <entry position="7" fighterId="fighter-somraknoi-muayded789" />
+      <entry position="8" fighterId="fighter-nongbiew-jitmuangnon" />
+      <entry position="9" fighterId="fighter-sangmanee-jitmangnon" />
+      <entry position="10" fighterId="fighter-buakaew-sorsor-pakorn" />
+      <entry position="11" fighterId="fighter-alfie-pearse" />
+      <entry position="12" fighterId="fighter-karl-tannion" />
+      <entry position="13" fighterId="fighter-craig-marshall" />
+      <entry position="14" fighterId="fighter-santiago-lalane" />
+      <entry position="15" fighterId="fighter-tagir-khalilov" />
+      <entry position="16" fighterId="fighter-jhonta-farias-silva" />
+      <entry position="17" fighterId="fighter-muga" />
+      <entry position="18" fighterId="fighter-renta-wor-wanchai" />
+      <entry position="19" fighterId="fighter-nico-antolinez" />
+      <entry position="20" fighterId="fighter-miki-ghazali" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-super-featherweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-chaila-por-lakboon" />
+      <entry position="1" fighterId="fighter-thongnoi-wor-sungprapai" />
+      <entry position="2" fighterId="fighter-chalam-parunchai" />
+      <entry position="3" fighterId="fighter-samingdaeng-sor-sonnatet" />
+      <entry position="4" fighterId="fighter-wukong-sitcharoensub" />
+      <entry position="5" fighterId="fighter-yodet-ptt-tongtawee" />
+      <entry position="6" fighterId="fighter-panpadetch-nf-luksuan" />
+      <entry position="7" fighterId="fighter-plaipayak-sor-sommai" />
+      <entry position="8" fighterId="fighter-ratchasai-golita-muaythai" />
+      <entry position="9" fighterId="fighter-failaeng-chor-haypayak" />
+      <entry position="10" fighterId="fighter-jalil-barnes" />
+      <entry position="11" fighterId="fighter-ubaid-hussain" />
+      <entry position="12" fighterId="fighter-stephen-irvine" />
+      <entry position="13" fighterId="fighter-wanchaloem-sitshoothon" />
+      <entry position="14" fighterId="fighter-noelisson-silva" />
+      <entry position="15" fighterId="fighter-maxi-caballero" />
+      <entry position="16" fighterId="fighter-james-kostic" />
+      <entry position="17" fighterId="fighter-darren-roland" />
+      <entry position="18" fighterId="fighter-mbaye-samb" />
+      <entry position="19" fighterId="fighter-jacob-thomson" />
+      <entry position="20" fighterId="fighter-dominic-reed" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-featherweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-antonio-orden" />
+      <entry position="International Champion" fighterId="fighter-adam-messaoud" />
+      <entry position="European Champion" fighterId="fighter-tam-mccourt" />
+      <entry position="1" fighterId="fighter-pornsanae-sor-phumpat" />
+      <entry position="2" fighterId="fighter-takuma-ota" />
+      <entry position="3" fighterId="fighter-kritpetch-pk-saenchai" />
+      <entry position="4" fighterId="fighter-chujai-sor-chomklin" />
+      <entry position="5" fighterId="fighter-chiebkad-por-phongsawang" />
+      <entry position="6" fighterId="fighter-petchsiam-jor-pattreya" />
+      <entry position="7" fighterId="fighter-khunsuknoi-boomdeksian" />
+      <entry position="8" fighterId="fighter-kaimookao-bestchauad" />
+      <entry position="9" fighterId="fighter-mangkonlek-pernnakorn" />
+      <entry position="10" fighterId="fighter-adam-messaoud" />
+      <entry position="11" fighterId="fighter-noelisson-silva" />
+      <entry position="12" fighterId="fighter-hikaru-furumura" />
+      <entry position="13" fighterId="fighter-pol-pascal" />
+      <entry position="14" fighterId="fighter-tam-mccourt" />
+      <entry position="15" fighterId="fighter-shanteng-lan" />
+      <entry position="16" fighterId="fighter-asahi-shinagawa" />
+      <entry position="17" fighterId="fighter-owen-gillis" />
+      <entry position="18" fighterId="fighter-mario-alvarez" />
+      <entry position="19" fighterId="fighter-kaito-fukuda" />
+      <entry position="20" fighterId="fighter-walid-snoussi" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-super-bantamweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-saoaek-or-atchariya" />
+      <entry position="International Champion" fighterId="fighter-alex-usieto" />
+      <entry position="1" fighterId="fighter-dokmaipa-topfairtex" />
+      <entry position="2" fighterId="fighter-teerapong-kraisirapob" />
+      <entry position="3" fighterId="fighter-petchthailand-or-kitkasem" />
+      <entry position="4" fighterId="fighter-petchsila-auracha" />
+      <entry position="5" fighterId="fighter-kongtoranee-santiubon" />
+      <entry position="6" fighterId="fighter-kohtao-golita-muaythai" />
+      <entry position="7" fighterId="fighter-petchsaman-sor-samangarment" />
+      <entry position="8" fighterId="fighter-atchai-kelasport" />
+      <entry position="9" fighterId="fighter-diontha-tobias" />
+      <entry position="10" fighterId="fighter-alex-usieto" />
+      <entry position="11" fighterId="fighter-issei-wor-wanchai" />
+      <entry position="12" fighterId="fighter-elmehdi-el-jamari" />
+      <entry position="13" fighterId="fighter-ryan-sheehan" />
+      <entry position="14" fighterId="fighter-che-bradley" />
+      <entry position="15" fighterId="fighter-thai-barlow" />
+      <entry position="16" fighterId="fighter-mikel-fernandez" />
+      <entry position="17" fighterId="fighter-ikko-ota" />
+      <entry position="18" fighterId="fighter-akram-ouchibi" />
+      <entry position="19" fighterId="fighter-mario-fernandez" />
+      <entry position="20" fighterId="fighter-ichi-saenchai-gym" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-bantamweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-gianny-de-leu" />
+      <entry position="European Champion" fighterId="fighter-imrane-iklil" />
+      <entry position="1" fighterId="fighter-pangtor-por-lakboon" />
+      <entry position="2" fighterId="fighter-puenyai-por-lakboon" />
+      <entry position="3" fighterId="fighter-petchneung-petchmuaythai" />
+      <entry position="4" fighterId="fighter-methee-sorsor-toipidrew" />
+      <entry position="5" fighterId="fighter-paeyim-sor-boonmerit" />
+      <entry position="6" fighterId="fighter-charoensuk-boonlannamuaythai" />
+      <entry position="7" fighterId="fighter-petaek-singklongluang" />
+      <entry position="8" fighterId="fighter-koko-mor-rattanabandit" />
+      <entry position="9" fighterId="fighter-fergus-smith" />
+      <entry position="10" fighterId="fighter-marc-campbell" />
+      <entry position="11" fighterId="fighter-sandro-bosi" />
+      <entry position="12" fighterId="fighter-peyman-zolfaghari" />
+      <entry position="13" fighterId="fighter-andrii-mezentsev" />
+      <entry position="14" fighterId="fighter-tyree-stevens" />
+      <entry position="15" fighterId="fighter-patrick-padovani-biliato" />
+      <entry position="16" fighterId="fighter-ryusei-matsuda" />
+      <entry position="17" fighterId="fighter-ayoub-elamghari" />
+      <entry position="18" fighterId="fighter-imad-salhi" />
+      <entry position="19" fighterId="fighter-takumi-hoshi" />
+      <entry position="20" fighterId="fighter-fung-tsz-yeung" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-super-flyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="1" fighterId="fighter-pech-suanluang-rodyok" />
+      <entry position="2" fighterId="fighter-petchtechin-bangsaenfightclub" />
+      <entry position="3" fighterId="fighter-talumpuk-sor-sasiwat" />
+      <entry position="4" fighterId="fighter-thapna-sor-prembut" />
+      <entry position="5" fighterId="fighter-davinci-luckymuaythai" />
+      <entry position="6" fighterId="fighter-petchanuwat-taikubon" />
+      <entry position="7" fighterId="fighter-petchdetch-petchyindee" />
+      <entry position="8" fighterId="fighter-hern-nf-looksuan" />
+      <entry position="9" fighterId="fighter-petchniphon-bor-rungrot" />
+      <entry position="10" fighterId="fighter-sontanong-tk-yuttana" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-flyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-ryuya-okuwaki" />
+      <entry position="1" fighterId="fighter-nittikorn-jp-power" />
+      <entry position="2" fighterId="fighter-singdam-kiatfufueng" />
+      <entry position="3" fighterId="fighter-kampanthong-chor-haypayak" />
+      <entry position="4" fighterId="fighter-mankonpetch-saimaun-snookerclub" />
+      <entry position="5" fighterId="fighter-yodpetchchake-boomdeksian" />
+      <entry position="6" fighterId="fighter-nuathoranee-jitmuangnon" />
+      <entry position="7" fighterId="fighter-detchphichai-navyandaman" />
+      <entry position="8" fighterId="fighter-petchbaanrai-singmawyn" />
+      <entry position="9" fighterId="fighter-pek-krapaolinky" />
+      <entry position="10" fighterId="fighter-suaphoom-teenoikachin" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-light-flyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="1" fighterId="fighter-wanpadetch-kaitkaonoi" />
+      <entry position="2" fighterId="fighter-chikara-petchyindee" />
+      <entry position="3" fighterId="fighter-domaifai-topfairygym" />
+      <entry position="4" fighterId="fighter-thapthai-sor-prembutd" />
+      <entry position="5" fighterId="fighter-plaitongkam-sitthailand" />
+      <entry position="6" fighterId="fighter-petchduet-golita-muaythai" />
+      <entry position="7" fighterId="fighter-petchsam-petchmuaythai" />
+      <entry position="8" fighterId="fighter-phanaek-pk-saenchai" />
+      <entry position="9" fighterId="fighter-payak-saksatul" />
+      <entry position="10" fighterId="fighter-duan99-tor-thanthai" />
+    </ranking>
+    <ranking organisationId="org-wbc" weightClassId="wbc-minimumweight" updatedAt="2026-06-06">
+      <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
+      <entry position="World Champion" fighterId="fighter-homura-abe" />
+      <entry position="1" fighterId="fighter-wanheng-kaitchutthai" />
+      <entry position="2" fighterId="fighter-yodpetchto-boomdeksian" />
+      <entry position="3" fighterId="fighter-petch25-tn-diamondhome" />
+      <entry position="4" fighterId="fighter-laostar-kiatthongyot" />
+      <entry position="5" fighterId="fighter-monpraram-sitpetchchalukan" />
+      <entry position="6" fighterId="fighter-petchmuangsing-tai-petchburi" />
+      <entry position="7" fighterId="fighter-yodmanee-suanjakcafe" />
+      <entry position="8" fighterId="fighter-singasurat-or-aodudon" />
+      <entry position="9" fighterId="fighter-jongangdam-singmawyn" />
+      <entry position="10" fighterId="fighter-petchkongfah-pk-saenchai-gym" />
+    </ranking>
+  </rankings>
+</mtRankings>
