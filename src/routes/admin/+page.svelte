@@ -52,7 +52,7 @@
 			</button>
 		</div>
 		<p class="workflow-note">
-			To update rankings: run <code>python scripts/scrape_wbc.py</code> locally, commit
+			To update rankings: run <code>python static/scripts/scrape_wbc.py</code> locally, commit
 			<code>static/data/wbc_rankings.xml</code>, then click <strong>Sync Rankings from XML</strong>
 			to push the changes to the database.
 		</p>

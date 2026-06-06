@@ -28,10 +28,14 @@ const verifyPassword = (password, storedPassword) => {
 };
 
 const normalizeEmail = (email) => email.trim().toLowerCase();
+const normalizeUsername = (username) => username.trim().toLowerCase();
 
 const toPublicUser = (user) => ({
 	id: user._id.toString(),
 	email: user.email,
+	username: user.username ?? '',
+	firstName: user.firstName ?? '',
+	lastName: user.lastName ?? '',
 	role: user.role ?? 'user'
 });
 
@@ -43,27 +47,36 @@ export const getSessionCookieOptions = () => ({
 	maxAge: 60 * 60 * 24 * 7
 });
 
-export const createUser = async ({ email, password }) => {
+export const createUser = async ({ email, password, username, firstName, lastName }) => {
 	const users = await getUsersCollection();
 	const normalizedEmail = normalizeEmail(email);
+	const normalizedUsername = normalizeUsername(username);
 
 	await users.createIndex({ email: 1 }, { unique: true });
+	await users.createIndex({ username: 1 }, { unique: true });
 
 	const result = await users.insertOne({
 		email: normalizedEmail,
+		username: normalizedUsername,
+		firstName: firstName?.trim() ?? '',
+		lastName: lastName?.trim() ?? '',
 		passwordHash: hashPassword(password),
 		createdAt: new Date()
 	});
 
 	return {
 		id: result.insertedId.toString(),
-		email: normalizedEmail
+		email: normalizedEmail,
+		username: normalizedUsername
 	};
 };
 
-export const verifyUser = async ({ email, password }) => {
+export const verifyUser = async ({ identifier, password }) => {
 	const users = await getUsersCollection();
-	const user = await users.findOne({ email: normalizeEmail(email) });
+	const normalized = identifier.trim().toLowerCase();
+	const user = await users.findOne({
+		$or: [{ email: normalized }, { username: normalized }]
+	});
 
 	if (!user || !verifyPassword(password, user.passwordHash)) {
 		return null;
@@ -72,9 +85,12 @@ export const verifyUser = async ({ email, password }) => {
 	return toPublicUser(user);
 };
 
-export const getLoginDebugInfo = async (email) => {
+export const getLoginDebugInfo = async (identifier) => {
 	const users = await getUsersCollection();
-	const user = await users.findOne({ email: normalizeEmail(email) });
+	const normalized = identifier.trim().toLowerCase();
+	const user = await users.findOne({
+		$or: [{ email: normalized }, { username: normalized }]
+	});
 	const passwordHash = user?.passwordHash;
 
 	return {
@@ -101,6 +117,9 @@ export const getAllUsers = async () => {
 	return all.map((u) => ({
 		id: u._id.toString(),
 		email: u.email,
+		username: u.username ?? '',
+		firstName: u.firstName ?? '',
+		lastName: u.lastName ?? '',
 		role: u.role ?? 'user',
 		createdAt: u.createdAt ?? null
 	}));

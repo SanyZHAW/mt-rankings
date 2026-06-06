@@ -14,8 +14,14 @@
 
 	<form method="POST" class="auth-form">
 		<label>
-			<span>Email</span>
-			<input type="email" name="email" value={form?.email ?? ''} autocomplete="email" required />
+			<span>Email or username</span>
+			<input
+				type="text"
+				name="identifier"
+				value={form?.identifier ?? ''}
+				autocomplete="username"
+				required
+			/>
 		</label>
 
 		<label>

@@ -16,13 +16,48 @@
 	{/if}
 
 	<form method="POST" class="auth-form">
+		<div class="name-row">
+			<label>
+				<span>First name <em>*</em></span>
+				<input
+					type="text"
+					name="firstName"
+					value={form?.firstName ?? ''}
+					autocomplete="given-name"
+					required
+				/>
+			</label>
+			<label>
+				<span>Last name</span>
+				<input
+					type="text"
+					name="lastName"
+					value={form?.lastName ?? ''}
+					autocomplete="family-name"
+				/>
+			</label>
+		</div>
+
 		<label>
-			<span>Email</span>
+			<span>Username <em>*</em></span>
+			<input
+				type="text"
+				name="username"
+				value={form?.username ?? ''}
+				autocomplete="username"
+				pattern={'[a-zA-Z0-9_]{3,20}'}
+				title="3–20 characters: letters, digits, or underscores"
+				required
+			/>
+		</label>
+
+		<label>
+			<span>Email <em>*</em></span>
 			<input type="email" name="email" value={form?.email ?? ''} autocomplete="email" required />
 		</label>
 
 		<label>
-			<span>Password</span>
+			<span>Password <em>*</em></span>
 			<input type="password" name="password" autocomplete="new-password" minlength="6" required />
 		</label>
 
@@ -46,6 +81,12 @@
 		padding: 1rem;
 	}
 
+	.name-row {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+	}
+
 	label {
 		display: grid;
 		gap: 0.4rem;
@@ -54,6 +95,11 @@
 	span {
 		color: #d6a33d;
 		font-weight: 700;
+	}
+
+	em {
+		color: #e05c5c;
+		font-style: normal;
 	}
 
 	input,
@@ -76,5 +122,11 @@
 		color: #111111;
 		cursor: pointer;
 		font-weight: 700;
+	}
+
+	@media (max-width: 480px) {
+		.name-row {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

@@ -10,28 +10,28 @@ import { getMongoDebugInfo } from '$lib/server/db.js';
 export const actions = {
 	default: async ({ request, cookies }) => {
 		const formData = await request.formData();
-		const email = String(formData.get('email') ?? '');
-		const password = String(formData.get('password') ?? '').trim();
+		const identifier = String(formData.get('identifier') ?? '').trim();
+		const password   = String(formData.get('password')   ?? '').trim();
 
-		if (!email.trim() || !password) {
+		if (!identifier || !password) {
 			return fail(400, {
-				email,
-				message: 'Email and password are required.'
+				identifier,
+				message: 'Email (or username) and password are required.'
 			});
 		}
 
 		try {
-			const user = await verifyUser({ email, password });
+			const user = await verifyUser({ identifier, password });
 
 			if (!user) {
 				console.info('Login rejected', {
-					login: await getLoginDebugInfo(email),
+					login: await getLoginDebugInfo(identifier),
 					mongoConfig: getMongoDebugInfo()
 				});
 
 				return fail(400, {
-					email,
-					message: 'Invalid email or password.'
+					identifier,
+					message: 'Invalid email, username, or password.'
 				});
 			}
 
@@ -44,7 +44,7 @@ export const actions = {
 				mongoConfig: getMongoDebugInfo()
 			});
 			return fail(500, {
-				email,
+				identifier,
 				message: 'Login failed. Check the MongoDB connection and try again.'
 			});
 		}
