@@ -57,6 +57,11 @@ export const getAnnouncementsCollection = async () => {
 	return db.collection('announcements');
 };
 
+export const getPoundForPoundCollection = async () => {
+	const db = await getDb();
+	return db.collection('pound_for_pound');
+};
+
 export const testDbConnection = async () => {
 	const db = await getDb();
 	await db.command({ ping: 1 });

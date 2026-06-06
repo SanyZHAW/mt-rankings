@@ -30,9 +30,70 @@
 	const tabs = [
 		{ id: 'fighters',     label: 'Fighters'     },
 		{ id: 'users',        label: 'Users'        },
+		{ id: 'p4p',          label: 'P4P Ranking'  },
 		{ id: 'sync',         label: 'Sync'         },
 		{ id: 'announcement', label: 'Announcement' }
 	];
+
+	// ── P4P editor state ──────────────────────────────────────────────────────
+	// Each row: { fighterId, note }
+	let p4pRows = $state(
+		Array.from({ length: 10 }, (_, i) => {
+			const existing = data.p4p?.entries?.[i];
+			return {
+				fighterId: existing?.fighterId ?? '',
+				note:      existing?.note      ?? ''
+			};
+		})
+	);
+
+	let fighterSearch = $state(
+		Array.from({ length: 10 }, (_, i) => {
+			const fid = data.p4p?.entries?.[i]?.fighterId ?? '';
+			return data.fighters.find((f) => f.id === fid)?.name ?? '';
+		})
+	);
+	let openDropdown  = $state(-1);  // which row has its dropdown open (-1 = none)
+
+	// Build a flat fighter list for the dropdown — include flag + org info
+	const allFighters = $derived(() => {
+		return data.fighters.map((f) => {
+			const nat = f.nationalities?.[0] ?? f.country ?? '';
+			return {
+				id: f.id,
+				name: f.name,
+				nat,
+				orgs: f.rankings.map((r) => r.org ?? r.orgId).filter(Boolean)
+			};
+		});
+	});
+
+	function filteredFighters(rowIdx) {
+		const q = fighterSearch[rowIdx]?.toLowerCase().trim() ?? '';
+		const currentId = p4pRows[rowIdx].fighterId;
+		// IDs already picked in all other slots — exclude them from this dropdown
+		const usedElsewhere = new Set(
+			p4pRows.filter((_, i) => i !== rowIdx).map((r) => r.fighterId).filter(Boolean)
+		);
+		const list = allFighters().filter((f) => !usedElsewhere.has(f.id) || f.id === currentId);
+		if (!q) return list;
+		return list.filter((f) =>
+			f.name.toLowerCase().includes(q) ||
+			f.nat.toLowerCase().includes(q)
+		);
+	}
+
+	function selectFighter(rowIdx, fighter) {
+		p4pRows[rowIdx].fighterId = fighter.id;
+		fighterSearch[rowIdx] = fighter.name;
+		openDropdown = -1;
+	}
+
+	function clearRow(rowIdx) {
+		p4pRows[rowIdx].fighterId = '';
+		fighterSearch[rowIdx] = '';
+	}
+
 </script>
 
 <section class="admin-page">
@@ -111,6 +172,106 @@
 				{/each}
 			</div>
 		{/if}
+
+	<!-- ── P4P Ranking tab ──────────────────────────────────────────────────── -->
+	{:else if activeTab === 'p4p'}
+		{#if form?.action === 'p4p'}
+			{#if form.success}
+				<StatusMessage type="success" message="P4P Ranking saved." />
+			{:else}
+				<StatusMessage type="error" message={form.message ?? 'Save failed.'} />
+			{/if}
+		{/if}
+
+		<div class="panel">
+			<div class="panel-header">
+				<span class="panel-title">P4P World Ranking</span>
+				{#if data.p4p?.updatedAt}
+					<span class="p4p-updated">
+						Last saved by <strong>{data.p4p.updatedBy}</strong>
+						on {new Date(data.p4p.updatedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+					</span>
+				{/if}
+			</div>
+			<p class="workflow-note">Up to 10 fighters. Select from existing fighter records. Leave rows empty to omit them from the published ranking.</p>
+
+			<form method="POST" action="?/saveP4P" class="p4p-form">
+				{#each p4pRows as row, i}
+					<div class="p4p-editor-row">
+						<span class="p4p-num">{i + 1}</span>
+
+						<!-- Fighter picker -->
+						<div class="p4p-picker">
+							<div class="picker-wrap">
+								<input
+									class="picker-input"
+									type="text"
+									placeholder="Search fighter…"
+									bind:value={fighterSearch[i]}
+									onfocus={() => { openDropdown = i; }}
+									oninput={() => { openDropdown = i; }}
+									onfocusout={(e) => {
+										if (!e.currentTarget.closest('.picker-wrap')?.contains(e.relatedTarget)) {
+											openDropdown = -1;
+										}
+									}}
+									autocomplete="off"
+								/>
+								{#if row.fighterId}
+									<button
+										type="button"
+										class="picker-clear"
+										tabindex="-1"
+										onmousedown={(e) => { e.preventDefault(); clearRow(i); }}
+										aria-label="Clear"
+									>×</button>
+								{/if}
+							</div>
+							{#if openDropdown === i}
+								<ul class="picker-list">
+									{#each filteredFighters(i) as f (f.id)}
+										<li>
+											<button
+												type="button"
+												class="picker-option"
+												class:is-selected={row.fighterId === f.id}
+												onmousedown={(e) => { e.preventDefault(); selectFighter(i, f); }}
+											>
+												<span class="picker-name">{f.name}</span>
+												{#if f.orgs.length}
+													<span class="picker-org">{f.orgs.join(' · ')}</span>
+												{/if}
+												{#if f.nat}<span class="picker-nat">{f.nat}</span>{/if}
+											</button>
+										</li>
+									{/each}
+									{#if filteredFighters(i).length === 0}
+										<li class="picker-empty">No fighters found</li>
+									{/if}
+								</ul>
+							{/if}
+						</div>
+
+						<!-- Hidden fighter id field -->
+						<input type="hidden" name="fighter_{i + 1}" value={row.fighterId} />
+
+						<!-- Note field -->
+						<input
+							class="p4p-note-input"
+							type="text"
+							name="note_{i + 1}"
+							placeholder="Note (optional)"
+							bind:value={row.note}
+							maxlength="120"
+						/>
+					</div>
+				{/each}
+
+				<div class="p4p-save-row">
+					<button type="submit" class="btn-save">Save P4P Ranking</button>
+				</div>
+			</form>
+		</div>
 
 	<!-- ── Sync tab ──────────────────────────────────────────────────────────── -->
 	{:else if activeTab === 'sync'}
@@ -402,5 +563,132 @@
 	.ann-textarea:focus {
 		border-color: #d6a33d;
 		outline: none;
+	}
+
+	/* ── P4P editor ── */
+	.p4p-updated {
+		color: #7a7062;
+		font-size: 0.8rem;
+	}
+
+	.p4p-updated strong { color: #bdb4a1; }
+
+	.p4p-form {
+		display: grid;
+		gap: 0.5rem;
+	}
+
+	.p4p-editor-row {
+		align-items: center;
+		display: grid;
+		gap: 0.6rem;
+		grid-template-columns: 2rem 1fr 1fr;
+	}
+
+	.p4p-num {
+		color: #d6a33d;
+		font-size: 1rem;
+		font-weight: 700;
+		text-align: right;
+	}
+
+	/* Fighter picker */
+	.p4p-picker {
+		position: relative;
+	}
+
+	.picker-wrap {
+		align-items: center;
+		display: flex;
+		position: relative;
+	}
+
+	.picker-input {
+		flex: 1;
+		padding-right: 1.8rem !important;
+	}
+
+	.picker-clear {
+		background: transparent;
+		border: none;
+		color: #7a7062;
+		cursor: pointer;
+		font: inherit;
+		font-size: 1rem;
+		line-height: 1;
+		min-height: unset;
+		padding: 0 0.25rem;
+		position: absolute;
+		right: 0.3rem;
+	}
+
+	.picker-clear:hover { color: #f4efe4; }
+
+	.picker-list {
+		background: #111111;
+		border: 1px solid #3a321f;
+		border-radius: 5px;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+		left: 0;
+		list-style: none;
+		margin: 0;
+		max-height: 250px;
+		overflow-y: auto;
+		padding: 0.2rem 0;
+		position: absolute;
+		top: calc(100% + 2px);
+		width: 100%;
+		z-index: 200;
+	}
+
+	.picker-option {
+		align-items: baseline;
+		background: transparent;
+		border: none;
+		border-radius: 0;
+		color: #f4efe4;
+		cursor: pointer;
+		display: flex;
+		flex-wrap: wrap;
+		font: inherit;
+		font-size: 0.85rem;
+		gap: 0.4rem;
+		min-height: unset;
+		padding: 0.35rem 0.75rem;
+		text-align: left;
+		width: 100%;
+	}
+
+	.picker-option:hover,
+	.picker-option.is-selected { background: #1e1c14; }
+	.picker-option.is-selected { color: #d6a33d; }
+
+	.picker-name { font-weight: 600; }
+
+	.picker-org {
+		color: #7a7062;
+		font-size: 0.75rem;
+	}
+
+	.picker-nat {
+		color: #a09070;
+		font-size: 0.75rem;
+		margin-left: auto;
+	}
+
+	.picker-empty {
+		color: #7a7062;
+		font-size: 0.82rem;
+		padding: 0.5rem 0.75rem;
+	}
+
+	.p4p-note-input {
+		font-size: 0.85rem !important;
+	}
+
+	.p4p-save-row {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 0.5rem;
 	}
 </style>

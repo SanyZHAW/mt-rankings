@@ -2,18 +2,21 @@ import { fail } from '@sveltejs/kit';
 import { getAllUsers, updateUser, deleteUser } from '$lib/server/auth.js';
 import { getFightersCollection, getOrganisationsCollection } from '$lib/server/db.js';
 import { getCurrentAnnouncement, upsertAnnouncement } from '$lib/server/announcements.js';
+import { getP4P, upsertP4P } from '$lib/server/p4p.js';
 
 export const load = async () => {
-	const [users, fighterDocs, orgDocs, announcement] = await Promise.all([
+	const [users, fighterDocs, orgDocs, announcement, p4p] = await Promise.all([
 		getAllUsers(),
 		getFightersCollection().then((col) => col.find({}).sort({ name: 1 }).toArray()),
 		getOrganisationsCollection().then((col) => col.find({}).toArray()),
-		getCurrentAnnouncement()
+		getCurrentAnnouncement(),
+		getP4P()
 	]);
 
 	return {
 		users,
 		announcement,
+		p4p,
 		fighters: fighterDocs.map((f) => ({
 			id: f._id,
 			name: f.name,
@@ -116,5 +119,21 @@ export const actions = {
 		const updatedBy = locals.user?.username || locals.user?.email || 'admin';
 		await upsertAnnouncement({ text, updatedBy });
 		return { action: 'announcement', success: true };
+	},
+
+	// ── P4P Ranking action ─────────────────────────────────────────────────────
+
+	saveP4P: async ({ locals, request }) => {
+		const data = await request.formData();
+		const entries = [];
+		for (let i = 1; i <= 10; i++) {
+			const fighterId = data.get(`fighter_${i}`)?.toString().trim() ?? '';
+			const note      = data.get(`note_${i}`)?.toString().trim() ?? '';
+			entries.push({ position: i, fighterId, note });
+		}
+
+		const updatedBy = locals.user?.username || locals.user?.email || 'admin';
+		await upsertP4P({ entries, updatedBy });
+		return { action: 'p4p', success: true };
 	}
 };

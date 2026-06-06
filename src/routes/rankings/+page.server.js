@@ -4,11 +4,30 @@ import {
 	getRankingData,
 	getWeightClassesByOrganisation
 } from '$lib/server/rankingsXml.js';
+import { getP4P } from '$lib/server/p4p.js';
 
 export const load = async ({ url }) => {
+	const tab = url.searchParams.get('tab') ?? '';
 	const selectedOrganisationId = url.searchParams.get('organisation') ?? '';
 	const selectedWeightClassId = url.searchParams.get('weightClass') ?? '';
+
 	const organisations = await getOrganisations();
+
+	// P4P tab — skip org/weight-class loading
+	if (tab === 'p4p') {
+		const p4p = await getP4P();
+		return {
+			tab: 'p4p',
+			p4p,
+			organisations,
+			weightClasses: [],
+			rankings: [],
+			selectedOrganisationId: '',
+			selectedWeightClassId: '',
+			validationErrors: []
+		};
+	}
+
 	const weightClasses = selectedOrganisationId
 		? await getWeightClassesByOrganisation(selectedOrganisationId)
 		: [];
@@ -18,7 +37,9 @@ export const load = async ({ url }) => {
 			: [];
 	const rankingData = await getRankingData();
 
-	const result = {
+	return {
+		tab: '',
+		p4p: null,
 		organisations,
 		weightClasses,
 		rankings,
@@ -26,13 +47,4 @@ export const load = async ({ url }) => {
 		selectedWeightClassId,
 		validationErrors: rankingData.errors
 	};
-	console.log('[rankings/load]', {
-		orgCount: organisations.length,
-		orgs: organisations.map((o) => ({ id: o.id, name: o.name, wcCount: o.weightClasses?.length })),
-		wcCount: weightClasses.length,
-		rankingsCount: rankings.length,
-		selectedOrganisationId,
-		selectedWeightClassId
-	});
-	return result;
 };
