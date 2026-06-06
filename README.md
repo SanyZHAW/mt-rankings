@@ -277,7 +277,7 @@
 
   | Rolle | Benutzername / E-Mail | Passwort |
   |---|---|---|
-  | Admin | admin@gmail.com | Admin123 |
+  | Admin | admin@gmail.com | Admin123; |
   | Normaler User | Sany22 *(Login per Username)* | Testtt |
 
 - **Ziele der Prüfung:**  
@@ -501,9 +501,7 @@ Alle KI-generierten Codeänderungen wurden vor dem Commit mit `vite build` (auf 
 
 ### Video-Walkthrough
 
-→ [Video folgt]
-
-*(Geplanter Inhalt: Screencast des Hauptworkflows – Startseite → Rankings → Fighter-Detailseite → Favorit speichern → Favoritenliste – sowie Demo des Admin-Panels mit P4P-Ranking-Pflege und Scraper-Trigger)*
+Video im Anhang
 
 ### Bildquellen
 
