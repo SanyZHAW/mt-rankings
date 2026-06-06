@@ -38,9 +38,16 @@ export const getWeightClassesByOrganisation = async (organisationId) => {
 
 export const getFighterById = async (fighterId) => {
 	const col = await getFightersCollection();
-	const doc = await col.findOne({ _id: fighterId });
+	// Search by canonical _id first, then by any known alias
+	const doc = await col.findOne({ $or: [{ _id: fighterId }, { aliases: fighterId }] });
 	if (!doc) return null;
-	return { id: doc._id, name: doc.name, country: doc.country };
+	return {
+		id: doc._id,
+		name: doc.name,
+		country: doc.country,
+		nationalities: doc.nationalities ?? [],
+		rankings: doc.rankings ?? []
+	};
 };
 
 export const getRankingsByOrganisationAndWeightClass = async (organisationId, weightClassId) => {
@@ -54,10 +61,21 @@ export const getRankingsByOrganisationAndWeightClass = async (organisationId, we
 
 	const fighterIds = [...new Set(docs.flatMap((d) => d.entries.map((e) => e.fighterId)))];
 	const fightersCol = await getFightersCollection();
-	const fighterDocs = await fightersCol.find({ _id: { $in: fighterIds } }).toArray();
-	const fightersById = new Map(
-		fighterDocs.map((f) => [f._id, { id: f._id, name: f.name, country: f.country }])
-	);
+
+	// Also match documents where one of the fighter IDs is stored as an alias
+	const fighterDocs = await fightersCol
+		.find({ $or: [{ _id: { $in: fighterIds } }, { aliases: { $in: fighterIds } }] })
+		.toArray();
+
+	// Build lookup that covers both canonical _id and all aliases
+	const fightersById = new Map();
+	for (const f of fighterDocs) {
+		const fighter = { id: f._id, name: f.name, country: f.country };
+		fightersById.set(f._id, fighter);
+		for (const alias of f.aliases ?? []) {
+			fightersById.set(alias, fighter);
+		}
+	}
 
 	return docs.map((doc) => ({
 		organisationId: doc.organisationId,
@@ -66,7 +84,9 @@ export const getRankingsByOrganisationAndWeightClass = async (organisationId, we
 		updatedAt: doc.updatedAt,
 		organisation: orgsById.get(doc.organisationId) ?? null,
 		weightClass: weightClassesById.get(doc.weightClassId) ?? null,
-		entries: doc.entries.map((e) => ({ ...e, fighter: fightersById.get(e.fighterId) ?? null }))
+		entries: doc.entries
+			.map((e) => ({ ...e, fighter: fightersById.get(e.fighterId) ?? null }))
+			.filter((e) => e.fighter !== null)
 	}));
 };
 
@@ -75,12 +95,24 @@ export const getRankingEntriesByFighterId = async (fighterId) => {
 	const orgsById = new Map(orgs.map((o) => [o.id, o]));
 	const weightClassesById = new Map(orgs.flatMap((o) => o.weightClasses.map((wc) => [wc.id, wc])));
 
+	const fightersCol = await getFightersCollection();
+	const fighterDoc = await fightersCol.findOne({
+		$or: [{ _id: fighterId }, { aliases: fighterId }]
+	});
+
+	// Collect all IDs this fighter is known under (own _id + all aliases)
+	const allIds = fighterDoc
+		? [fighterDoc._id, ...(fighterDoc.aliases ?? [])]
+		: [fighterId];
+
 	const rankingsCol = await getRankingsCollection();
-	const docs = await rankingsCol.find({ 'entries.fighterId': fighterId }).toArray();
+	const docs = await rankingsCol
+		.find({ 'entries.fighterId': { $in: allIds } })
+		.toArray();
 
 	return docs.flatMap((doc) =>
 		doc.entries
-			.filter((e) => e.fighterId === fighterId)
+			.filter((e) => allIds.includes(e.fighterId))
 			.map((e) => ({
 				...e,
 				organisation: orgsById.get(doc.organisationId) ?? null,
