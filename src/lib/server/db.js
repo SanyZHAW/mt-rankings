@@ -4,18 +4,6 @@ import { MongoClient } from 'mongodb';
 let client;
 let clientPromise;
 
-const getMongoHostname = () => {
-	if (!DB_URI || DB_URI === 'your-real-mongodb-uri-here') {
-		return '';
-	}
-
-	try {
-		return new URL(DB_URI).hostname;
-	} catch {
-		return 'invalid-uri';
-	}
-};
-
 export const getMongoDebugInfo = () => ({
 	dbUriExists: Boolean(DB_URI && DB_URI !== 'your-real-mongodb-uri-here'),
 	dbName: DB_NAME || 'mt-rankings'
@@ -47,6 +35,16 @@ export const getUsersCollection = async () => {
 export const getFavoritesCollection = async () => {
 	const db = await getDb();
 	return db.collection('favorites');
+};
+
+export const getFightersCollection = async () => {
+	const db = await getDb();
+	return db.collection('fighters');
+};
+
+export const getRankingsCollection = async () => {
+	const db = await getDb();
+	return db.collection('rankings');
 };
 
 export const testDbConnection = async () => {

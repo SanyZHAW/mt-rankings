@@ -31,7 +31,8 @@ const normalizeEmail = (email) => email.trim().toLowerCase();
 
 const toPublicUser = (user) => ({
 	id: user._id.toString(),
-	email: user.email
+	email: user.email,
+	role: user.role ?? 'user'
 });
 
 export const getSessionCookieOptions = () => ({
@@ -92,4 +93,34 @@ export const getUserById = async (userId) => {
 	const user = await users.findOne({ _id: new ObjectId(userId) });
 
 	return user ? toPublicUser(user) : null;
+};
+
+export const getAllUsers = async () => {
+	const users = await getUsersCollection();
+	const all = await users.find({}, { projection: { passwordHash: 0 } }).sort({ createdAt: 1 }).toArray();
+	return all.map((u) => ({
+		id: u._id.toString(),
+		email: u.email,
+		role: u.role ?? 'user',
+		createdAt: u.createdAt ?? null
+	}));
+};
+
+export const updateUser = async (userId, { email, role }) => {
+	if (!ObjectId.isValid(userId)) return null;
+	const users = await getUsersCollection();
+	const $set = {};
+	if (email !== undefined) $set.email = normalizeEmail(email);
+	if (role !== undefined) $set.role = role;
+	if (Object.keys($set).length === 0) return null;
+	await users.updateOne({ _id: new ObjectId(userId) }, { $set });
+	const updated = await users.findOne({ _id: new ObjectId(userId) });
+	return updated ? toPublicUser(updated) : null;
+};
+
+export const deleteUser = async (userId) => {
+	if (!ObjectId.isValid(userId)) return false;
+	const users = await getUsersCollection();
+	const result = await users.deleteOne({ _id: new ObjectId(userId) });
+	return result.deletedCount === 1;
 };

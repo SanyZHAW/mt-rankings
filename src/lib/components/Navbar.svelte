@@ -11,7 +11,6 @@
 		{ href: '/register', label: 'Register' }
 	];
 
-	const isLoggedIn = $derived(Boolean(user));
 </script>
 
 <nav class="navbar" aria-label="Main navigation">
@@ -22,8 +21,12 @@
 			<a href={link.href}>{link.label}</a>
 		{/each}
 
-		{#if isLoggedIn}
+		{#if user}
 			<a href="/favorites">Favorites</a>
+			{#if user.role === 'admin'}
+				<a href="/admin">Admin</a>
+				<a href="/admin/fighters">Fighters</a>
+			{/if}
 			<span class="user-email">{user.email}</span>
 			<form method="POST" action="/logout">
 				<button type="submit">Logout</button>
