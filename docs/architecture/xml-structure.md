@@ -1,102 +1,119 @@
-# MT Rankings - XML Data Structure
+# MT Rankings – XML-Datenstruktur und MongoDB-Schema
 
-## XML Data Model
+## Überblick
 
-The MT Rankings prototype uses a manually maintainable XML file for fighter and ranking data. The structure separates stable fighter master data from ranking entries, so the same fighter can appear in multiple rankings without duplicating personal details.
+MT Rankings verwendet XML-Dateien als Quelldatenformat für Fighter- und Ranking-Daten. Die Daten werden per Sync-Prozess in MongoDB übertragen, wo sie für die Webanwendung effizient abgefragt werden können.
 
-The XML model supports:
+**Zwei separate XML-Dateien:**
+- `static/data/wbc_rankings.xml` – WBC Muay Thai (IDs mit Präfix `fighter-`)
+- `static/data/rws_rankings.xml` – Rajadamnern World Series (IDs mit Präfix `rws-`)
 
-- organisations
-- organisation-specific weight classes
-- fighters
-- ranking entries
+Beide Dateien haben identische XML-Struktur. Der Sync-Prozess erkennt automatisch, welche Organisation die Daten liefert, und führt Fighter die in beiden Organisationen auftreten zu einem einzigen MongoDB-Dokument zusammen (Dedup-Logik, siehe unten).
 
-This structure is simple enough to edit manually during the prototype phase, but still structured enough to support automatic extraction from external ranking websites later.
+---
 
-Later sample data should be based on these sources:
+## XML-Datenmodell
 
-- RWS rankings: `https://rank.rajadamnern.com/rankings`
-- WBC Muay Thai male rankings: `https://www.wbcmuaythai.com/male`
+Das Wurzelelement ist `<mtRankings>`.
 
-## Main XML Sections
+Die drei Hauptabschnitte:
 
-The root element is `<mtRankings>`.
+- `<organisations>` – Ranking-Organisationen mit ihren Gewichtsklassen
+- `<fighters>` – Fighter-Stammdaten
+- `<rankings>` – Ranking-Listen, gruppiert nach Organisation und Gewichtsklasse
 
-Recommended main sections:
+---
 
-- `<organisations>` contains all ranking organisations and their own weight classes.
-- `<fighters>` contains fighter master data.
-- `<rankings>` contains ranking lists grouped by organisation and weight class.
+## Pflichtfelder und Struktur
 
-## Required Fields
+### Organisation (`<organisation>`)
 
-### Organisation
+| Attribut / Element | Typ | Pflicht | Beschreibung |
+|---|---|:---:|---|
+| `id` (Attribut) | String | ✅ | Eindeutige Organisations-ID, z. B. `org-wbc`, `org-rws` |
+| `<name>` | String | ✅ | Anzeigename, z. B. `WBC Muay Thai`, `Rajadamnern World Series` |
+| `<website>` | URL | — | Offizielle Website der Organisation |
+| `<weightClasses>` | Element | ✅ | Container für alle Gewichtsklassen dieser Organisation |
 
-Each organisation needs:
+### Gewichtsklasse (`<weightClass>`)
 
-- `id`: unique organisation ID
-- `name`: organisation name
-- `website`: optional source or official website URL
-- `weightClasses`: weight classes that belong to this organisation
+| Attribut / Element | Typ | Pflicht | Beschreibung |
+|---|---|:---:|---|
+| `id` (Attribut) | String | ✅ | Eindeutige Gewichtsklassen-ID, z. B. `wbc-middleweight`, `rws-flyweight` |
+| `<name>` | String | ✅ | Anzeigename, z. B. `Middleweight`, `Super Welterweight` |
+| `<limit unit="lb">` | Zahl | — | Gewichtslimit in Pound; WBC verwendet Doppellimits (lb + kg) |
+| `<limit unit="kg">` | Zahl | — | Gewichtslimit in Kilogramm |
 
-### Weight Class
+**Hinweis:** RWS-Gewichtsklassen haben keine `<limit>`-Elemente. WBC-Gewichtsklassen haben je zwei `<limit>`-Elemente (lb und kg). Beide Formate werden vom Parser unterstützt.
 
-Each weight class belongs to exactly one organisation and needs:
+### Fighter (`<fighter>`)
 
-- `id`: unique weight class ID
-- `name`: display name
-- `limit`: optional weight limit
-- `unit`: optional weight unit, for example `kg` or `lb`
+| Attribut / Element | Typ | Pflicht | Beschreibung |
+|---|---|:---:|---|
+| `id` (Attribut) | String | ✅ | Eindeutige Fighter-ID; WBC: `fighter-name`, RWS: `rws-name` |
+| `<name>` | String | ✅ | Anzeigename des Kämpfers |
+| `<country>` | String | — | Nationalität als Klartextname (legacy), z. B. `Thailand`, `Russia` |
+| `<nationalities>` | Element | — | Neueres Format: Container für mehrere `<nationality>`-Tags |
+| `<nationality>` | String | — | Innerhalb von `<nationalities>`: ISO-3166-1-Code, z. B. `TH`, `FR` |
+| `<age>` | Zahl | — | Alter des Kämpfers; leer wenn unbekannt |
+| `<record>` | String | — | Kampfrekord im Format `W-L-D`, z. B. `48-4-0` |
 
-### Fighter
+**Nationalitäten – zwei unterstützte Formate:**
 
-Each fighter needs:
+**Format 1 (aktuell in XML-Dateien):** Einfaches `<country>`-Feld mit Klartextname:
+```xml
+<fighter id="rws-petchmorakot-bangmadklongtan">
+  <name>Petchmorakot Bangmadklongtan</name>
+  <country>Thailand</country>
+  <age>23</age>
+  <record>48-4-0</record>
+</fighter>
+```
 
-- `id`: unique fighter ID used by ranking entries
-- `name`: fighter display name
-- `country`: optional country
-- `age`: optional age
-- `record`: optional fight record
+**Format 2 (Parser-unterstützt, für manuelle Bearbeitung):** Mehrere Nationalitäten via `<nationalities>`:
+```xml
+<fighter id="fighter-example">
+  <name>Example Fighter</name>
+  <nationalities>
+    <nationality>TH</nationality>
+    <nationality>FR</nationality>
+  </nationalities>
+  <age>28</age>
+  <record>30-5-1</record>
+</fighter>
+```
 
-The `country`, `age`, and `record` fields may be empty if the source does not provide the value.
+**Fallback-Logik im Parser (`src/lib/server/xmlParser.js`):**
+- `<nationalities>` vorhanden und nicht leer → `nationalities`-Array aus `<nationality>`-Tags
+- `<nationalities>` vorhanden aber leer → Fallback auf `<country>` als `[country]`
+- Nur `<country>` vorhanden → `nationalities: [country]`
+- Beides fehlt → `nationalities: []`
 
-### Ranking Entry
+### Ranking-Eintrag
 
-Each ranking entry needs:
+**Ranking-Liste (`<ranking>`):**
 
-- `position`: ranking position
-- `fighterId`: reference to a fighter from `<fighters>`
+| Attribut | Typ | Pflicht | Beschreibung |
+|---|---|:---:|---|
+| `organisationId` | String | ✅ | Referenz auf `<organisation id>` |
+| `weightClassId` | String | ✅ | Referenz auf `<weightClass id>` |
+| `updatedAt` | Datum | — | Datum der letzten Aktualisierung, z. B. `2025-12-01` |
 
-Each ranking list also needs:
+**Einzel-Eintrag (`<entry />`):**
 
-- `organisationId`: reference to an organisation
-- `weightClassId`: reference to a weight class
-- `sourceUrl`: optional URL for the external ranking source
-- `updatedAt`: optional date when the ranking was last checked or updated
+| Attribut | Typ | Pflicht | Beschreibung |
+|---|---|:---:|---|
+| `position` | String | ✅ | Ranking-Position; numerisch (`1`–`15`) oder `World Champion` |
+| `fighterId` | String | ✅ | Referenz auf `<fighter id>` |
 
-## Example XML Snippet
+---
 
-This is a simplified structure example. It shows the intended XML shape and references between sections. The actual real sample XML data will be created in Issue #3 and should be checked against the source websites.
+## Vollständiges XML-Beispiel (vereinfacht)
 
 ```xml
+<?xml version='1.0' encoding='utf-8'?>
 <mtRankings>
   <organisations>
-    <organisation id="org-rws">
-      <name>RWS</name>
-      <website>https://rank.rajadamnern.com/rankings</website>
-      <weightClasses>
-        <weightClass id="rws-middleweight">
-          <name>Middleweight</name>
-        </weightClass>
-        <weightClass id="rws-class-2">
-          <name>RWS Example Weight Class 2</name>
-        </weightClass>
-        <weightClass id="rws-class-3">
-          <name>RWS Example Weight Class 3</name>
-        </weightClass>
-      </weightClasses>
-    </organisation>
-
     <organisation id="org-wbc">
       <name>WBC Muay Thai</name>
       <website>https://www.wbcmuaythai.com/male</website>
@@ -104,14 +121,12 @@ This is a simplified structure example. It shows the intended XML shape and refe
         <weightClass id="wbc-middleweight">
           <name>Middleweight</name>
           <limit unit="lb">160</limit>
-        </weightClass>
-        <weightClass id="wbc-super-welterweight">
-          <name>Super Welterweight</name>
-          <limit unit="lb">154</limit>
+          <limit unit="kg">72.575</limit>
         </weightClass>
         <weightClass id="wbc-welterweight">
           <name>Welterweight</name>
           <limit unit="lb">147</limit>
+          <limit unit="kg">66.678</limit>
         </weightClass>
       </weightClasses>
     </organisation>
@@ -121,44 +136,258 @@ This is a simplified structure example. It shows the intended XML shape and refe
     <fighter id="fighter-example-a">
       <name>Example Fighter A</name>
       <country>Thailand</country>
-      <age></age>
-      <record>20-3-0</record>
+      <age>27</age>
+      <record>45-5-2</record>
     </fighter>
     <fighter id="fighter-example-b">
       <name>Example Fighter B</name>
       <country>France</country>
-      <age></age>
-      <record>18-4-1</record>
+      <age>30</age>
+      <record>32-8-1</record>
     </fighter>
   </fighters>
 
   <rankings>
-    <ranking organisationId="org-rws" weightClassId="rws-middleweight" updatedAt="2026-05-01">
-      <sourceUrl>https://rank.rajadamnern.com/rankings</sourceUrl>
-      <entry position="1" fighterId="fighter-example-a" />
-      <entry position="2" fighterId="fighter-example-b" />
-    </ranking>
-
-    <ranking organisationId="org-wbc" weightClassId="wbc-super-welterweight" updatedAt="2026-05-01">
+    <ranking organisationId="org-wbc" weightClassId="wbc-middleweight" updatedAt="2025-12-01">
       <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
-      <entry position="3" fighterId="fighter-example-a" />
+      <entry position="World Champion" fighterId="fighter-example-a" />
+      <entry position="1" fighterId="fighter-example-b" />
     </ranking>
   </rankings>
 </mtRankings>
 ```
 
-## Why Fighter Data and Ranking Entries Are Separated
+---
 
-Fighter master data is separated from ranking entries to avoid duplicate fighter information. A fighter has one master record in `<fighters>`, and rankings only reference that fighter by ID.
+## Gewichtsklassen der aktuellen Organisationen
 
-This is important because one fighter can appear:
+### WBC Muay Thai (`org-wbc`) – 17 Gewichtsklassen
 
-- in multiple organisations
-- in the same or different weight classes depending on the organisation
-- in multiple ranking lists over time
+| ID | Name | Limit (lb) | Limit (kg) |
+|---|---|---:|---:|
+| `wbc-heavyweight` | Heavyweight | 200 | 91.0 |
+| `wbc-cruiserweight` | Cruiserweight | 200 | 90.719 |
+| `wbc-lt-heavyweight` | Lt. Heavyweight | 175 | 79.379 |
+| `wbc-super-middleweight` | Super Middleweight | 168 | 76.204 |
+| `wbc-middleweight` | Middleweight | 160 | 72.575 |
+| `wbc-super-welterweight` | Super Welterweight | 154 | 69.853 |
+| `wbc-welterweight` | Welterweight | 147 | 66.678 |
+| `wbc-super-lightweight` | Super Lightweight | 140 | 63.503 |
+| `wbc-lightweight` | Lightweight | 135 | 61.235 |
+| `wbc-super-featherweight` | Super Featherweight | 130 | 58.967 |
+| `wbc-featherweight` | Featherweight | 126 | 57.153 |
+| `wbc-super-bantamweight` | Super Bantamweight | 122 | 55.338 |
+| `wbc-bantamweight` | Bantamweight | 118 | 53.524 |
+| `wbc-super-flyweight` | Super Flyweight | 115 | 52.163 |
+| `wbc-flyweight` | Flyweight | 112 | – |
+| *(weitere)* | *(siehe XML-Datei)* | | |
 
-With this structure, updating a fighter's name, country, age, or record only needs to happen once. Ranking entries remain focused on ranking-specific data such as organisation, weight class, position, source URL, and update date.
+### Rajadamnern World Series (`org-rws`) – 16 Gewichtsklassen
 
-The separation also makes future automated extraction easier. External ranking pages can be parsed into ranking entries, while fighter matching and fighter master data can be handled separately.
+| ID | Name | Limit |
+|---|---|---|
+| `rws-middleweight` | Middleweight | — |
+| `rws-super-welterweight` | Super Welterweight | — |
+| `rws-welterweight` | Welterweight | — |
+| `rws-super-lightweight` | Super Lightweight | — |
+| `rws-lightweight` | Lightweight | — |
+| `rws-super-featherweight` | Super Featherweight | — |
+| `rws-featherweight` | Featherweight | — |
+| `rws-super-bantamweight` | Super Bantamweight | — |
+| `rws-bantamweight` | Bantamweight | — |
+| `rws-super-flyweight` | Super Flyweight | — |
+| `rws-flyweight` | Flyweight | — |
+| `rws-light-flyweight` | Light Flyweight | — |
+| `rws-minimumweight` | Minimumweight | — |
+| `rws-female-bantamweight` | Female Bantamweight | — |
+| `rws-female-flyweight` | Female Flyweight | — |
+| `rws-female-minimumweight` | Female Minimumweight | — |
 
-Weight classes are kept inside their organisation because different organisations can use different names, limits, and definitions. Even if two organisations use a similar class name, each class should have its own organisation-specific ID.
+---
+
+## MongoDB-Schema
+
+Nach dem Sync-Prozess werden die Daten in folgenden Collections gespeichert:
+
+### Collection: `organisations`
+
+```json
+{
+  "_id": "org-wbc",
+  "name": "WBC Muay Thai",
+  "website": "https://www.wbcmuaythai.com/male",
+  "weightClasses": [
+    {
+      "id": "wbc-middleweight",
+      "name": "Middleweight",
+      "limits": [
+        { "unit": "lb", "value": "160" },
+        { "unit": "kg", "value": "72.575" }
+      ]
+    }
+  ]
+}
+```
+
+### Collection: `rankings`
+
+Jedes Dokument entspricht einer Ranking-Liste (Organisation + Gewichtsklasse):
+
+```json
+{
+  "organisationId": "org-wbc",
+  "weightClassId": "wbc-middleweight",
+  "updatedAt": "2025-12-01",
+  "sourceUrl": "https://www.wbcmuaythai.com/male",
+  "entries": [
+    { "position": "World Champion", "fighterId": "fighter-example-a" },
+    { "position": "1", "fighterId": "fighter-example-b" }
+  ]
+}
+```
+
+### Collection: `fighters`
+
+Das Fighter-Dokument enthält Stammdaten plus eingebettete Ranking-Einträge:
+
+```json
+{
+  "_id": "fighter-petchmorakot",
+  "name": "Petchmorakot Bangmadklongtan",
+  "country": "Thailand",
+  "nationalities": ["Thailand"],
+  "normalizedName": "petchmorakotbangmadklongtan",
+  "aliases": ["fighter-petchmorakot", "rws-petchmorakot-bangmadklongtan"],
+  "age": 23,
+  "record": "48-4-0",
+  "rankings": [
+    {
+      "orgId": "org-wbc",
+      "org": "WBC Muay Thai",
+      "weightClassId": "wbc-middleweight",
+      "weightClassName": "Middleweight",
+      "position": "World Champion"
+    },
+    {
+      "orgId": "org-rws",
+      "org": "Rajadamnern World Series",
+      "weightClassId": "rws-middleweight",
+      "weightClassName": "Middleweight",
+      "position": "1"
+    }
+  ]
+}
+```
+
+**Felder im Fighter-Dokument:**
+
+| Feld | Typ | Herkunft | Beschreibung |
+|---|---|---|---|
+| `_id` | String | XML | Kanonische ID (erste Org die den Fighter erfasst hat) |
+| `name` | String | XML | Anzeigename |
+| `country` | String | XML | Legacy-Feld; Klartextname des Landes |
+| `nationalities` | String[] | XML / Admin | ISO-Codes oder Klartextnamen; bevorzugtes Feld für Anzeige |
+| `normalizedName` | String | Berechnet | Kleinbuchstaben, nur alphanumerisch – für Dedup-Vergleich |
+| `aliases` | String[] | Berechnet | Alle bekannten IDs dieses Fighters (aus beiden Orgs) |
+| `age` | Number | XML | Alter; `null` wenn nicht vorhanden |
+| `record` | String | XML | Kampfrekord `W-L-D`; `null` wenn nicht vorhanden |
+| `rankings` | Object[] | Berechnet | Eingebettete Ranking-Einträge aus allen Orgs |
+
+---
+
+## Dedup-Logik: Fighter-Zusammenführung über Organisationen
+
+Das grösste technische Problem ist, dass derselbe Kämpfer in beiden Organisationen mit unterschiedlichen IDs erfasst sein kann:
+- WBC-Datei: `fighter-petchmorakot-wangchanglek`
+- RWS-Datei: `rws-petchmorakot-bangmadklongtan`
+
+Dies sind möglicherweise dieselbe Person. Die Dedup-Logik (`src/routes/api/admin/scrape/+server.js` und `/rws/+server.js`) verhindert doppelte Dokumente:
+
+### Schritt 1: Name normalisieren
+
+```js
+// src/lib/server/xmlParser.js
+export const normalizeForDedup = (name) =>
+    name.toLowerCase().replace(/[^a-z0-9]/g, '');
+// "Petchmorakot Bangmadklongtan" → "petchmorakotbangmadklongtan"
+```
+
+### Schritt 2: Existierendes Dokument suchen
+
+Für jeden Fighter aus der XML-Datei wird in MongoDB nach einer Übereinstimmung gesucht:
+
+```js
+const existing = await fightersCol.findOne({
+    $or: [
+        { _id: fighter._id },           // gleiche ID (Re-Sync)
+        { normalizedName: normalized }, // gleicher normalisierter Name (cross-org)
+        { aliases: fighter._id }        // ID bereits als Alias bekannt
+    ]
+});
+```
+
+### Schritt 3a: Treffer gefunden – Merge
+
+- Die neue XML-ID wird als `alias` hinzugefügt (`$addToSet`)
+- Fehlende Felder (Alter, Rekord, Nationalitäten) werden ergänzt, wenn im XML vorhanden
+- Das Dokument behält seine ursprüngliche `_id` (die ID der ersten Org, die den Fighter erfasst hat)
+- Die `idMap` speichert die Zuordnung: XML-ID → kanonische MongoDB-ID
+
+```js
+idMap.set(fighter._id, existing._id);
+await fightersCol.updateOne(
+    { _id: existing._id },
+    {
+        $addToSet: { aliases: fighter._id },
+        $set: {
+            normalizedName: normalizeForDedup(existing.name),
+            ...(fighter.nationalities?.length && { nationalities: fighter.nationalities }),
+            ...(fighter.age != null && { age: fighter.age }),
+            ...(fighter.record && { record: fighter.record })
+        }
+    }
+);
+```
+
+### Schritt 3b: Kein Treffer – Neues Dokument erstellen
+
+```js
+idMap.set(fighter._id, fighter._id);
+await fightersCol.replaceOne(
+    { _id: fighter._id },
+    { ...fighter, normalizedName: normalized, aliases: [fighter._id] },
+    { upsert: true }
+);
+```
+
+### Schritt 4: Ranking-Einträge auf kanonischen Fighter schreiben
+
+Die `idMap` stellt sicher, dass Ranking-Einträge immer an das kanonische Dokument gebunden werden, unabhängig davon ob eine WBC- oder RWS-ID in der XML-Datei verwendet wird:
+
+```js
+// Stale-Einträge dieser Org entfernen
+await fightersCol.updateMany({}, { $pull: { rankings: { orgId } } });
+
+// Aktuelle Einträge einbetten
+for (const [canonicalId, entries] of fighterRankingsMap) {
+    await fightersCol.updateOne(
+        { _id: canonicalId },
+        { $addToSet: { rankings: { $each: entries } } }
+    );
+}
+```
+
+Dieser Mechanismus sorgt dafür, dass beim erneuten Sync nur die Einträge der gerade synchronisierten Organisation überschrieben werden. Einträge der anderen Organisation bleiben unberührt.
+
+---
+
+## Trennung von Fighter-Stammdaten und Ranking-Einträgen
+
+Fighter-Stammdaten werden einmalig in `<fighters>` definiert. Ranking-Einträge in `<rankings>` referenzieren Fighter nur per ID. Dieses Prinzip gilt sowohl im XML als auch in MongoDB (Collection `rankings` und eingebettetes `rankings[]`-Array im Fighter-Dokument).
+
+**Vorteile:**
+- Namensänderungen, Alters- oder Rekord-Updates sind an einer einzigen Stelle nötig
+- Ein Fighter kann in mehreren Organisationen und Gewichtsklassen gelistet sein, ohne Doppelerfassung
+- Die Trennung ermöglicht separate Sync-Zyklen: Stammdaten und Rankings können unabhängig aktualisiert werden
+
+**Gewichtsklassen** sind bewusst organisationsspezifisch: Auch wenn zwei Organisationen die gleiche Gewichtsklassenbezeichnung verwenden (z. B. «Middleweight»), haben die Klassen unterschiedliche IDs und können unterschiedliche Gewichtslimits haben.
