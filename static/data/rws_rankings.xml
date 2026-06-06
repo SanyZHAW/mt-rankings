@@ -1,0 +1,1388 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mtRankings>
+  <organisations>
+    <organisation id="org-rws">
+      <name>Rajadamnern World Series</name>
+      <website>https://rank.rajadamnern.com</website>
+      <weightClasses>
+        <weightClass id="rws-middleweight">
+          <name>Middleweight</name>
+        </weightClass>
+        <weightClass id="rws-super-welterweight">
+          <name>Super Welterweight</name>
+        </weightClass>
+        <weightClass id="rws-welterweight">
+          <name>Welterweight</name>
+        </weightClass>
+        <weightClass id="rws-super-lightweight">
+          <name>Super Lightweight</name>
+        </weightClass>
+        <weightClass id="rws-lightweight">
+          <name>Lightweight</name>
+        </weightClass>
+        <weightClass id="rws-super-featherweight">
+          <name>Super Featherweight</name>
+        </weightClass>
+        <weightClass id="rws-featherweight">
+          <name>Featherweight</name>
+        </weightClass>
+        <weightClass id="rws-super-bantamweight">
+          <name>Super Bantamweight</name>
+        </weightClass>
+        <weightClass id="rws-bantamweight">
+          <name>Bantamweight</name>
+        </weightClass>
+        <weightClass id="rws-super-flyweight">
+          <name>Super Flyweight</name>
+        </weightClass>
+        <weightClass id="rws-flyweight">
+          <name>Flyweight</name>
+        </weightClass>
+        <weightClass id="rws-light-flyweight">
+          <name>Light Flyweight</name>
+        </weightClass>
+        <weightClass id="rws-minimumweight">
+          <name>Minimumweight</name>
+        </weightClass>
+        <weightClass id="rws-female-bantamweight">
+          <name>Female Bantamweight</name>
+        </weightClass>
+        <weightClass id="rws-female-flyweight">
+          <name>Female Flyweight</name>
+        </weightClass>
+        <weightClass id="rws-female-minimumweight">
+          <name>Female Minimumweight</name>
+        </weightClass>
+      </weightClasses>
+    </organisation>
+  </organisations>
+  <fighters>
+    <fighter id="rws-petchmorakot-bangmadklongtan">
+      <name>Petchmorakot Bangmadklongtan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-dmitry-changelia">
+      <name>Dmitry Changelia</name>
+      <country>Russia</country>
+    </fighter>
+    <fighter id="rws-emerson-bento">
+      <name>Emerson Bento</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="rws-kongjak-por-paoin">
+      <name>Kongjak Por. Paoin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-ruslan-naghiyev">
+      <name>Ruslan Naghiyev</name>
+      <country>Azerbaijan</country>
+    </fighter>
+    <fighter id="rws-salimkhan-ibragimov">
+      <name>Salimkhan Ibragimov</name>
+      <country>Russia</country>
+    </fighter>
+    <fighter id="rws-yodsaenchai-nayok-a-thasala">
+      <name>Yodsaenchai Nayok A Thasala</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-nayanesh-ayman">
+      <name>Nayanesh Ayman</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="rws-nuasingha-sitpooyainiran">
+      <name>Nuasingha Sitpooyainiran</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-lee-mackay">
+      <name>Lee Mackay</name>
+    </fighter>
+    <fighter id="rws-tapaothong-singha-mawynn">
+      <name>Tapaothong Singha Mawynn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-liam-mcdonnell">
+      <name>Liam McDonnell</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="rws-angel-bauza">
+      <name>Angel Bauza</name>
+      <country>Argentina</country>
+    </fighter>
+    <fighter id="rws-elad-suman">
+      <name>Elad Suman</name>
+      <country>Ghana</country>
+    </fighter>
+    <fighter id="rws-valentin-thibaut">
+      <name>Valentin Thibaut</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="rws-david-pennimpede">
+      <name>David Pennimpede</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="rws-daniel-rodriguez">
+      <name>Daniel Rodriguez</name>
+      <country>Switzerland</country>
+    </fighter>
+    <fighter id="rws-pheuthai-siriluck-muay-thai">
+      <name>Pheuthai Siriluck Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-boonlert-sor-boonmeerit">
+      <name>Boonlert Sor. Boonmeerit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-rittewada-petchyindee-academy">
+      <name>Rittewada Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-daniel-matthews">
+      <name>Daniel Matthews</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="rws-hercules-best-chaouad">
+      <name>Hercules Best Chaouad</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-burak-poyraz">
+      <name>Burak Poyraz</name>
+      <country>Turkey</country>
+    </fighter>
+    <fighter id="rws-knoah-solomon">
+      <name>Knoah Solomon</name>
+      <country>United States</country>
+    </fighter>
+    <fighter id="rws-garrett-smylie">
+      <name>Garrett Smylie</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="rws-petchsamart-petchkiatpetch">
+      <name>Petchsamart Petchkiatpetch</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-rambo-mor-rattanabandit">
+      <name>Rambo Mor. Rattanabandit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-sansiri-mor-rattanabandit">
+      <name>Sansiri Mor. Rattanabandit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-juan-andrade">
+      <name>Juan Andrade</name>
+      <country>United States</country>
+    </fighter>
+    <fighter id="rws-thuanthong-chor-chang-gym-lopburi">
+      <name>Thuanthong Chor.Chang Gym Lopburi</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-hichem-rahmoune">
+      <name>Hichem Rahmoune</name>
+      <country>Algeria</country>
+    </fighter>
+    <fighter id="rws-hugh-odonnell">
+      <name>Hugh O'Donnell</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="rws-tapaokaew-singha-mawynn">
+      <name>Tapaokaew Singha Mawynn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchthongchai-sor-sommai">
+      <name>Petchthongchai Sor. Sommai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-khunhanlek-superbon-training-camp">
+      <name>Khunhanlek Superbon Training Camp</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kirill-khomutov">
+      <name>Kirill Khomutov</name>
+      <country>Russia</country>
+    </fighter>
+    <fighter id="rws-paolo-dantoni">
+      <name>Paolo D'Antoni</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="rws-pornpitak-sor-jor-tongprachin">
+      <name>Pornpitak Sor. Jor. Tongprachin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-saenpon-sor-sommai">
+      <name>Saenpon Sor. Sommai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-alex-jitmuangnon">
+      <name>Alex Jitmuangnon</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="rws-joseph-jitmuangnon">
+      <name>Joseph Jitmuangnon</name>
+      <country>Slovakia</country>
+    </fighter>
+    <fighter id="rws-nuenglanlek-jitmuangnon">
+      <name>Nuenglanlek Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-moradokpetch-petchyindee-academy">
+      <name>Moradokpetch Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-niall-mcgreevy">
+      <name>Niall McGreevy</name>
+      <country>Ireland</country>
+    </fighter>
+    <fighter id="rws-pentor-paeminburi">
+      <name>Pentor Paeminburi</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-peemai-por-kobkuea">
+      <name>Peemai Por. Kobkuea</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-sajad-venum-muay-thai">
+      <name>Sajad Venum Muay Thai</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="rws-louie-doherty">
+      <name>Louie Doherty</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="rws-dam-paranchai">
+      <name>Dam Paranchai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-capitan-petchyindee-academy">
+      <name>Capitan Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchwichai-wor-chakrawut">
+      <name>Petchwichai Wor. Chakrawut</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chadd-collins">
+      <name>Chadd Collins</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="rws-kimluay-wankhongohm">
+      <name>Kimluay Wankhongohm</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-rungsaengtawan-sor-parat">
+      <name>Rungsaengtawan Sor. Parat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chartmungkorn-chor-hapayak">
+      <name>Chartmungkorn Chor. Hapayak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-rungkhao-wor-sangprapai">
+      <name>Rungkhao Wor. Sangprapai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-mammoth-lookjaophokumphakan">
+      <name>Mammoth Lookjaophokumphakan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-paruhatnoi-sor-sommai">
+      <name>Paruhatnoi Sor. Sommai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kampeetewada-sittikul">
+      <name>Kampeetewada Sittikul</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-yodkhunsuek-sitkaewpraphon">
+      <name>Yodkhunsuek Sitkaewpraphon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-nongbeer-sor-sakkasem-gym">
+      <name>Nongbeer Sor. Sakkasem Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-duangsompong-jitmuangnon">
+      <name>Duangsompong Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-changsuek-petchyindee-academy">
+      <name>Changsuek Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kongkula-jitmuangnon">
+      <name>Kongkula Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-egor-bikrev">
+      <name>Egor Bikrev</name>
+      <country>Russia</country>
+    </fighter>
+    <fighter id="rws-petchchonlatharn-kor-adisak">
+      <name>Petchchonlatharn Kor. Adisak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-samingdet-bangmadklongtan">
+      <name>Samingdet Bangmadklongtan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-sangmanee-sor-samangarment">
+      <name>Sangmanee Sor. Samangarment</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-nongbew-jitmuangnon">
+      <name>Nongbew Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-somraknoi-muayded789">
+      <name>Somraknoi Muayded789</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchpichet-lookjaomaesaithong">
+      <name>Petchpichet Lookjaomaesaithong</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchburapha-petchchompoo">
+      <name>Petchburapha Petchchompoo</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchdam-petchyindee-academy">
+      <name>Petchdam Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-milad-tavakoli">
+      <name>Milad Tavakoli</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="rws-mohammad-sadeghi">
+      <name>Mohammad Sadeghi</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="rws-denpayak-sor-sommai">
+      <name>Denpayak Sor. Sommai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchkeeree-pong-seven-farm">
+      <name>Petchkeeree Pong Seven Farm</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-savvas-michael">
+      <name>Savvas Michael</name>
+      <country>CY</country>
+    </fighter>
+    <fighter id="rws-thanupetch-wor-sangpraipai">
+      <name>Thanupetch Wor. Sangpraipai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-superlek-jitmuangnon">
+      <name>Superlek Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chalarm-paranchai">
+      <name>Chalarm Paranchai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-thongnoi-wor-sangprapai">
+      <name>Thongnoi Wor. Sangprapai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-patiharn-por-lakboon">
+      <name>Patiharn Por. Lakboon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-samingdaeng-wankhongohm-mbk">
+      <name>Samingdaeng Wankhongohm MBK</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-fairang-chor-hapayak">
+      <name>Fairang Chor. Hapayak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-wukong-sitjaroenwit">
+      <name>Wukong Sitjaroenwit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kiwthong-t-k-d-muay-thai-gym">
+      <name>Kiwthong T.K.D. Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-silangern-lanna-waterside-muay-thai-gym">
+      <name>Silangern Lanna Waterside Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-yod-e-t-por-tor-tor-tongtawee">
+      <name>Yod E.T. Por.Tor.Tor. Tongtawee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-yodtong-sor-jor-tongprachin">
+      <name>Yodtong Sor.Jor. Tongprachin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-silatham-jitasabangkaew">
+      <name>Silatham Jitasabangkaew</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kaipa-wor-sangprapai">
+      <name>Kaipa Wor. Sangprapai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kongnova-bangsaen-fight-club">
+      <name>Kongnova Bangsaen Fight Club</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chaila-por-lakboon">
+      <name>Chaila Por. Lakboon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-satangthong-chor-hapayak">
+      <name>Satangthong Chor. Hapayak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-watcharapon-singha-mawynn">
+      <name>Watcharapon Singha Mawynn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chiabkard-por-pongsawang">
+      <name>Chiabkard Por. Pongsawang</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-mangkonlek-pernnakorn">
+      <name>Mangkonlek Pernnakorn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-pornsanae-sor-phumipat">
+      <name>Pornsanae Sor. Phumipat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-khunsueknoi-boomdeksian">
+      <name>Khunsueknoi Boomdeksian</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-yothin-f-a-group">
+      <name>Yothin F.A. Group</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chujai-chujai-muay-thai-gym">
+      <name>Chujai Chujai Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-jaguar-petchyindee-academy">
+      <name>Jaguar Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchnamnueng-tor-surat">
+      <name>Petchnamnueng Tor. Surat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-suesat-manop-muay-thai-gym">
+      <name>Suesat Manop Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-narak-banglong-auto-max">
+      <name>Narak Banglong Auto Max</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-boonchote-sor-boonmeerit">
+      <name>Boonchote Sor.Boonmeerit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-george-paranchai">
+      <name>George Paranchai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-silvio-virgil">
+      <name>Silvio Virgil</name>
+      <country>France</country>
+    </fighter>
+    <fighter id="rws-kaimookkhao-wankhongohm">
+      <name>Kaimookkhao Wankhongohm</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-saenrak-superlek-muay-thai-gym">
+      <name>Saenrak Superlek Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kaensak-jitmuangnon">
+      <name>Kaensak Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchsila-wor-auracha">
+      <name>Petchsila Wor. Auracha</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchsiam-jor-patareeya">
+      <name>Petchsiam Jor. Patareeya</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-teerapong-dabtidbangrak">
+      <name>Teerapong Dabtidbangrak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchthailand-yodmuayphonrat">
+      <name>Petchthailand Yodmuayphonrat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchsaman-sor-saman-garment">
+      <name>Petchsaman Sor. Saman Garment</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-songpayak-yokkao-gym">
+      <name>Songpayak Yokkao Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chaitone-wor-auracha">
+      <name>Chaitone Wor. Auracha</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchmongkol-samartpayakaroon-gym">
+      <name>Petchmongkol Samartpayakaroon Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-den-sor-petchudon">
+      <name>Den Sor. Petchudon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchsonglay-rawai-muay-thai">
+      <name>Petchsonglay Rawai Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-sadaotong-nuiseemoommuang">
+      <name>Sadaotong Nuiseemoommuang</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-diesellek-petchyindee-academy">
+      <name>Diesellek Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-dokmaipa-santiubon">
+      <name>Dokmaipa Santiubon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-khunsueklek-boomdeksian">
+      <name>Khunsueklek Boomdeksian</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchsaenkom-sor-sommai">
+      <name>Petchsaenkom Sor. Sommai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchphatchara-soonkeelakudchim">
+      <name>Petchphatchara Soonkeelakudchim</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-jaroensook-boonlanna-muay-thai">
+      <name>Jaroensook Boonlanna Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-puenyai-por-lakboon">
+      <name>Puenyai Por. Lakboon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-choosab-sor-salacheeb">
+      <name>Choosab Sor. Salacheeb</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchake-singhakhlongluang">
+      <name>Petchake Singhakhlongluang</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-addtewada-tor-surat">
+      <name>Addtewada Tor. Surat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-pangtor-por-lakboon">
+      <name>Pangtor Por. Lakboon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-saotho-or-atchariya">
+      <name>Saotho Or. Atchariya</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chalarmthong-sitchalaramkhao">
+      <name>Chalarmthong Sitchalaramkhao</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-captainteam-sit-thailand">
+      <name>Captainteam Sit Thailand</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-koko-manop-muay-thai-gym">
+      <name>Koko Manop Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kongtoranee-santiubon">
+      <name>Kongtoranee Santiubon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chatngernlek-paniwat-muay-thai-gym">
+      <name>Chatngernlek Paniwat Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-facebook-nawaphon-farm-sook-krabue-thai">
+      <name>Facebook Nawaphon Farm Sook Krabue Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-putin-sor-tienpo">
+      <name>Putin Sor. Tienpo</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchrit-p-k-saenchai-muay-thai">
+      <name>Petchrit P.K. Saenchai Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-detchanan-wor-wiangsa">
+      <name>Detchanan Wor. Wiangsa</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchdej-muayded789">
+      <name>Petchdej Muayded789</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-baknova-bangsaen-fight-club">
+      <name>Baknova Bangsaen Fight Club</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-thailand-sor-rungsak">
+      <name>Thailand Sor. Rungsak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-thapna-sor-prembut">
+      <name>Thapna Sor. Prembut</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchanuwat-taikoobon">
+      <name>Petchanuwat Taikoobon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-siengnoiroilan-laochokcharoenratchasri">
+      <name>Siengnoiroilan Laochokcharoenratchasri</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchkriangkrai-jitmuangnon">
+      <name>Petchkriangkrai Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-phusingha-or-khamin">
+      <name>Phusingha Or. Khamin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchnipphon-petchsimuen">
+      <name>Petchnipphon Petchsimuen</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-taloompook-sor-sasiwat">
+      <name>Taloompook Sor. Sasiwat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-khunsuek-petchyindee-academy">
+      <name>Khunsuek Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-klanarong-panpinit">
+      <name>Klanarong Panpinit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-buernueng-lookjaophokumphakan">
+      <name>Buernueng Lookjaophokumphakan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chokdee-maxjandee">
+      <name>Chokdee Maxjandee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-boonchai-sor-boonmeerit">
+      <name>Boonchai Sor.Boonmeerit</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-ritthipan-pandakrattanaburi">
+      <name>Ritthipan Pandakrattanaburi</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-jigsaw-sit-thailand">
+      <name>Jigsaw Sit Thailand</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-davinci-luckybanterng">
+      <name>Davinci Luckybanterng</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-waewwaw-wor-wangprom">
+      <name>Waewwaw Wor. Wangprom</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchake-kiatjamroon">
+      <name>Petchake Kiatjamroon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-singhadam-kiatfufuang">
+      <name>Singhadam Kiatfufuang</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-singhapetch-or-piyapan-farm">
+      <name>Singhapetch Or. Piyapan Farm</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-mungkornpetch-saimoonsnooker-club">
+      <name>Mungkornpetch Saimoonsnooker Club</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-suasonglay-rawai-muay-thai">
+      <name>Suasonglay Rawai Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchseedaeng-sitjaroensab">
+      <name>Petchseedaeng Sitjaroensab</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-nuatoranee-jitmuangnon">
+      <name>Nuatoranee Jitmuangnon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-jaisingha-lookjaomaesaithong">
+      <name>Jaisingha Lookjaomaesaithong</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-pek-krapaolinky">
+      <name>Pek Krapaolinky</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-suaphum-teenoikachin">
+      <name>Suaphum Teenoikachin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-plaeng-erawan">
+      <name>Plaeng Erawan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-yimsiam-tor-thepsunguan">
+      <name>Yimsiam Tor. Thepsunguan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchbaanrai-singha-mawynn">
+      <name>Petchbaanrai Singha Mawynn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-duan99-or-petchkhunsuek">
+      <name>Duan99 Or. Petchkhunsuek</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-thapthai-sor-prembut">
+      <name>Thapthai Sor. Prembut</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-wanpadej-looksuan">
+      <name>Wanpadej Looksuan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chikara-sato">
+      <name>Chikara Sato</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="rws-plaithongkham-sit-thailand-chiang-mai-gym">
+      <name>Plaithongkham Sit Thailand Chiang Mai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kampanthong-chor-hapayak">
+      <name>Kampanthong Chor. Hapayak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-shogun-nawaphon-farm-sook-krabue-thai">
+      <name>Shogun Nawaphon Farm Sook Krabue Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-yodpetchake-boomdeksian">
+      <name>Yodpetchake Boomdeksian</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-sungfah-taikoobon">
+      <name>Sungfah Taikoobon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-dokmaifai-santiubon">
+      <name>Dokmaifai Santiubon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-laempo-sitkhunwasan">
+      <name>Laempo Sitkhunwasan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchmuangkan-chor-hapayak">
+      <name>Petchmuangkan Chor. Hapayak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-panaek-p-k-saenchai-muay-thai-gym">
+      <name>Panaek P.K. Saenchai Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchduad-golit-muay-thai">
+      <name>Petchduad Golit Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-pepsi-sujeebameekiew">
+      <name>Pepsi Sujeebameekiew</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-fiws-padungchai-muay-thai-gym">
+      <name>Fiws Padungchai Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chalarmchon-wor-auracha">
+      <name>Chalarmchon Wor. Auracha</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kradooklek-or-atchariya">
+      <name>Kradooklek Or. Atchariya</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchmuangsingha-taipetchaburi">
+      <name>Petchmuangsingha Taipetchaburi</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-thonglone-savatdy">
+      <name>Thonglone Savatdy</name>
+      <country>Laos</country>
+    </fighter>
+    <fighter id="rws-knotmai-wor-auracha">
+      <name>Knotmai Wor. Auracha</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-yodpetchtho-boomdeksian">
+      <name>Yodpetchtho Boomdeksian</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-wanheng-kiatchuthai">
+      <name>Wanheng Kiatchuthai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-homura-abe">
+      <name>Homura Abe</name>
+      <country>Japan</country>
+    </fighter>
+    <fighter id="rws-monprakarn-sitpetchchalookan">
+      <name>Monprakarn Sitpetchchalookan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-jongarngdam-singha-mawynn">
+      <name>Jongarngdam Singha Mawynn</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-teelek-mor-ruamjaipeun">
+      <name>Teelek Mor. Ruamjaipeun</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-vip-sitjaton">
+      <name>VIP Sitjaton</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-khunhan-dabtidbangrak">
+      <name>Khunhan Dabtidbangrak</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-yodmanee-suanjarkcafe">
+      <name>Yodmanee Suanjarkcafe</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-robert-paniwat-muay-thai">
+      <name>Robert Paniwat Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-monpraram-sitpetchchalookan">
+      <name>Monpraram Sitpetchchalookan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-barbara-aguiar">
+      <name>Barbara Aguiar</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="rws-buachompoo-chootangduan">
+      <name>Buachompoo Chootangduan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-somratsamee-manop-muay-thai-gym">
+      <name>Somratsamee Manop Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-morgane-mary-pouliot">
+      <name>Morgane Mary-Pouliot</name>
+      <country>Canada</country>
+    </fighter>
+    <fighter id="rws-laura-burgos">
+      <name>Laura Burgos</name>
+      <country>Mexico</country>
+    </fighter>
+    <fighter id="rws-christina-manop-muay-thai">
+      <name>Christina Manop Muay Thai</name>
+      <country>United States</country>
+    </fighter>
+    <fighter id="rws-fakfah-coke-khaoyai">
+      <name>Fakfah Coke Khaoyai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-nongmay-rongrean-keela-korat">
+      <name>Nongmay Rongrean Keela Korat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-eeva-pohto">
+      <name>Eeva Pohto</name>
+      <country>Finland</country>
+    </fighter>
+    <fighter id="rws-roghayeh-mohammadiyan">
+      <name>Roghayeh Mohammadiyan</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="rws-amy-duke">
+      <name>Amy Duke</name>
+      <country>United States</country>
+    </fighter>
+    <fighter id="rws-hollie-bowness">
+      <name>Hollie Bowness</name>
+    </fighter>
+    <fighter id="rws-mayree-khongsittha-muay-thai">
+      <name>Mayree Khongsittha Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-zarina-islamova">
+      <name>Zarina Islamova</name>
+      <country>Russia</country>
+    </fighter>
+    <fighter id="rws-monika-chochlikova">
+      <name>Monika Chochlikova</name>
+      <country>Slovakia</country>
+    </fighter>
+    <fighter id="rws-sandra-vestergaard">
+      <name>Sandra Vestergaard</name>
+      <country>Denmark</country>
+    </fighter>
+    <fighter id="rws-marie-ruumet">
+      <name>Marie Ruumet</name>
+      <country>Estonia</country>
+    </fighter>
+    <fighter id="rws-maria-eduarda">
+      <name>Maria Eduarda</name>
+      <country>Brazil</country>
+    </fighter>
+    <fighter id="rws-pinpetch-mor-rajaphatkorat">
+      <name>Pinpetch Mor. Rajaphatkorat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-narak-wkk-gym">
+      <name>Narak WKK Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-nongnook-mor-kor-chor-chaiyaphum">
+      <name>Nongnook Mor.Kor.Chor. Chaiyaphum</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-lisa-brierley">
+      <name>Lisa Brierley</name>
+    </fighter>
+    <fighter id="rws-alessia-bertellotti">
+      <name>Alessia Bertellotti</name>
+      <country>Italy</country>
+    </fighter>
+    <fighter id="rws-jitti-manop-muay-thai-gym">
+      <name>Jitti Manop Muay Thai Gym</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchsomboon-sor-petchphrathat">
+      <name>Petchsomboon Sor. Petchphrathat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-ananta-n-f-luksuan">
+      <name>Ananta N.F. Luksuan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-zaidania-looksaikongdin">
+      <name>Zaidania Looksaikongdin</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-suayngam-or-oodudon">
+      <name>Suayngam Or. Oodudon</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-paula-silva">
+      <name>Paula Silva</name>
+      <country>Spain</country>
+    </fighter>
+    <fighter id="rws-wanfai-mor-rajabhatmoobaanjombung">
+      <name>Wanfai Mor. Rajabhatmoobaanjombung</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-looknam-kor-klomkiew">
+      <name>Looknam Kor. Klomkiew</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-desiree-wodicker">
+      <name>Desiree Wodicker</name>
+      <country>United States</country>
+    </fighter>
+    <fighter id="rws-mongkutpetch-petchyindee-academy">
+      <name>Mongkutpetch Petchyindee Academy</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-mookmanee-nor-naksuwan">
+      <name>Mookmanee Nor. Naksuwan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kwanjira-sor-yupawadee">
+      <name>Kwanjira Sor. Yupawadee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-payahong-banchamek">
+      <name>Payahong Banchamek</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-sanehngarm-sakchamni">
+      <name>Sanehngarm Sakchamni</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-devina-martin">
+      <name>Devina Martin</name>
+      <country>Australia</country>
+    </fighter>
+    <fighter id="rws-mafia-petchmongkoldee">
+      <name>Mafia Petchmongkoldee</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-kaosuay-por-kobkua">
+      <name>Kaosuay Por. Kobkua</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-katayoun-rahimi">
+      <name>Katayoun Rahimi</name>
+      <country>Iran</country>
+    </fighter>
+    <fighter id="rws-baoplai-banchamek">
+      <name>Baoplai Banchamek</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-chabakaew-t-c-muay-thai">
+      <name>Chabakaew T.C. Muay Thai</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-prajanchai-wor-petchchonjan">
+      <name>Prajanchai Wor. Petchchonjan</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-phuduan-sakchamni">
+      <name>Phuduan Sakchamni</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-petchsaiparn-sitpanancherng">
+      <name>Petchsaiparn Sitpanancherng</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-jomkwan-rongrean-keela-korat">
+      <name>Jomkwan Rongrean Keela Korat</name>
+      <country>Thailand</country>
+    </fighter>
+    <fighter id="rws-lomfon-sor-silaluk">
+      <name>Lomfon Sor. Silaluk</name>
+      <country>Thailand</country>
+    </fighter>
+  </fighters>
+  <rankings>
+    <ranking organisationId="org-rws" weightClassId="rws-middleweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Middleweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-petchmorakot-bangmadklongtan" />
+      <entry position="1" fighterId="rws-dmitry-changelia" />
+      <entry position="2" fighterId="rws-emerson-bento" />
+      <entry position="3" fighterId="rws-kongjak-por-paoin" />
+      <entry position="4" fighterId="rws-ruslan-naghiyev" />
+      <entry position="5" fighterId="rws-salimkhan-ibragimov" />
+      <entry position="6" fighterId="rws-yodsaenchai-nayok-a-thasala" />
+      <entry position="7" fighterId="rws-nayanesh-ayman" />
+      <entry position="8" fighterId="rws-nuasingha-sitpooyainiran" />
+      <entry position="9" fighterId="rws-lee-mackay" />
+      <entry position="10" fighterId="rws-tapaothong-singha-mawynn" />
+      <entry position="11" fighterId="rws-liam-mcdonnell" />
+      <entry position="12" fighterId="rws-angel-bauza" />
+      <entry position="13" fighterId="rws-elad-suman" />
+      <entry position="14" fighterId="rws-valentin-thibaut" />
+      <entry position="15" fighterId="rws-david-pennimpede" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-super-welterweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Super+Welterweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-daniel-rodriguez" />
+      <entry position="1" fighterId="rws-pheuthai-siriluck-muay-thai" />
+      <entry position="2" fighterId="rws-boonlert-sor-boonmeerit" />
+      <entry position="3" fighterId="rws-rittewada-petchyindee-academy" />
+      <entry position="4" fighterId="rws-daniel-matthews" />
+      <entry position="5" fighterId="rws-hercules-best-chaouad" />
+      <entry position="6" fighterId="rws-burak-poyraz" />
+      <entry position="7" fighterId="rws-knoah-solomon" />
+      <entry position="8" fighterId="rws-garrett-smylie" />
+      <entry position="9" fighterId="rws-petchsamart-petchkiatpetch" />
+      <entry position="10" fighterId="rws-rambo-mor-rattanabandit" />
+      <entry position="11" fighterId="rws-sansiri-mor-rattanabandit" />
+      <entry position="12" fighterId="rws-juan-andrade" />
+      <entry position="13" fighterId="rws-thuanthong-chor-chang-gym-lopburi" />
+      <entry position="14" fighterId="rws-hichem-rahmoune" />
+      <entry position="15" fighterId="rws-hugh-odonnell" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-welterweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Welterweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-tapaokaew-singha-mawynn" />
+      <entry position="1" fighterId="rws-petchthongchai-sor-sommai" />
+      <entry position="2" fighterId="rws-khunhanlek-superbon-training-camp" />
+      <entry position="3" fighterId="rws-kirill-khomutov" />
+      <entry position="4" fighterId="rws-paolo-dantoni" />
+      <entry position="5" fighterId="rws-pornpitak-sor-jor-tongprachin" />
+      <entry position="6" fighterId="rws-saenpon-sor-sommai" />
+      <entry position="7" fighterId="rws-alex-jitmuangnon" />
+      <entry position="8" fighterId="rws-joseph-jitmuangnon" />
+      <entry position="9" fighterId="rws-nuenglanlek-jitmuangnon" />
+      <entry position="10" fighterId="rws-moradokpetch-petchyindee-academy" />
+      <entry position="11" fighterId="rws-niall-mcgreevy" />
+      <entry position="12" fighterId="rws-pentor-paeminburi" />
+      <entry position="13" fighterId="rws-peemai-por-kobkuea" />
+      <entry position="14" fighterId="rws-sajad-venum-muay-thai" />
+      <entry position="15" fighterId="rws-louie-doherty" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-super-lightweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Super+Lightweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-dam-paranchai" />
+      <entry position="1" fighterId="rws-capitan-petchyindee-academy" />
+      <entry position="2" fighterId="rws-petchwichai-wor-chakrawut" />
+      <entry position="3" fighterId="rws-chadd-collins" />
+      <entry position="4" fighterId="rws-kimluay-wankhongohm" />
+      <entry position="5" fighterId="rws-rungsaengtawan-sor-parat" />
+      <entry position="6" fighterId="rws-chartmungkorn-chor-hapayak" />
+      <entry position="7" fighterId="rws-rungkhao-wor-sangprapai" />
+      <entry position="8" fighterId="rws-mammoth-lookjaophokumphakan" />
+      <entry position="9" fighterId="rws-paruhatnoi-sor-sommai" />
+      <entry position="10" fighterId="rws-kampeetewada-sittikul" />
+      <entry position="11" fighterId="rws-yodkhunsuek-sitkaewpraphon" />
+      <entry position="12" fighterId="rws-nongbeer-sor-sakkasem-gym" />
+      <entry position="13" fighterId="rws-duangsompong-jitmuangnon" />
+      <entry position="14" fighterId="rws-changsuek-petchyindee-academy" />
+      <entry position="15" fighterId="rws-kongkula-jitmuangnon" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-lightweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Lightweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-egor-bikrev" />
+      <entry position="1" fighterId="rws-petchchonlatharn-kor-adisak" />
+      <entry position="2" fighterId="rws-samingdet-bangmadklongtan" />
+      <entry position="3" fighterId="rws-sangmanee-sor-samangarment" />
+      <entry position="4" fighterId="rws-nongbew-jitmuangnon" />
+      <entry position="5" fighterId="rws-somraknoi-muayded789" />
+      <entry position="6" fighterId="rws-petchpichet-lookjaomaesaithong" />
+      <entry position="7" fighterId="rws-petchburapha-petchchompoo" />
+      <entry position="8" fighterId="rws-petchdam-petchyindee-academy" />
+      <entry position="9" fighterId="rws-milad-tavakoli" />
+      <entry position="10" fighterId="rws-mohammad-sadeghi" />
+      <entry position="11" fighterId="rws-denpayak-sor-sommai" />
+      <entry position="12" fighterId="rws-petchkeeree-pong-seven-farm" />
+      <entry position="13" fighterId="rws-savvas-michael" />
+      <entry position="14" fighterId="rws-thanupetch-wor-sangpraipai" />
+      <entry position="15" fighterId="rws-superlek-jitmuangnon" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-super-featherweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Super+Featherweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-chalarm-paranchai" />
+      <entry position="1" fighterId="rws-thongnoi-wor-sangprapai" />
+      <entry position="2" fighterId="rws-patiharn-por-lakboon" />
+      <entry position="3" fighterId="rws-samingdaeng-wankhongohm-mbk" />
+      <entry position="4" fighterId="rws-fairang-chor-hapayak" />
+      <entry position="5" fighterId="rws-wukong-sitjaroenwit" />
+      <entry position="6" fighterId="rws-kiwthong-t-k-d-muay-thai-gym" />
+      <entry position="7" fighterId="rws-silangern-lanna-waterside-muay-thai-gym" />
+      <entry position="8" fighterId="rws-yod-e-t-por-tor-tor-tongtawee" />
+      <entry position="9" fighterId="rws-yodtong-sor-jor-tongprachin" />
+      <entry position="10" fighterId="rws-silatham-jitasabangkaew" />
+      <entry position="11" fighterId="rws-kaipa-wor-sangprapai" />
+      <entry position="12" fighterId="rws-kongnova-bangsaen-fight-club" />
+      <entry position="13" fighterId="rws-chaila-por-lakboon" />
+      <entry position="14" fighterId="rws-satangthong-chor-hapayak" />
+      <entry position="15" fighterId="rws-watcharapon-singha-mawynn" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-featherweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Featherweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-chiabkard-por-pongsawang" />
+      <entry position="1" fighterId="rws-mangkonlek-pernnakorn" />
+      <entry position="2" fighterId="rws-pornsanae-sor-phumipat" />
+      <entry position="3" fighterId="rws-khunsueknoi-boomdeksian" />
+      <entry position="4" fighterId="rws-yothin-f-a-group" />
+      <entry position="5" fighterId="rws-chujai-chujai-muay-thai-gym" />
+      <entry position="6" fighterId="rws-jaguar-petchyindee-academy" />
+      <entry position="7" fighterId="rws-petchnamnueng-tor-surat" />
+      <entry position="8" fighterId="rws-suesat-manop-muay-thai-gym" />
+      <entry position="9" fighterId="rws-narak-banglong-auto-max" />
+      <entry position="10" fighterId="rws-boonchote-sor-boonmeerit" />
+      <entry position="11" fighterId="rws-george-paranchai" />
+      <entry position="12" fighterId="rws-silvio-virgil" />
+      <entry position="13" fighterId="rws-kaimookkhao-wankhongohm" />
+      <entry position="14" fighterId="rws-saenrak-superlek-muay-thai-gym" />
+      <entry position="15" fighterId="rws-kaensak-jitmuangnon" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-super-bantamweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Super+Bantamweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-petchsila-wor-auracha" />
+      <entry position="1" fighterId="rws-petchsiam-jor-patareeya" />
+      <entry position="2" fighterId="rws-teerapong-dabtidbangrak" />
+      <entry position="3" fighterId="rws-petchthailand-yodmuayphonrat" />
+      <entry position="4" fighterId="rws-petchsaman-sor-saman-garment" />
+      <entry position="5" fighterId="rws-songpayak-yokkao-gym" />
+      <entry position="6" fighterId="rws-chaitone-wor-auracha" />
+      <entry position="7" fighterId="rws-petchmongkol-samartpayakaroon-gym" />
+      <entry position="8" fighterId="rws-den-sor-petchudon" />
+      <entry position="9" fighterId="rws-petchsonglay-rawai-muay-thai" />
+      <entry position="10" fighterId="rws-sadaotong-nuiseemoommuang" />
+      <entry position="11" fighterId="rws-diesellek-petchyindee-academy" />
+      <entry position="12" fighterId="rws-dokmaipa-santiubon" />
+      <entry position="13" fighterId="rws-khunsueklek-boomdeksian" />
+      <entry position="14" fighterId="rws-petchsaenkom-sor-sommai" />
+      <entry position="15" fighterId="rws-petchphatchara-soonkeelakudchim" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-bantamweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Bantamweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-jaroensook-boonlanna-muay-thai" />
+      <entry position="1" fighterId="rws-puenyai-por-lakboon" />
+      <entry position="2" fighterId="rws-choosab-sor-salacheeb" />
+      <entry position="3" fighterId="rws-petchake-singhakhlongluang" />
+      <entry position="4" fighterId="rws-addtewada-tor-surat" />
+      <entry position="5" fighterId="rws-pangtor-por-lakboon" />
+      <entry position="6" fighterId="rws-saotho-or-atchariya" />
+      <entry position="7" fighterId="rws-chalarmthong-sitchalaramkhao" />
+      <entry position="8" fighterId="rws-captainteam-sit-thailand" />
+      <entry position="9" fighterId="rws-koko-manop-muay-thai-gym" />
+      <entry position="10" fighterId="rws-kongtoranee-santiubon" />
+      <entry position="11" fighterId="rws-chatngernlek-paniwat-muay-thai-gym" />
+      <entry position="12" fighterId="rws-facebook-nawaphon-farm-sook-krabue-thai" />
+      <entry position="13" fighterId="rws-putin-sor-tienpo" />
+      <entry position="14" fighterId="rws-petchrit-p-k-saenchai-muay-thai" />
+      <entry position="15" fighterId="rws-detchanan-wor-wiangsa" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-super-flyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Super+Flyweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-petchdej-muayded789" />
+      <entry position="1" fighterId="rws-baknova-bangsaen-fight-club" />
+      <entry position="2" fighterId="rws-thailand-sor-rungsak" />
+      <entry position="3" fighterId="rws-thapna-sor-prembut" />
+      <entry position="4" fighterId="rws-petchanuwat-taikoobon" />
+      <entry position="5" fighterId="rws-siengnoiroilan-laochokcharoenratchasri" />
+      <entry position="6" fighterId="rws-petchkriangkrai-jitmuangnon" />
+      <entry position="7" fighterId="rws-phusingha-or-khamin" />
+      <entry position="8" fighterId="rws-petchnipphon-petchsimuen" />
+      <entry position="9" fighterId="rws-taloompook-sor-sasiwat" />
+      <entry position="10" fighterId="rws-khunsuek-petchyindee-academy" />
+      <entry position="11" fighterId="rws-klanarong-panpinit" />
+      <entry position="12" fighterId="rws-buernueng-lookjaophokumphakan" />
+      <entry position="13" fighterId="rws-chokdee-maxjandee" />
+      <entry position="14" fighterId="rws-boonchai-sor-boonmeerit" />
+      <entry position="15" fighterId="rws-ritthipan-pandakrattanaburi" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-flyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Flyweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-jigsaw-sit-thailand" />
+      <entry position="1" fighterId="rws-davinci-luckybanterng" />
+      <entry position="2" fighterId="rws-waewwaw-wor-wangprom" />
+      <entry position="3" fighterId="rws-petchake-kiatjamroon" />
+      <entry position="4" fighterId="rws-singhadam-kiatfufuang" />
+      <entry position="5" fighterId="rws-singhapetch-or-piyapan-farm" />
+      <entry position="6" fighterId="rws-mungkornpetch-saimoonsnooker-club" />
+      <entry position="7" fighterId="rws-suasonglay-rawai-muay-thai" />
+      <entry position="8" fighterId="rws-petchseedaeng-sitjaroensab" />
+      <entry position="9" fighterId="rws-nuatoranee-jitmuangnon" />
+      <entry position="10" fighterId="rws-jaisingha-lookjaomaesaithong" />
+      <entry position="11" fighterId="rws-pek-krapaolinky" />
+      <entry position="12" fighterId="rws-suaphum-teenoikachin" />
+      <entry position="13" fighterId="rws-plaeng-erawan" />
+      <entry position="14" fighterId="rws-yimsiam-tor-thepsunguan" />
+      <entry position="15" fighterId="rws-petchbaanrai-singha-mawynn" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-light-flyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Light+Flyweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-duan99-or-petchkhunsuek" />
+      <entry position="1" fighterId="rws-thapthai-sor-prembut" />
+      <entry position="2" fighterId="rws-wanpadej-looksuan" />
+      <entry position="3" fighterId="rws-chikara-sato" />
+      <entry position="4" fighterId="rws-plaithongkham-sit-thailand-chiang-mai-gym" />
+      <entry position="5" fighterId="rws-kampanthong-chor-hapayak" />
+      <entry position="6" fighterId="rws-shogun-nawaphon-farm-sook-krabue-thai" />
+      <entry position="7" fighterId="rws-yodpetchake-boomdeksian" />
+      <entry position="8" fighterId="rws-sungfah-taikoobon" />
+      <entry position="9" fighterId="rws-dokmaifai-santiubon" />
+      <entry position="10" fighterId="rws-laempo-sitkhunwasan" />
+      <entry position="11" fighterId="rws-petchmuangkan-chor-hapayak" />
+      <entry position="12" fighterId="rws-panaek-p-k-saenchai-muay-thai-gym" />
+      <entry position="13" fighterId="rws-petchduad-golit-muay-thai" />
+      <entry position="14" fighterId="rws-pepsi-sujeebameekiew" />
+      <entry position="15" fighterId="rws-fiws-padungchai-muay-thai-gym" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-minimumweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Minimumweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-chalarmchon-wor-auracha" />
+      <entry position="1" fighterId="rws-kradooklek-or-atchariya" />
+      <entry position="2" fighterId="rws-petchmuangsingha-taipetchaburi" />
+      <entry position="3" fighterId="rws-thonglone-savatdy" />
+      <entry position="4" fighterId="rws-knotmai-wor-auracha" />
+      <entry position="5" fighterId="rws-yodpetchtho-boomdeksian" />
+      <entry position="6" fighterId="rws-wanheng-kiatchuthai" />
+      <entry position="7" fighterId="rws-homura-abe" />
+      <entry position="8" fighterId="rws-monprakarn-sitpetchchalookan" />
+      <entry position="9" fighterId="rws-jongarngdam-singha-mawynn" />
+      <entry position="10" fighterId="rws-teelek-mor-ruamjaipeun" />
+      <entry position="11" fighterId="rws-vip-sitjaton" />
+      <entry position="12" fighterId="rws-khunhan-dabtidbangrak" />
+      <entry position="13" fighterId="rws-yodmanee-suanjarkcafe" />
+      <entry position="14" fighterId="rws-robert-paniwat-muay-thai" />
+      <entry position="15" fighterId="rws-monpraram-sitpetchchalookan" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-female-bantamweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Female+Bantamweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-barbara-aguiar" />
+      <entry position="1" fighterId="rws-buachompoo-chootangduan" />
+      <entry position="2" fighterId="rws-somratsamee-manop-muay-thai-gym" />
+      <entry position="3" fighterId="rws-morgane-mary-pouliot" />
+      <entry position="4" fighterId="rws-laura-burgos" />
+      <entry position="5" fighterId="rws-christina-manop-muay-thai" />
+      <entry position="6" fighterId="rws-fakfah-coke-khaoyai" />
+      <entry position="7" fighterId="rws-nongmay-rongrean-keela-korat" />
+      <entry position="8" fighterId="rws-eeva-pohto" />
+      <entry position="9" fighterId="rws-roghayeh-mohammadiyan" />
+      <entry position="10" fighterId="rws-amy-duke" />
+      <entry position="11" fighterId="rws-hollie-bowness" />
+      <entry position="12" fighterId="rws-mayree-khongsittha-muay-thai" />
+      <entry position="13" fighterId="rws-zarina-islamova" />
+      <entry position="14" fighterId="rws-monika-chochlikova" />
+      <entry position="15" fighterId="rws-sandra-vestergaard" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-female-flyweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Female+Flyweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-marie-ruumet" />
+      <entry position="1" fighterId="rws-maria-eduarda" />
+      <entry position="2" fighterId="rws-pinpetch-mor-rajaphatkorat" />
+      <entry position="3" fighterId="rws-narak-wkk-gym" />
+      <entry position="4" fighterId="rws-nongnook-mor-kor-chor-chaiyaphum" />
+      <entry position="5" fighterId="rws-lisa-brierley" />
+      <entry position="6" fighterId="rws-alessia-bertellotti" />
+      <entry position="7" fighterId="rws-jitti-manop-muay-thai-gym" />
+      <entry position="8" fighterId="rws-petchsomboon-sor-petchphrathat" />
+      <entry position="9" fighterId="rws-ananta-n-f-luksuan" />
+      <entry position="10" fighterId="rws-zaidania-looksaikongdin" />
+      <entry position="11" fighterId="rws-suayngam-or-oodudon" />
+      <entry position="12" fighterId="rws-paula-silva" />
+      <entry position="13" fighterId="rws-wanfai-mor-rajabhatmoobaanjombung" />
+      <entry position="14" fighterId="rws-looknam-kor-klomkiew" />
+      <entry position="15" fighterId="rws-desiree-wodicker" />
+    </ranking>
+    <ranking organisationId="org-rws" weightClassId="rws-female-minimumweight" updatedAt="2026-06-06">
+      <sourceUrl>https://rank.rajadamnern.com/rankings?weight=Female+Minimumweight</sourceUrl>
+      <entry position="Champion" fighterId="rws-mongkutpetch-petchyindee-academy" />
+      <entry position="1" fighterId="rws-mookmanee-nor-naksuwan" />
+      <entry position="2" fighterId="rws-kwanjira-sor-yupawadee" />
+      <entry position="3" fighterId="rws-payahong-banchamek" />
+      <entry position="4" fighterId="rws-sanehngarm-sakchamni" />
+      <entry position="5" fighterId="rws-devina-martin" />
+      <entry position="6" fighterId="rws-mafia-petchmongkoldee" />
+      <entry position="7" fighterId="rws-kaosuay-por-kobkua" />
+      <entry position="8" fighterId="rws-katayoun-rahimi" />
+      <entry position="9" fighterId="rws-baoplai-banchamek" />
+      <entry position="10" fighterId="rws-chabakaew-t-c-muay-thai" />
+      <entry position="11" fighterId="rws-prajanchai-wor-petchchonjan" />
+      <entry position="12" fighterId="rws-phuduan-sakchamni" />
+      <entry position="13" fighterId="rws-petchsaiparn-sitpanancherng" />
+      <entry position="14" fighterId="rws-jomkwan-rongrean-keela-korat" />
+      <entry position="15" fighterId="rws-lomfon-sor-silaluk" />
+    </ranking>
+  </rankings>
+</mtRankings>

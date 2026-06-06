@@ -6,6 +6,8 @@
 
 	let scrapeLoading = $state(false);
 	let scrapeResult = $state(null);
+	let rwsLoading = $state(false);
+	let rwsResult = $state(null);
 
 	async function syncRankings() {
 		scrapeLoading = true;
@@ -17,6 +19,19 @@
 			scrapeResult = { error: e.message };
 		} finally {
 			scrapeLoading = false;
+		}
+	}
+
+	async function syncRwsRankings() {
+		rwsLoading = true;
+		rwsResult = null;
+		try {
+			const res = await fetch('/api/admin/scrape/rws', { method: 'POST' });
+			rwsResult = await res.json();
+		} catch (e) {
+			rwsResult = { error: e.message };
+		} finally {
+			rwsLoading = false;
 		}
 	}
 </script>
@@ -45,6 +60,30 @@
 			<StatusMessage type="success" message="Synced — {scrapeResult.updatedAt} ({scrapeResult.fighters} fighters, {scrapeResult.rankings} weight classes)" />
 		{:else if scrapeResult?.error}
 			<StatusMessage type="error" message="Sync failed: {scrapeResult.error}" />
+		{/if}
+	</div>
+
+	<div class="panel">
+		<div class="panel-header">
+			<span class="panel-title">RWS Rankings</span>
+			<button class="btn-scrape" onclick={syncRwsRankings} disabled={rwsLoading}>
+				{#if rwsLoading}
+					<span class="spinner" aria-hidden="true"></span>
+					Syncing…
+				{:else}
+					Sync RWS Rankings from XML
+				{/if}
+			</button>
+		</div>
+		<p class="workflow-note">
+			To update rankings: run <code>python static/scripts/scrape_rws.py</code> locally, commit
+			<code>static/data/rws_rankings.xml</code>, then click <strong>Sync RWS Rankings from XML</strong>
+			to push the changes to the database.
+		</p>
+		{#if rwsResult?.success}
+			<StatusMessage type="success" message="Synced — {rwsResult.updatedAt} ({rwsResult.fighters} fighters, {rwsResult.rankings} weight classes)" />
+		{:else if rwsResult?.error}
+			<StatusMessage type="error" message="Sync failed: {rwsResult.error}" />
 		{/if}
 	</div>
 

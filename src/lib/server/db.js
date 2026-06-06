@@ -37,6 +37,11 @@ export const getFavoritesCollection = async () => {
 	return db.collection('favorites');
 };
 
+export const getOrganisationsCollection = async () => {
+	const db = await getDb();
+	return db.collection('organisations');
+};
+
 export const getFightersCollection = async () => {
 	const db = await getDb();
 	return db.collection('fighters');

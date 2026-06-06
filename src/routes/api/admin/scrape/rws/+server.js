@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { getOrganisationsCollection, getFightersCollection, getRankingsCollection } from '$lib/server/db.js';
 
-const WBC_XML = join(process.cwd(), 'static', 'data', 'wbc_rankings.xml');
+const RWS_XML = join(process.cwd(), 'static', 'data', 'rws_rankings.xml');
 
 // ── XML helpers ───────────────────────────────────────────────────────────────
 
@@ -35,6 +35,8 @@ const decodeXml = (value) =>
 
 const getTagValue = (text, tagName) => decodeXml(getTagValueRaw(text, tagName).trim());
 
+// ── parsers ───────────────────────────────────────────────────────────────────
+
 const parseLimits = (block) =>
 	[...block.matchAll(/<limit\s+([^>]*)>([\s\S]*?)<\/limit>/gu)].map((m) => ({
 		unit: getAttribute(m[1], 'unit'),
@@ -58,11 +60,18 @@ const parseOrganisations = (xml) =>
 	});
 
 const parseFighters = (xml) =>
-	getTagBlocks(getTagValueRaw(xml, 'fighters'), 'fighter').map((block) => ({
-		_id: getAttribute(block, 'id'),
-		name: getTagValue(block, 'name'),
-		country: getTagValue(block, 'country')
-	}));
+	getTagBlocks(getTagValueRaw(xml, 'fighters'), 'fighter').map((block) => {
+		const fighter = {
+			_id: getAttribute(block, 'id'),
+			name: getTagValue(block, 'name'),
+			country: getTagValue(block, 'country')
+		};
+		const age = getTagValue(block, 'age');
+		const record = getTagValue(block, 'record');
+		if (age) fighter.age = Number(age) || age;
+		if (record) fighter.record = record;
+		return fighter;
+	});
 
 const parseRankings = (xml) =>
 	getTagBlocks(getTagValueRaw(xml, 'rankings'), 'ranking').map((block) => ({
@@ -76,7 +85,7 @@ const parseRankings = (xml) =>
 		}))
 	}));
 
-// ── sync parsed XML into MongoDB ───────────────────────────────────────────────
+// ── sync ──────────────────────────────────────────────────────────────────────
 
 const syncToMongo = async (xml) => {
 	const organisations = parseOrganisations(xml);
@@ -90,11 +99,9 @@ const syncToMongo = async (xml) => {
 	for (const org of organisations) {
 		await orgsCol.replaceOne({ _id: org._id }, org, { upsert: true });
 	}
-
 	for (const fighter of fighters) {
 		await fightersCol.replaceOne({ _id: fighter._id }, fighter, { upsert: true });
 	}
-
 	for (const ranking of rankings) {
 		await rankingsCol.replaceOne(
 			{ organisationId: ranking.organisationId, weightClassId: ranking.weightClassId },
@@ -106,27 +113,25 @@ const syncToMongo = async (xml) => {
 	return { fighters: fighters.length, rankings: rankings.length };
 };
 
-// ── handler ────────────────────────────────────────────────────────────────────
+// ── handler ───────────────────────────────────────────────────────────────────
 
 export const POST = async ({ locals }) => {
 	if (!locals.user) return json({ error: 'Unauthorised.' }, { status: 401 });
 	if (locals.user.role !== 'admin') return json({ error: 'Forbidden.' }, { status: 403 });
 
-	// Phase 1: read the XML file committed to the repo
 	let xml;
 	try {
-		xml = await readFile(WBC_XML, 'utf-8');
+		xml = await readFile(RWS_XML, 'utf-8');
 	} catch (err) {
-		console.error('[scrape] Failed to read XML file:', { path: WBC_XML, message: err.message });
+		console.error('[scrape/rws] Failed to read XML file:', { path: RWS_XML, message: err.message });
 		return json({ error: `Failed to read XML: ${err.message}` }, { status: 500 });
 	}
 
-	// Phase 2: parse XML and upsert into MongoDB
 	let counts;
 	try {
 		counts = await syncToMongo(xml);
 	} catch (err) {
-		console.error('[scrape] MongoDB sync failed:', err);
+		console.error('[scrape/rws] MongoDB sync failed:', err);
 		return json({ error: `Database sync failed: ${err.message}` }, { status: 500 });
 	}
 

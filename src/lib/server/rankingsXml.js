@@ -1,71 +1,28 @@
-import { readFile } from 'node:fs/promises';
-import { join } from 'node:path';
-import { getFightersCollection, getRankingsCollection } from './db.js';
+import {
+	getOrganisationsCollection,
+	getFightersCollection,
+	getRankingsCollection
+} from './db.js';
 
-const XML_PATH = join(process.cwd(), 'static', 'data', 'rankings.xml');
-
-// ── XML helpers (organisations / weight classes only) ─────────────────────────
-
-const getAttribute = (text, name) => {
-	const match = text.match(new RegExp(`${name}="([^"]*)"`, 'u'));
-	return match?.[1] ?? '';
-};
-
-const getTagBlocks = (text, tagName) =>
-	[...text.matchAll(new RegExp(`<${tagName}(?:\\s[^>]*)?>[\\s\\S]*?<\\/${tagName}>`, 'gu'))].map(
-		(m) => m[0]
-	);
-
-const getTagValueRaw = (text, tagName) => {
-	const m = text.match(new RegExp(`<${tagName}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tagName}>`, 'u'));
-	return m?.[1] ?? '';
-};
-
-const decodeXml = (value) =>
-	value
-		.replaceAll('&apos;', "'")
-		.replaceAll('&quot;', '"')
-		.replaceAll('&gt;', '>')
-		.replaceAll('&lt;', '<')
-		.replaceAll('&amp;', '&');
-
-const getTagValue = (text, tagName) => decodeXml(getTagValueRaw(text, tagName).trim());
-
-const parseLimits = (weightClassBlock) =>
-	[...weightClassBlock.matchAll(/<limit\s+([^>]*)>([\s\S]*?)<\/limit>/gu)].map((match) => ({
-		unit: getAttribute(match[1], 'unit'),
-		value: decodeXml(match[2].trim())
-	}));
-
-const parseOrganisations = (xml) =>
-	getTagBlocks(xml, 'organisation').map((block) => {
-		const id = getAttribute(block, 'id');
-		const wcBlock = getTagValueRaw(block, 'weightClasses');
-		return {
-			id,
-			name: getTagValue(block, 'name'),
-			website: getTagValue(block, 'website'),
-			weightClasses: getTagBlocks(wcBlock, 'weightClass').map((wc) => ({
-				id: getAttribute(wc, 'id'),
-				organisationId: id,
-				name: getTagValue(wc, 'name'),
-				limits: parseLimits(wc)
-			}))
-		};
-	});
-
-// Cache organisations — they're static config, no need to re-read the file every request.
-let cachedOrgs;
+// ── organisations / weight classes from MongoDB ────────────────────────────────
 
 const loadOrgs = async () => {
-	if (!cachedOrgs) {
-		const xml = await readFile(XML_PATH, 'utf-8');
-		cachedOrgs = parseOrganisations(xml);
-	}
-	return cachedOrgs;
+	const col = await getOrganisationsCollection();
+	const docs = await col.find({}).toArray();
+	return docs.map((doc) => ({
+		id: doc._id,
+		name: doc.name,
+		website: doc.website,
+		weightClasses: (doc.weightClasses ?? []).map((wc) => ({
+			id: wc.id,
+			organisationId: doc._id,
+			name: wc.name,
+			limits: wc.limits
+		}))
+	}));
 };
 
-// ── exported functions (same signatures as before) ────────────────────────────
+// ── exported functions ─────────────────────────────────────────────────────────
 
 export const getRankingData = async () => {
 	const organisations = await loadOrgs();
