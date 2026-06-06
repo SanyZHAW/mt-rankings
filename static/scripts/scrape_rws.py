@@ -76,14 +76,17 @@ def is_vacant(name: str) -> bool:
     return not name or "vacant" in name.lower()
 
 
-def country_from_flag_span(container) -> str:
-    """Find the first fi-XX span in `container` and return the full country name."""
+def countries_from_flag_spans(container) -> list[str]:
+    """Return all country names found via fi-XX flag spans within container."""
+    seen = []
     for span in container.find_all("span"):
         for cls in span.get("class", []):
             if cls.startswith("fi-") and len(cls) == 5:
                 code = cls[3:]  # "fi-ru" → "ru"
-                return ISO_COUNTRIES.get(code, code.upper())
-    return ""
+                name = ISO_COUNTRIES.get(code, code.upper())
+                if name not in seen:
+                    seen.append(name)
+    return seen
 
 
 # ── weight class discovery ─────────────────────────────────────────────────────
@@ -149,9 +152,8 @@ def scrape_weight_class(page, weight_class: str) -> tuple[dict | None, list[dict
     if champ_h2:
         name = clean(champ_h2.get_text())
         if name and not is_vacant(name):
-            # Country is in the sibling/parent container
-            country = country_from_flag_span(champ_h2.parent)
-            champion = {"name": name, "country": country}
+            countries = countries_from_flag_spans(champ_h2.parent)
+            champion = {"name": name, "countries": countries}
 
     # ── Numbered ranked fighters ──
     # Each is an <a href="/fighters/FT_..."> row with:
@@ -188,13 +190,13 @@ def scrape_weight_class(page, weight_class: str) -> tuple[dict | None, list[dict
             continue
         seen_names.add(name)
 
-        # Country
-        country = country_from_flag_span(a_tag)
+        # Country / countries
+        countries = countries_from_flag_spans(a_tag)
 
         fighters.append({
             "position": pos,
             "name":     name,
-            "country":  country,
+            "countries": countries,
             "age":      "",
             "record":   "",
         })
@@ -229,8 +231,13 @@ def build_xml(scraped: list[tuple[str, dict | None, list[dict]]]) -> Element:
         seen_ids.add(fid)
         f_el = SubElement(fighters_el, "fighter", id=fid)
         SubElement(f_el, "name").text = f["name"]
-        if f.get("country"):
-            SubElement(f_el, "country").text = f["country"]
+        countries = f.get("countries") or []
+        if len(countries) > 1:
+            nats_el = SubElement(f_el, "nationalities")
+            for c in countries:
+                SubElement(nats_el, "nationality").text = c
+        elif countries:
+            SubElement(f_el, "country").text = countries[0]
         if f.get("age"):
             SubElement(f_el, "age").text = str(f["age"])
         if f.get("record"):

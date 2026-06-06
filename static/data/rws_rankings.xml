@@ -60,1023 +60,1797 @@
     <fighter id="rws-petchmorakot-bangmadklongtan">
       <name>Petchmorakot Bangmadklongtan</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>48-4-0</record>
     </fighter>
     <fighter id="rws-dmitry-changelia">
       <name>Dmitry Changelia</name>
       <country>Russia</country>
+    
+      <age>31</age>
+      <record>24-3-0</record>
     </fighter>
     <fighter id="rws-emerson-bento">
       <name>Emerson Bento</name>
       <country>Brazil</country>
+    
+      <age>27</age>
+      <record>22-10-0</record>
     </fighter>
     <fighter id="rws-kongjak-por-paoin">
       <name>Kongjak Por. Paoin</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>43-5-1</record>
     </fighter>
     <fighter id="rws-ruslan-naghiyev">
       <name>Ruslan Naghiyev</name>
       <country>Azerbaijan</country>
+    
+      <age>26</age>
+      <record>25-10-1</record>
     </fighter>
     <fighter id="rws-salimkhan-ibragimov">
       <name>Salimkhan Ibragimov</name>
       <country>Russia</country>
+    
+      <age>28</age>
+      <record>41-14-0</record>
     </fighter>
     <fighter id="rws-yodsaenchai-nayok-a-thasala">
       <name>Yodsaenchai Nayok A Thasala</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>50-6-1</record>
     </fighter>
     <fighter id="rws-nayanesh-ayman">
       <name>Nayanesh Ayman</name>
       <country>Spain</country>
+    
+      <age>29</age>
+      <record>58-12-1</record>
     </fighter>
     <fighter id="rws-nuasingha-sitpooyainiran">
       <name>Nuasingha Sitpooyainiran</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>20-2-0</record>
     </fighter>
     <fighter id="rws-lee-mackay">
       <name>Lee Mackay</name>
+    
+      <age>34</age>
+      <record>57-8-0</record>
     </fighter>
     <fighter id="rws-tapaothong-singha-mawynn">
       <name>Tapaothong Singha Mawynn</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>23-4-0</record>
     </fighter>
     <fighter id="rws-liam-mcdonnell">
       <name>Liam McDonnell</name>
       <country>Ireland</country>
+    
+      <age>31</age>
+      <record>58-13-0</record>
     </fighter>
     <fighter id="rws-angel-bauza">
       <name>Angel Bauza</name>
       <country>Argentina</country>
+    
+      <age>32</age>
+      <record>45-15-1</record>
     </fighter>
     <fighter id="rws-elad-suman">
       <name>Elad Suman</name>
       <country>Ghana</country>
+    
+      <age>22</age>
+      <record>15-10-0</record>
     </fighter>
     <fighter id="rws-valentin-thibaut">
       <name>Valentin Thibaut</name>
       <country>France</country>
+    
+      <age>28</age>
+      <record>29-10-1</record>
     </fighter>
     <fighter id="rws-david-pennimpede">
       <name>David Pennimpede</name>
       <country>Australia</country>
+    
+      <age>25</age>
+      <record>34-10-0</record>
     </fighter>
     <fighter id="rws-daniel-rodriguez">
       <name>Daniel Rodriguez</name>
-      <country>Switzerland</country>
+      <nationalities>
+        <nationality>Switzerland</nationality>
+        <nationality>DO</nationality>
+      </nationalities>
+    
+      <age>28</age>
+      <record>35-7-1</record>
     </fighter>
     <fighter id="rws-pheuthai-siriluck-muay-thai">
       <name>Pheuthai Siriluck Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>39-9-0</record>
     </fighter>
     <fighter id="rws-boonlert-sor-boonmeerit">
       <name>Boonlert Sor. Boonmeerit</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>21-11-0</record>
     </fighter>
     <fighter id="rws-rittewada-petchyindee-academy">
       <name>Rittewada Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>27-12-0</record>
     </fighter>
     <fighter id="rws-daniel-matthews">
       <name>Daniel Matthews</name>
       <country>Australia</country>
+    
+      <age>24</age>
+      <record>51-4-1</record>
     </fighter>
     <fighter id="rws-hercules-best-chaouad">
       <name>Hercules Best Chaouad</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>56-6-1</record>
     </fighter>
     <fighter id="rws-burak-poyraz">
       <name>Burak Poyraz</name>
       <country>Turkey</country>
+    
+      <age>24</age>
+      <record>55-4-0</record>
     </fighter>
     <fighter id="rws-knoah-solomon">
       <name>Knoah Solomon</name>
       <country>United States</country>
+    
+      <age>22</age>
+      <record>35-4-1</record>
     </fighter>
     <fighter id="rws-garrett-smylie">
       <name>Garrett Smylie</name>
       <country>Ireland</country>
+    
+      <age>28</age>
+      <record>21-12-0</record>
     </fighter>
     <fighter id="rws-petchsamart-petchkiatpetch">
       <name>Petchsamart Petchkiatpetch</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>36-3-1</record>
     </fighter>
     <fighter id="rws-rambo-mor-rattanabandit">
       <name>Rambo Mor. Rattanabandit</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>48-13-0</record>
     </fighter>
     <fighter id="rws-sansiri-mor-rattanabandit">
       <name>Sansiri Mor. Rattanabandit</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>28-3-1</record>
     </fighter>
     <fighter id="rws-juan-andrade">
       <name>Juan Andrade</name>
       <country>United States</country>
+    
+      <age>23</age>
+      <record>28-2-0</record>
     </fighter>
     <fighter id="rws-thuanthong-chor-chang-gym-lopburi">
       <name>Thuanthong Chor.Chang Gym Lopburi</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>23-12-0</record>
     </fighter>
     <fighter id="rws-hichem-rahmoune">
       <name>Hichem Rahmoune</name>
       <country>Algeria</country>
+    
+      <age>25</age>
+      <record>22-3-1</record>
     </fighter>
     <fighter id="rws-hugh-odonnell">
       <name>Hugh O'Donnell</name>
       <country>Australia</country>
+    
+      <age>23</age>
+      <record>32-5-0</record>
     </fighter>
     <fighter id="rws-tapaokaew-singha-mawynn">
       <name>Tapaokaew Singha Mawynn</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>21-11-1</record>
     </fighter>
     <fighter id="rws-petchthongchai-sor-sommai">
       <name>Petchthongchai Sor. Sommai</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>57-9-0</record>
     </fighter>
     <fighter id="rws-khunhanlek-superbon-training-camp">
       <name>Khunhanlek Superbon Training Camp</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>23-15-0</record>
     </fighter>
     <fighter id="rws-kirill-khomutov">
       <name>Kirill Khomutov</name>
       <country>Russia</country>
+    
+      <age>22</age>
+      <record>51-13-1</record>
     </fighter>
     <fighter id="rws-paolo-dantoni">
       <name>Paolo D'Antoni</name>
       <country>Italy</country>
+    
+      <age>32</age>
+      <record>45-9-1</record>
     </fighter>
     <fighter id="rws-pornpitak-sor-jor-tongprachin">
       <name>Pornpitak Sor. Jor. Tongprachin</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>29-10-0</record>
     </fighter>
     <fighter id="rws-saenpon-sor-sommai">
       <name>Saenpon Sor. Sommai</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>52-9-0</record>
     </fighter>
     <fighter id="rws-alex-jitmuangnon">
       <name>Alex Jitmuangnon</name>
       <country>Italy</country>
+    
+      <age>30</age>
+      <record>31-3-0</record>
     </fighter>
     <fighter id="rws-joseph-jitmuangnon">
       <name>Joseph Jitmuangnon</name>
       <country>Slovakia</country>
+    
+      <age>33</age>
+      <record>26-12-1</record>
     </fighter>
     <fighter id="rws-nuenglanlek-jitmuangnon">
       <name>Nuenglanlek Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>39-2-1</record>
     </fighter>
     <fighter id="rws-moradokpetch-petchyindee-academy">
       <name>Moradokpetch Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>47-3-0</record>
     </fighter>
     <fighter id="rws-niall-mcgreevy">
       <name>Niall McGreevy</name>
       <country>Ireland</country>
+    
+      <age>24</age>
+      <record>41-15-0</record>
     </fighter>
     <fighter id="rws-pentor-paeminburi">
       <name>Pentor Paeminburi</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>23-10-1</record>
     </fighter>
     <fighter id="rws-peemai-por-kobkuea">
       <name>Peemai Por. Kobkuea</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>54-9-0</record>
     </fighter>
     <fighter id="rws-sajad-venum-muay-thai">
       <name>Sajad Venum Muay Thai</name>
       <country>Iran</country>
+    
+      <age>30</age>
+      <record>31-14-0</record>
     </fighter>
     <fighter id="rws-louie-doherty">
       <name>Louie Doherty</name>
       <country>Italy</country>
+    
+      <age>27</age>
+      <record>28-11-0</record>
     </fighter>
     <fighter id="rws-dam-paranchai">
       <name>Dam Paranchai</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>34-6-0</record>
     </fighter>
     <fighter id="rws-capitan-petchyindee-academy">
       <name>Capitan Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>16-13-0</record>
     </fighter>
     <fighter id="rws-petchwichai-wor-chakrawut">
       <name>Petchwichai Wor. Chakrawut</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>35-3-0</record>
     </fighter>
     <fighter id="rws-chadd-collins">
       <name>Chadd Collins</name>
       <country>Australia</country>
+    
+      <age>22</age>
+      <record>53-4-1</record>
     </fighter>
     <fighter id="rws-kimluay-wankhongohm">
       <name>Kimluay Wankhongohm</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>38-5-0</record>
     </fighter>
     <fighter id="rws-rungsaengtawan-sor-parat">
       <name>Rungsaengtawan Sor. Parat</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>45-15-1</record>
     </fighter>
     <fighter id="rws-chartmungkorn-chor-hapayak">
       <name>Chartmungkorn Chor. Hapayak</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>48-11-1</record>
     </fighter>
     <fighter id="rws-rungkhao-wor-sangprapai">
       <name>Rungkhao Wor. Sangprapai</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>35-9-1</record>
     </fighter>
     <fighter id="rws-mammoth-lookjaophokumphakan">
       <name>Mammoth Lookjaophokumphakan</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>20-10-1</record>
     </fighter>
     <fighter id="rws-paruhatnoi-sor-sommai">
       <name>Paruhatnoi Sor. Sommai</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>43-2-1</record>
     </fighter>
     <fighter id="rws-kampeetewada-sittikul">
       <name>Kampeetewada Sittikul</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>19-15-0</record>
     </fighter>
     <fighter id="rws-yodkhunsuek-sitkaewpraphon">
       <name>Yodkhunsuek Sitkaewpraphon</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>41-3-1</record>
     </fighter>
     <fighter id="rws-nongbeer-sor-sakkasem-gym">
       <name>Nongbeer Sor. Sakkasem Gym</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>30-3-0</record>
     </fighter>
     <fighter id="rws-duangsompong-jitmuangnon">
       <name>Duangsompong Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>47-6-1</record>
     </fighter>
     <fighter id="rws-changsuek-petchyindee-academy">
       <name>Changsuek Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>41-2-1</record>
     </fighter>
     <fighter id="rws-kongkula-jitmuangnon">
       <name>Kongkula Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>43-6-1</record>
     </fighter>
     <fighter id="rws-egor-bikrev">
       <name>Egor Bikrev</name>
       <country>Russia</country>
+    
+      <age>28</age>
+      <record>49-4-0</record>
     </fighter>
     <fighter id="rws-petchchonlatharn-kor-adisak">
       <name>Petchchonlatharn Kor. Adisak</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>31-2-0</record>
     </fighter>
     <fighter id="rws-samingdet-bangmadklongtan">
       <name>Samingdet Bangmadklongtan</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>23-8-0</record>
     </fighter>
     <fighter id="rws-sangmanee-sor-samangarment">
       <name>Sangmanee Sor. Samangarment</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>29-13-0</record>
     </fighter>
     <fighter id="rws-nongbew-jitmuangnon">
       <name>Nongbew Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>25-4-1</record>
     </fighter>
     <fighter id="rws-somraknoi-muayded789">
       <name>Somraknoi Muayded789</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>53-12-0</record>
     </fighter>
     <fighter id="rws-petchpichet-lookjaomaesaithong">
       <name>Petchpichet Lookjaomaesaithong</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>19-13-0</record>
     </fighter>
     <fighter id="rws-petchburapha-petchchompoo">
       <name>Petchburapha Petchchompoo</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>47-10-1</record>
     </fighter>
     <fighter id="rws-petchdam-petchyindee-academy">
       <name>Petchdam Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>40-6-0</record>
     </fighter>
     <fighter id="rws-milad-tavakoli">
       <name>Milad Tavakoli</name>
       <country>Iran</country>
+    
+      <age>24</age>
+      <record>53-8-0</record>
     </fighter>
     <fighter id="rws-mohammad-sadeghi">
       <name>Mohammad Sadeghi</name>
       <country>Iran</country>
+    
+      <age>35</age>
+      <record>60-10-1</record>
     </fighter>
     <fighter id="rws-denpayak-sor-sommai">
       <name>Denpayak Sor. Sommai</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>49-2-0</record>
     </fighter>
     <fighter id="rws-petchkeeree-pong-seven-farm">
       <name>Petchkeeree Pong Seven Farm</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>15-11-0</record>
     </fighter>
     <fighter id="rws-savvas-michael">
       <name>Savvas Michael</name>
       <country>CY</country>
+    
+      <age>29</age>
+      <record>50-8-0</record>
     </fighter>
     <fighter id="rws-thanupetch-wor-sangpraipai">
       <name>Thanupetch Wor. Sangpraipai</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>19-5-0</record>
     </fighter>
     <fighter id="rws-superlek-jitmuangnon">
       <name>Superlek Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>18-15-1</record>
     </fighter>
     <fighter id="rws-chalarm-paranchai">
       <name>Chalarm Paranchai</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>56-8-0</record>
     </fighter>
     <fighter id="rws-thongnoi-wor-sangprapai">
       <name>Thongnoi Wor. Sangprapai</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>20-9-0</record>
     </fighter>
     <fighter id="rws-patiharn-por-lakboon">
       <name>Patiharn Por. Lakboon</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>20-12-0</record>
     </fighter>
     <fighter id="rws-samingdaeng-wankhongohm-mbk">
       <name>Samingdaeng Wankhongohm MBK</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>21-5-0</record>
     </fighter>
     <fighter id="rws-fairang-chor-hapayak">
       <name>Fairang Chor. Hapayak</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>45-7-1</record>
     </fighter>
     <fighter id="rws-wukong-sitjaroenwit">
       <name>Wukong Sitjaroenwit</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>19-7-1</record>
     </fighter>
     <fighter id="rws-kiwthong-t-k-d-muay-thai-gym">
       <name>Kiwthong T.K.D. Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>19-9-0</record>
     </fighter>
     <fighter id="rws-silangern-lanna-waterside-muay-thai-gym">
       <name>Silangern Lanna Waterside Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>15-4-1</record>
     </fighter>
     <fighter id="rws-yod-e-t-por-tor-tor-tongtawee">
       <name>Yod E.T. Por.Tor.Tor. Tongtawee</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>50-5-1</record>
     </fighter>
     <fighter id="rws-yodtong-sor-jor-tongprachin">
       <name>Yodtong Sor.Jor. Tongprachin</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>37-15-1</record>
     </fighter>
     <fighter id="rws-silatham-jitasabangkaew">
       <name>Silatham Jitasabangkaew</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>48-10-0</record>
     </fighter>
     <fighter id="rws-kaipa-wor-sangprapai">
       <name>Kaipa Wor. Sangprapai</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>26-2-0</record>
     </fighter>
     <fighter id="rws-kongnova-bangsaen-fight-club">
       <name>Kongnova Bangsaen Fight Club</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>53-8-1</record>
     </fighter>
     <fighter id="rws-chaila-por-lakboon">
       <name>Chaila Por. Lakboon</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>37-10-1</record>
     </fighter>
     <fighter id="rws-satangthong-chor-hapayak">
       <name>Satangthong Chor. Hapayak</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>45-8-0</record>
     </fighter>
     <fighter id="rws-watcharapon-singha-mawynn">
       <name>Watcharapon Singha Mawynn</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>56-4-0</record>
     </fighter>
     <fighter id="rws-chiabkard-por-pongsawang">
       <name>Chiabkard Por. Pongsawang</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>21-2-1</record>
     </fighter>
     <fighter id="rws-mangkonlek-pernnakorn">
       <name>Mangkonlek Pernnakorn</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>50-15-0</record>
     </fighter>
     <fighter id="rws-pornsanae-sor-phumipat">
       <name>Pornsanae Sor. Phumipat</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>23-9-1</record>
     </fighter>
     <fighter id="rws-khunsueknoi-boomdeksian">
       <name>Khunsueknoi Boomdeksian</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>23-13-0</record>
     </fighter>
     <fighter id="rws-yothin-f-a-group">
       <name>Yothin F.A. Group</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>50-9-1</record>
     </fighter>
     <fighter id="rws-chujai-chujai-muay-thai-gym">
       <name>Chujai Chujai Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>45-7-0</record>
     </fighter>
     <fighter id="rws-jaguar-petchyindee-academy">
       <name>Jaguar Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>42-14-1</record>
     </fighter>
     <fighter id="rws-petchnamnueng-tor-surat">
       <name>Petchnamnueng Tor. Surat</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>25-6-0</record>
     </fighter>
     <fighter id="rws-suesat-manop-muay-thai-gym">
       <name>Suesat Manop Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>41-6-0</record>
     </fighter>
     <fighter id="rws-narak-banglong-auto-max">
       <name>Narak Banglong Auto Max</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>31-13-0</record>
     </fighter>
     <fighter id="rws-boonchote-sor-boonmeerit">
       <name>Boonchote Sor.Boonmeerit</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>49-3-1</record>
     </fighter>
     <fighter id="rws-george-paranchai">
       <name>George Paranchai</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>31-4-0</record>
     </fighter>
     <fighter id="rws-silvio-virgil">
       <name>Silvio Virgil</name>
       <country>France</country>
+    
+      <age>23</age>
+      <record>30-7-1</record>
     </fighter>
     <fighter id="rws-kaimookkhao-wankhongohm">
       <name>Kaimookkhao Wankhongohm</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>20-7-0</record>
     </fighter>
     <fighter id="rws-saenrak-superlek-muay-thai-gym">
       <name>Saenrak Superlek Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>41-11-0</record>
     </fighter>
     <fighter id="rws-kaensak-jitmuangnon">
       <name>Kaensak Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>51-4-0</record>
     </fighter>
     <fighter id="rws-petchsila-wor-auracha">
       <name>Petchsila Wor. Auracha</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>58-6-1</record>
     </fighter>
     <fighter id="rws-petchsiam-jor-patareeya">
       <name>Petchsiam Jor. Patareeya</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>37-10-1</record>
     </fighter>
     <fighter id="rws-teerapong-dabtidbangrak">
       <name>Teerapong Dabtidbangrak</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>50-8-1</record>
     </fighter>
     <fighter id="rws-petchthailand-yodmuayphonrat">
       <name>Petchthailand Yodmuayphonrat</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>26-5-0</record>
     </fighter>
     <fighter id="rws-petchsaman-sor-saman-garment">
       <name>Petchsaman Sor. Saman Garment</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>21-6-0</record>
     </fighter>
     <fighter id="rws-songpayak-yokkao-gym">
       <name>Songpayak Yokkao Gym</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>56-12-0</record>
     </fighter>
     <fighter id="rws-chaitone-wor-auracha">
       <name>Chaitone Wor. Auracha</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>50-2-0</record>
     </fighter>
     <fighter id="rws-petchmongkol-samartpayakaroon-gym">
       <name>Petchmongkol Samartpayakaroon Gym</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>27-7-1</record>
     </fighter>
     <fighter id="rws-den-sor-petchudon">
       <name>Den Sor. Petchudon</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>33-7-0</record>
     </fighter>
     <fighter id="rws-petchsonglay-rawai-muay-thai">
       <name>Petchsonglay Rawai Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>60-12-0</record>
     </fighter>
     <fighter id="rws-sadaotong-nuiseemoommuang">
       <name>Sadaotong Nuiseemoommuang</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>16-10-0</record>
     </fighter>
     <fighter id="rws-diesellek-petchyindee-academy">
       <name>Diesellek Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>54-9-1</record>
     </fighter>
     <fighter id="rws-dokmaipa-santiubon">
       <name>Dokmaipa Santiubon</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>22-3-0</record>
     </fighter>
     <fighter id="rws-khunsueklek-boomdeksian">
       <name>Khunsueklek Boomdeksian</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>15-14-0</record>
     </fighter>
     <fighter id="rws-petchsaenkom-sor-sommai">
       <name>Petchsaenkom Sor. Sommai</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>26-14-1</record>
     </fighter>
     <fighter id="rws-petchphatchara-soonkeelakudchim">
       <name>Petchphatchara Soonkeelakudchim</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>41-15-1</record>
     </fighter>
     <fighter id="rws-jaroensook-boonlanna-muay-thai">
       <name>Jaroensook Boonlanna Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>22-15-1</record>
     </fighter>
     <fighter id="rws-puenyai-por-lakboon">
       <name>Puenyai Por. Lakboon</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>44-8-0</record>
     </fighter>
     <fighter id="rws-choosab-sor-salacheeb">
       <name>Choosab Sor. Salacheeb</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>17-3-0</record>
     </fighter>
     <fighter id="rws-petchake-singhakhlongluang">
       <name>Petchake Singhakhlongluang</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>16-10-0</record>
     </fighter>
     <fighter id="rws-addtewada-tor-surat">
       <name>Addtewada Tor. Surat</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>29-6-0</record>
     </fighter>
     <fighter id="rws-pangtor-por-lakboon">
       <name>Pangtor Por. Lakboon</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>30-6-0</record>
     </fighter>
     <fighter id="rws-saotho-or-atchariya">
       <name>Saotho Or. Atchariya</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>45-15-0</record>
     </fighter>
     <fighter id="rws-chalarmthong-sitchalaramkhao">
       <name>Chalarmthong Sitchalaramkhao</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>45-3-1</record>
     </fighter>
     <fighter id="rws-captainteam-sit-thailand">
       <name>Captainteam Sit Thailand</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>30-11-0</record>
     </fighter>
     <fighter id="rws-koko-manop-muay-thai-gym">
       <name>Koko Manop Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>34-14-0</record>
     </fighter>
     <fighter id="rws-kongtoranee-santiubon">
       <name>Kongtoranee Santiubon</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>41-8-0</record>
     </fighter>
     <fighter id="rws-chatngernlek-paniwat-muay-thai-gym">
       <name>Chatngernlek Paniwat Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>43-4-0</record>
     </fighter>
     <fighter id="rws-facebook-nawaphon-farm-sook-krabue-thai">
       <name>Facebook Nawaphon Farm Sook Krabue Thai</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>41-2-0</record>
     </fighter>
     <fighter id="rws-putin-sor-tienpo">
       <name>Putin Sor. Tienpo</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>19-9-0</record>
     </fighter>
     <fighter id="rws-petchrit-p-k-saenchai-muay-thai">
       <name>Petchrit P.K. Saenchai Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>49-15-0</record>
     </fighter>
     <fighter id="rws-detchanan-wor-wiangsa">
       <name>Detchanan Wor. Wiangsa</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>28-11-0</record>
     </fighter>
     <fighter id="rws-petchdej-muayded789">
       <name>Petchdej Muayded789</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>27-10-1</record>
     </fighter>
     <fighter id="rws-baknova-bangsaen-fight-club">
       <name>Baknova Bangsaen Fight Club</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>58-8-1</record>
     </fighter>
     <fighter id="rws-thailand-sor-rungsak">
       <name>Thailand Sor. Rungsak</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>60-12-0</record>
     </fighter>
     <fighter id="rws-thapna-sor-prembut">
       <name>Thapna Sor. Prembut</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>39-5-0</record>
     </fighter>
     <fighter id="rws-petchanuwat-taikoobon">
       <name>Petchanuwat Taikoobon</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>17-5-0</record>
     </fighter>
     <fighter id="rws-siengnoiroilan-laochokcharoenratchasri">
       <name>Siengnoiroilan Laochokcharoenratchasri</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>28-9-0</record>
     </fighter>
     <fighter id="rws-petchkriangkrai-jitmuangnon">
       <name>Petchkriangkrai Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>22-4-0</record>
     </fighter>
     <fighter id="rws-phusingha-or-khamin">
       <name>Phusingha Or. Khamin</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>38-8-1</record>
     </fighter>
     <fighter id="rws-petchnipphon-petchsimuen">
       <name>Petchnipphon Petchsimuen</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>24-15-0</record>
     </fighter>
     <fighter id="rws-taloompook-sor-sasiwat">
       <name>Taloompook Sor. Sasiwat</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>53-7-1</record>
     </fighter>
     <fighter id="rws-khunsuek-petchyindee-academy">
       <name>Khunsuek Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>42-15-0</record>
     </fighter>
     <fighter id="rws-klanarong-panpinit">
       <name>Klanarong Panpinit</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>43-2-0</record>
     </fighter>
     <fighter id="rws-buernueng-lookjaophokumphakan">
       <name>Buernueng Lookjaophokumphakan</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>30-3-1</record>
     </fighter>
     <fighter id="rws-chokdee-maxjandee">
       <name>Chokdee Maxjandee</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>33-14-1</record>
     </fighter>
     <fighter id="rws-boonchai-sor-boonmeerit">
       <name>Boonchai Sor.Boonmeerit</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>21-4-0</record>
     </fighter>
     <fighter id="rws-ritthipan-pandakrattanaburi">
       <name>Ritthipan Pandakrattanaburi</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>26-5-1</record>
     </fighter>
     <fighter id="rws-jigsaw-sit-thailand">
       <name>Jigsaw Sit Thailand</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>30-7-0</record>
     </fighter>
     <fighter id="rws-davinci-luckybanterng">
       <name>Davinci Luckybanterng</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>48-10-1</record>
     </fighter>
     <fighter id="rws-waewwaw-wor-wangprom">
       <name>Waewwaw Wor. Wangprom</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>32-7-0</record>
     </fighter>
     <fighter id="rws-petchake-kiatjamroon">
       <name>Petchake Kiatjamroon</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>57-9-0</record>
     </fighter>
     <fighter id="rws-singhadam-kiatfufuang">
       <name>Singhadam Kiatfufuang</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>42-9-0</record>
     </fighter>
     <fighter id="rws-singhapetch-or-piyapan-farm">
       <name>Singhapetch Or. Piyapan Farm</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>34-12-1</record>
     </fighter>
     <fighter id="rws-mungkornpetch-saimoonsnooker-club">
       <name>Mungkornpetch Saimoonsnooker Club</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>18-11-1</record>
     </fighter>
     <fighter id="rws-suasonglay-rawai-muay-thai">
       <name>Suasonglay Rawai Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>19-5-0</record>
     </fighter>
     <fighter id="rws-petchseedaeng-sitjaroensab">
       <name>Petchseedaeng Sitjaroensab</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>42-15-0</record>
     </fighter>
     <fighter id="rws-nuatoranee-jitmuangnon">
       <name>Nuatoranee Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>51-14-0</record>
     </fighter>
     <fighter id="rws-jaisingha-lookjaomaesaithong">
       <name>Jaisingha Lookjaomaesaithong</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>32-10-0</record>
     </fighter>
     <fighter id="rws-pek-krapaolinky">
       <name>Pek Krapaolinky</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>60-9-0</record>
     </fighter>
     <fighter id="rws-suaphum-teenoikachin">
       <name>Suaphum Teenoikachin</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>42-6-0</record>
     </fighter>
     <fighter id="rws-plaeng-erawan">
       <name>Plaeng Erawan</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>40-8-0</record>
     </fighter>
     <fighter id="rws-yimsiam-tor-thepsunguan">
       <name>Yimsiam Tor. Thepsunguan</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>50-8-0</record>
     </fighter>
     <fighter id="rws-petchbaanrai-singha-mawynn">
       <name>Petchbaanrai Singha Mawynn</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>20-9-0</record>
     </fighter>
     <fighter id="rws-duan99-or-petchkhunsuek">
       <name>Duan99 Or. Petchkhunsuek</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>51-15-0</record>
     </fighter>
     <fighter id="rws-thapthai-sor-prembut">
       <name>Thapthai Sor. Prembut</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>36-6-0</record>
     </fighter>
     <fighter id="rws-wanpadej-looksuan">
       <name>Wanpadej Looksuan</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>29-8-1</record>
     </fighter>
     <fighter id="rws-chikara-sato">
       <name>Chikara Sato</name>
       <country>Japan</country>
+    
+      <age>28</age>
+      <record>29-13-0</record>
     </fighter>
     <fighter id="rws-plaithongkham-sit-thailand-chiang-mai-gym">
       <name>Plaithongkham Sit Thailand Chiang Mai Gym</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>53-5-0</record>
     </fighter>
     <fighter id="rws-kampanthong-chor-hapayak">
       <name>Kampanthong Chor. Hapayak</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>47-6-0</record>
     </fighter>
     <fighter id="rws-shogun-nawaphon-farm-sook-krabue-thai">
       <name>Shogun Nawaphon Farm Sook Krabue Thai</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>29-4-0</record>
     </fighter>
     <fighter id="rws-yodpetchake-boomdeksian">
       <name>Yodpetchake Boomdeksian</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>48-11-1</record>
     </fighter>
     <fighter id="rws-sungfah-taikoobon">
       <name>Sungfah Taikoobon</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>33-6-0</record>
     </fighter>
     <fighter id="rws-dokmaifai-santiubon">
       <name>Dokmaifai Santiubon</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>53-14-0</record>
     </fighter>
     <fighter id="rws-laempo-sitkhunwasan">
       <name>Laempo Sitkhunwasan</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>55-5-1</record>
     </fighter>
     <fighter id="rws-petchmuangkan-chor-hapayak">
       <name>Petchmuangkan Chor. Hapayak</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>41-6-1</record>
     </fighter>
     <fighter id="rws-panaek-p-k-saenchai-muay-thai-gym">
       <name>Panaek P.K. Saenchai Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>40-11-1</record>
     </fighter>
     <fighter id="rws-petchduad-golit-muay-thai">
       <name>Petchduad Golit Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>26-2-1</record>
     </fighter>
     <fighter id="rws-pepsi-sujeebameekiew">
       <name>Pepsi Sujeebameekiew</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>36-10-0</record>
     </fighter>
     <fighter id="rws-fiws-padungchai-muay-thai-gym">
       <name>Fiws Padungchai Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>34-13-1</record>
     </fighter>
     <fighter id="rws-chalarmchon-wor-auracha">
       <name>Chalarmchon Wor. Auracha</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>21-3-1</record>
     </fighter>
     <fighter id="rws-kradooklek-or-atchariya">
       <name>Kradooklek Or. Atchariya</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>30-9-0</record>
     </fighter>
     <fighter id="rws-petchmuangsingha-taipetchaburi">
       <name>Petchmuangsingha Taipetchaburi</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>58-10-1</record>
     </fighter>
     <fighter id="rws-thonglone-savatdy">
       <name>Thonglone Savatdy</name>
       <country>Laos</country>
+    
+      <age>30</age>
+      <record>43-7-1</record>
     </fighter>
     <fighter id="rws-knotmai-wor-auracha">
       <name>Knotmai Wor. Auracha</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>50-8-0</record>
     </fighter>
     <fighter id="rws-yodpetchtho-boomdeksian">
       <name>Yodpetchtho Boomdeksian</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>60-8-0</record>
     </fighter>
     <fighter id="rws-wanheng-kiatchuthai">
       <name>Wanheng Kiatchuthai</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>28-11-0</record>
     </fighter>
     <fighter id="rws-homura-abe">
       <name>Homura Abe</name>
       <country>Japan</country>
+    
+      <age>30</age>
+      <record>25-10-0</record>
     </fighter>
     <fighter id="rws-monprakarn-sitpetchchalookan">
       <name>Monprakarn Sitpetchchalookan</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>28-12-0</record>
     </fighter>
     <fighter id="rws-jongarngdam-singha-mawynn">
       <name>Jongarngdam Singha Mawynn</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>18-5-0</record>
     </fighter>
     <fighter id="rws-teelek-mor-ruamjaipeun">
       <name>Teelek Mor. Ruamjaipeun</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>17-15-0</record>
     </fighter>
     <fighter id="rws-vip-sitjaton">
       <name>VIP Sitjaton</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>24-15-0</record>
     </fighter>
     <fighter id="rws-khunhan-dabtidbangrak">
       <name>Khunhan Dabtidbangrak</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>28-15-0</record>
     </fighter>
     <fighter id="rws-yodmanee-suanjarkcafe">
       <name>Yodmanee Suanjarkcafe</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>25-14-1</record>
     </fighter>
     <fighter id="rws-robert-paniwat-muay-thai">
       <name>Robert Paniwat Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>35-4-0</record>
     </fighter>
     <fighter id="rws-monpraram-sitpetchchalookan">
       <name>Monpraram Sitpetchchalookan</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>40-4-1</record>
     </fighter>
     <fighter id="rws-barbara-aguiar">
       <name>Barbara Aguiar</name>
       <country>Brazil</country>
+    
+      <age>28</age>
+      <record>55-2-0</record>
     </fighter>
     <fighter id="rws-buachompoo-chootangduan">
       <name>Buachompoo Chootangduan</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>21-12-1</record>
     </fighter>
     <fighter id="rws-somratsamee-manop-muay-thai-gym">
       <name>Somratsamee Manop Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>35-11-0</record>
     </fighter>
     <fighter id="rws-morgane-mary-pouliot">
       <name>Morgane Mary-Pouliot</name>
       <country>Canada</country>
+    
+      <age>27</age>
+      <record>52-12-0</record>
     </fighter>
     <fighter id="rws-laura-burgos">
       <name>Laura Burgos</name>
       <country>Mexico</country>
+    
+      <age>27</age>
+      <record>38-7-0</record>
     </fighter>
     <fighter id="rws-christina-manop-muay-thai">
       <name>Christina Manop Muay Thai</name>
       <country>United States</country>
+    
+      <age>30</age>
+      <record>45-13-1</record>
     </fighter>
     <fighter id="rws-fakfah-coke-khaoyai">
       <name>Fakfah Coke Khaoyai</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>35-5-1</record>
     </fighter>
     <fighter id="rws-nongmay-rongrean-keela-korat">
       <name>Nongmay Rongrean Keela Korat</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>43-13-0</record>
     </fighter>
     <fighter id="rws-eeva-pohto">
       <name>Eeva Pohto</name>
       <country>Finland</country>
+    
+      <age>29</age>
+      <record>38-13-0</record>
     </fighter>
     <fighter id="rws-roghayeh-mohammadiyan">
       <name>Roghayeh Mohammadiyan</name>
       <country>Iran</country>
+    
+      <age>30</age>
+      <record>45-13-0</record>
     </fighter>
     <fighter id="rws-amy-duke">
       <name>Amy Duke</name>
       <country>United States</country>
+    
+      <age>22</age>
+      <record>45-15-0</record>
     </fighter>
     <fighter id="rws-hollie-bowness">
       <name>Hollie Bowness</name>
+    
+      <age>22</age>
+      <record>31-9-0</record>
     </fighter>
     <fighter id="rws-mayree-khongsittha-muay-thai">
       <name>Mayree Khongsittha Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>38-14-0</record>
     </fighter>
     <fighter id="rws-zarina-islamova">
       <name>Zarina Islamova</name>
       <country>Russia</country>
+    
+      <age>31</age>
+      <record>20-5-0</record>
     </fighter>
     <fighter id="rws-monika-chochlikova">
       <name>Monika Chochlikova</name>
       <country>Slovakia</country>
+    
+      <age>22</age>
+      <record>33-10-0</record>
     </fighter>
     <fighter id="rws-sandra-vestergaard">
       <name>Sandra Vestergaard</name>
       <country>Denmark</country>
+    
+      <age>33</age>
+      <record>16-6-1</record>
     </fighter>
     <fighter id="rws-marie-ruumet">
       <name>Marie Ruumet</name>
       <country>Estonia</country>
+    
+      <age>24</age>
+      <record>47-9-0</record>
     </fighter>
     <fighter id="rws-maria-eduarda">
       <name>Maria Eduarda</name>
       <country>Brazil</country>
+    
+      <age>28</age>
+      <record>35-4-0</record>
     </fighter>
     <fighter id="rws-pinpetch-mor-rajaphatkorat">
       <name>Pinpetch Mor. Rajaphatkorat</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>55-5-1</record>
     </fighter>
     <fighter id="rws-narak-wkk-gym">
       <name>Narak WKK Gym</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>49-11-0</record>
     </fighter>
     <fighter id="rws-nongnook-mor-kor-chor-chaiyaphum">
       <name>Nongnook Mor.Kor.Chor. Chaiyaphum</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>54-10-1</record>
     </fighter>
     <fighter id="rws-lisa-brierley">
       <name>Lisa Brierley</name>
+    
+      <age>35</age>
+      <record>28-11-0</record>
     </fighter>
     <fighter id="rws-alessia-bertellotti">
       <name>Alessia Bertellotti</name>
       <country>Italy</country>
+    
+      <age>32</age>
+      <record>19-7-0</record>
     </fighter>
     <fighter id="rws-jitti-manop-muay-thai-gym">
       <name>Jitti Manop Muay Thai Gym</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>26-3-1</record>
     </fighter>
     <fighter id="rws-petchsomboon-sor-petchphrathat">
       <name>Petchsomboon Sor. Petchphrathat</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>47-3-1</record>
     </fighter>
     <fighter id="rws-ananta-n-f-luksuan">
       <name>Ananta N.F. Luksuan</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>15-6-1</record>
     </fighter>
     <fighter id="rws-zaidania-looksaikongdin">
       <name>Zaidania Looksaikongdin</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>18-7-0</record>
     </fighter>
     <fighter id="rws-suayngam-or-oodudon">
       <name>Suayngam Or. Oodudon</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>26-7-1</record>
     </fighter>
     <fighter id="rws-paula-silva">
       <name>Paula Silva</name>
       <country>Spain</country>
+    
+      <age>26</age>
+      <record>15-9-0</record>
     </fighter>
     <fighter id="rws-wanfai-mor-rajabhatmoobaanjombung">
       <name>Wanfai Mor. Rajabhatmoobaanjombung</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>22-5-0</record>
     </fighter>
     <fighter id="rws-looknam-kor-klomkiew">
       <name>Looknam Kor. Klomkiew</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>44-4-1</record>
     </fighter>
     <fighter id="rws-desiree-wodicker">
       <name>Desiree Wodicker</name>
-      <country>United States</country>
+      <nationalities>
+        <nationality>United States</nationality>
+        <nationality>Philippines</nationality>
+      </nationalities>
+    
+      <age>33</age>
+      <record>22-2-0</record>
     </fighter>
     <fighter id="rws-mongkutpetch-petchyindee-academy">
       <name>Mongkutpetch Petchyindee Academy</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>41-10-0</record>
     </fighter>
     <fighter id="rws-mookmanee-nor-naksuwan">
       <name>Mookmanee Nor. Naksuwan</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>25-11-0</record>
     </fighter>
     <fighter id="rws-kwanjira-sor-yupawadee">
       <name>Kwanjira Sor. Yupawadee</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>42-10-0</record>
     </fighter>
     <fighter id="rws-payahong-banchamek">
       <name>Payahong Banchamek</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>52-2-0</record>
     </fighter>
     <fighter id="rws-sanehngarm-sakchamni">
       <name>Sanehngarm Sakchamni</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>56-12-0</record>
     </fighter>
     <fighter id="rws-devina-martin">
       <name>Devina Martin</name>
       <country>Australia</country>
+    
+      <age>26</age>
+      <record>51-9-0</record>
     </fighter>
     <fighter id="rws-mafia-petchmongkoldee">
       <name>Mafia Petchmongkoldee</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>24-9-0</record>
     </fighter>
     <fighter id="rws-kaosuay-por-kobkua">
       <name>Kaosuay Por. Kobkua</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>15-9-1</record>
     </fighter>
     <fighter id="rws-katayoun-rahimi">
       <name>Katayoun Rahimi</name>
       <country>Iran</country>
+    
+      <age>24</age>
+      <record>33-6-0</record>
     </fighter>
     <fighter id="rws-baoplai-banchamek">
       <name>Baoplai Banchamek</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>37-13-0</record>
     </fighter>
     <fighter id="rws-chabakaew-t-c-muay-thai">
       <name>Chabakaew T.C. Muay Thai</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>42-13-1</record>
     </fighter>
     <fighter id="rws-prajanchai-wor-petchchonjan">
       <name>Prajanchai Wor. Petchchonjan</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>38-10-1</record>
     </fighter>
     <fighter id="rws-phuduan-sakchamni">
       <name>Phuduan Sakchamni</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>47-4-0</record>
     </fighter>
     <fighter id="rws-petchsaiparn-sitpanancherng">
       <name>Petchsaiparn Sitpanancherng</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>18-11-0</record>
     </fighter>
     <fighter id="rws-jomkwan-rongrean-keela-korat">
       <name>Jomkwan Rongrean Keela Korat</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>33-8-1</record>
     </fighter>
     <fighter id="rws-lomfon-sor-silaluk">
       <name>Lomfon Sor. Silaluk</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>24-10-0</record>
     </fighter>
   </fighters>
   <rankings>

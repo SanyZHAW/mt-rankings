@@ -97,1246 +97,2221 @@
     <fighter id="fighter-gerardo-atti">
       <name>Gerardo Atti</name>
       <country>Germany</country>
+    
+      <age>32</age>
+      <record>15-10-0</record>
     </fighter>
     <fighter id="fighter-faris-lukovic">
       <name>Faris Lukovic</name>
       <country>Malta</country>
+    
+      <age>28</age>
+      <record>29-10-1</record>
     </fighter>
     <fighter id="fighter-lyndon-knowles">
       <name>Lyndon Knowles</name>
       <country>England</country>
+    
+      <age>31</age>
+      <record>26-2-0</record>
     </fighter>
     <fighter id="fighter-tomasz-utczinski">
       <name>Tomasz Utczinski</name>
       <country>Poland</country>
+    
+      <age>26</age>
+      <record>55-2-0</record>
     </fighter>
     <fighter id="fighter-nathan-cook">
       <name>Nathan Cook</name>
       <country>England</country>
+    
+      <age>26</age>
+      <record>33-14-0</record>
     </fighter>
     <fighter id="fighter-oswaldo-duque">
       <name>Oswaldo Duque</name>
       <country>Mexico</country>
+    
+      <age>35</age>
+      <record>54-15-0</record>
     </fighter>
     <fighter id="fighter-steve-walker">
       <name>Steve Walker</name>
       <country>USA</country>
+    
+      <age>35</age>
+      <record>42-8-0</record>
     </fighter>
     <fighter id="fighter-alexandr-savin">
       <name>Alexandr Savin</name>
-      <country>Italy/Moldova</country>
+      <nationalities>
+        <nationality>Italy</nationality>
+        <nationality>Moldova</nationality>
+      </nationalities>
+    
+      <age>24</age>
+      <record>33-9-0</record>
     </fighter>
     <fighter id="fighter-ben-mason">
       <name>Ben Mason</name>
       <country>England</country>
+    
+      <age>31</age>
+      <record>52-4-0</record>
     </fighter>
     <fighter id="fighter-simon-mendes">
       <name>Simon Mendes</name>
       <country>Spain</country>
+    
+      <age>30</age>
+      <record>23-11-1</record>
     </fighter>
     <fighter id="fighter-pierre-vodi">
       <name>Pierre Vodi</name>
       <country>Ivory Coast</country>
+    
+      <age>27</age>
+      <record>58-13-0</record>
     </fighter>
     <fighter id="fighter-alex-roberts">
       <name>Alex Roberts</name>
       <country>Australia</country>
+    
+      <age>25</age>
+      <record>46-11-0</record>
     </fighter>
     <fighter id="fighter-hamid-reza-kordabadi">
       <name>Hamid Reza Kordabadi</name>
       <country>Iran</country>
+    
+      <age>33</age>
+      <record>36-5-0</record>
     </fighter>
     <fighter id="fighter-bensouna-sabih">
       <name>Bensouna Sabih</name>
       <country>France</country>
+    
+      <age>30</age>
+      <record>25-4-0</record>
     </fighter>
     <fighter id="fighter-vicente-rojas">
       <name>Vicente Rojas</name>
       <country>Chile</country>
+    
+      <age>29</age>
+      <record>58-12-1</record>
     </fighter>
     <fighter id="fighter-dchamad-armstrong">
       <name>Dchamad Armstrong</name>
       <country>New Zealand</country>
+    
+      <age>29</age>
+      <record>20-12-1</record>
     </fighter>
     <fighter id="fighter-guilaume-barnabe">
       <name>Guilaume Barnabe</name>
       <country>France</country>
+    
+      <age>24</age>
+      <record>33-7-0</record>
     </fighter>
     <fighter id="fighter-areta-gilbert">
       <name>Areta Gilbert</name>
       <country>New Zealand</country>
+    
+      <age>30</age>
+      <record>37-9-0</record>
     </fighter>
     <fighter id="fighter-annas-nogch">
       <name>Annas Nogch</name>
       <country>Spain</country>
+    
+      <age>32</age>
+      <record>41-6-0</record>
     </fighter>
     <fighter id="fighter-stewart-graham">
       <name>Stewart Graham</name>
       <country>Scotland</country>
+    
+      <age>34</age>
+      <record>35-9-1</record>
     </fighter>
     <fighter id="fighter-jesse-astill">
       <name>Jesse Astill</name>
       <country>Australia</country>
+    
+      <age>23</age>
+      <record>48-7-1</record>
     </fighter>
     <fighter id="fighter-ali-aliev">
       <name>Ali Aliev</name>
       <country>Dagestan</country>
+    
+      <age>29</age>
+      <record>48-8-1</record>
     </fighter>
     <fighter id="fighter-sofiane-djelab">
       <name>Sofiane Djelab</name>
       <country>France</country>
+    
+      <age>31</age>
+      <record>32-2-0</record>
     </fighter>
     <fighter id="fighter-charlie-bubb">
       <name>Charlie Bubb</name>
       <country>Australia</country>
+    
+      <age>25</age>
+      <record>44-8-1</record>
     </fighter>
     <fighter id="fighter-chip-pollard">
       <name>Chip Pollard</name>
       <country>USA</country>
+    
+      <age>34</age>
+      <record>37-6-0</record>
     </fighter>
     <fighter id="fighter-jayden-eynaud">
       <name>Jayden Eynaud</name>
       <country>Australia</country>
+    
+      <age>27</age>
+      <record>48-10-0</record>
     </fighter>
     <fighter id="fighter-mohammad-kia">
       <name>Mohammad Kia</name>
       <country>Iran</country>
+    
+      <age>35</age>
+      <record>34-3-0</record>
     </fighter>
     <fighter id="fighter-jakub-benko">
       <name>Jakub Benko</name>
       <country>Slovakia</country>
+    
+      <age>24</age>
+      <record>59-3-0</record>
     </fighter>
     <fighter id="fighter-charles-sikwa">
       <name>Charles Sikwa</name>
       <country>England</country>
+    
+      <age>27</age>
+      <record>52-10-0</record>
     </fighter>
     <fighter id="fighter-scott-stewart">
       <name>Scott Stewart</name>
       <country>England</country>
+    
+      <age>35</age>
+      <record>30-4-1</record>
     </fighter>
     <fighter id="fighter-charlie-pearce">
       <name>Charlie Pearce</name>
       <country>England</country>
+    
+      <age>28</age>
+      <record>55-7-1</record>
     </fighter>
     <fighter id="fighter-ciarain-shanahan">
       <name>Ciarain Shanahan</name>
       <country>Ireland</country>
+    
+      <age>31</age>
+      <record>56-8-0</record>
     </fighter>
     <fighter id="fighter-ali-el-ameri">
       <name>Ali El Ameri</name>
-      <country>Spain/Morocco</country>
+      <nationalities>
+        <nationality>Spain</nationality>
+        <nationality>Morocco</nationality>
+      </nationalities>
+    
+      <age>30</age>
+      <record>19-11-1</record>
     </fighter>
     <fighter id="fighter-moses-murrietta">
       <name>Moses Murrietta</name>
       <country>USA</country>
+    
+      <age>30</age>
+      <record>57-10-0</record>
     </fighter>
     <fighter id="fighter-matt-baker">
       <name>Matt Baker</name>
       <country>USA</country>
+    
+      <age>23</age>
+      <record>30-10-1</record>
     </fighter>
     <fighter id="fighter-vincent-wiktora">
       <name>Vincent Wiktora</name>
       <country>Australia</country>
+    
+      <age>32</age>
+      <record>55-9-1</record>
     </fighter>
     <fighter id="fighter-martello-jones">
       <name>Martello Jones</name>
       <country>Canada</country>
+    
+      <age>29</age>
+      <record>46-12-0</record>
     </fighter>
     <fighter id="fighter-bryann-mayaut">
       <name>Bryann Mayaut</name>
       <country>France</country>
+    
+      <age>29</age>
+      <record>38-13-0</record>
     </fighter>
     <fighter id="fighter-robert-stoll">
       <name>Robert Stoll</name>
       <country>Germany</country>
+    
+      <age>34</age>
+      <record>45-15-0</record>
     </fighter>
     <fighter id="fighter-dimitri-salamatin">
       <name>Dimitri Salamatin</name>
       <country>Estonia</country>
+    
+      <age>30</age>
+      <record>55-6-0</record>
     </fighter>
     <fighter id="fighter-martin-vemmelund">
       <name>Martin Vemmelund</name>
       <country>Denmark</country>
+    
+      <age>24</age>
+      <record>29-5-0</record>
     </fighter>
     <fighter id="fighter-lorenzo-panaro">
       <name>Lorenzo Panaro</name>
       <country>Italy</country>
+    
+      <age>24</age>
+      <record>21-11-0</record>
     </fighter>
     <fighter id="fighter-mouhcine-chafi">
       <name>Mouhcine Chafi</name>
-      <country>Spain/Morocco</country>
+      <nationalities>
+        <nationality>Spain</nationality>
+        <nationality>Morocco</nationality>
+      </nationalities>
+    
+      <age>35</age>
+      <record>36-13-1</record>
     </fighter>
     <fighter id="fighter-ramzi-nouainia">
       <name>Ramzi Nouainia</name>
       <country>France</country>
+    
+      <age>29</age>
+      <record>56-15-0</record>
     </fighter>
     <fighter id="fighter-younes-sadi">
       <name>Younes Sadi</name>
-      <country>Algeria/Denmark</country>
+      <nationalities>
+        <nationality>Algeria</nationality>
+        <nationality>Denmark</nationality>
+      </nationalities>
+    
+      <age>32</age>
+      <record>59-11-0</record>
     </fighter>
     <fighter id="fighter-lion-moonlanititthammantprompao">
       <name>Lion Moonlanititthammantprompao</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>39-11-1</record>
     </fighter>
     <fighter id="fighter-george-jarvis">
       <name>George Jarvis</name>
       <country>England</country>
+    
+      <age>34</age>
+      <record>59-10-0</record>
     </fighter>
     <fighter id="fighter-frederick-winter">
       <name>Frederick Winter</name>
       <country>Denmark</country>
+    
+      <age>26</age>
+      <record>31-6-1</record>
     </fighter>
     <fighter id="fighter-joakim-hagg">
       <name>Joakim Hagg</name>
       <country>Sweden</country>
+    
+      <age>26</age>
+      <record>33-9-0</record>
     </fighter>
     <fighter id="fighter-james-majok">
       <name>James Majok</name>
       <country>South Sudan</country>
+    
+      <age>32</age>
+      <record>31-12-0</record>
     </fighter>
     <fighter id="fighter-mikael-benatar">
       <name>Mikael Benatar</name>
       <country>France</country>
+    
+      <age>32</age>
+      <record>45-13-1</record>
     </fighter>
     <fighter id="fighter-reda-oudgou">
       <name>Reda Oudgou</name>
       <country>France</country>
+    
+      <age>35</age>
+      <record>38-15-1</record>
     </fighter>
     <fighter id="fighter-dmitrii-salamatin">
       <name>Dmitrii Salamatin</name>
       <country>Estonia</country>
+    
+      <age>28</age>
+      <record>59-5-0</record>
     </fighter>
     <fighter id="fighter-petchgantat-muden">
       <name>Petchgantat MUDen</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>47-12-1</record>
     </fighter>
     <fighter id="fighter-tim-schlapbach">
       <name>Tim Schlapbach</name>
       <country>Sitzerland</country>
+    
+      <age>23</age>
+      <record>42-7-0</record>
     </fighter>
     <fighter id="fighter-jomkhon-kiatnongluang">
       <name>Jomkhon Kiatnongluang</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>39-12-1</record>
     </fighter>
     <fighter id="fighter-jack-bullock">
       <name>Jack Bullock</name>
       <country>England</country>
+    
+      <age>27</age>
+      <record>16-15-1</record>
     </fighter>
     <fighter id="fighter-charlie-o-neill">
       <name>Charlie O’ Neill</name>
       <country>England</country>
+    
+      <age>24</age>
+      <record>41-12-0</record>
     </fighter>
     <fighter id="fighter-thomas-wright">
       <name>Thomas Wright</name>
       <country>New Zealand</country>
+    
+      <age>27</age>
+      <record>28-3-0</record>
     </fighter>
     <fighter id="fighter-marcus-sundin-liljeorff">
       <name>Marcus Sundin Liljeorff</name>
       <country>Sweden</country>
+    
+      <age>22</age>
+      <record>19-5-0</record>
     </fighter>
     <fighter id="fighter-roman-mitjajev">
       <name>Roman Mitjajev</name>
       <country>Estonia</country>
+    
+      <age>25</age>
+      <record>56-13-0</record>
     </fighter>
     <fighter id="fighter-jaxson-hayman">
       <name>Jaxson Hayman</name>
       <country>Australia</country>
+    
+      <age>23</age>
+      <record>22-15-0</record>
     </fighter>
     <fighter id="fighter-titus-proctor">
       <name>Titus Proctor</name>
       <country>New Zealand</country>
+    
+      <age>30</age>
+      <record>51-4-1</record>
     </fighter>
     <fighter id="fighter-jamie-allison">
       <name>Jamie Allison</name>
       <country>Scotland</country>
+    
+      <age>32</age>
+      <record>21-2-1</record>
     </fighter>
     <fighter id="fighter-tengneung-sitjaisairung">
       <name>Tengneung Sitjaisairung</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>53-2-0</record>
     </fighter>
     <fighter id="fighter-rungrawee-sitsongpeenong">
       <name>Rungrawee Sitsongpeenong</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>24-15-0</record>
     </fighter>
     <fighter id="fighter-josh-hill">
       <name>Josh Hill</name>
       <country>England</country>
+    
+      <age>29</age>
+      <record>46-5-0</record>
     </fighter>
     <fighter id="fighter-emerson-bento">
       <name>Emerson Bento</name>
       <country>Brazil</country>
+    
+      <age>27</age>
+      <record>22-10-0</record>
     </fighter>
     <fighter id="fighter-youssef-assouik">
       <name>Youssef Assouik</name>
       <country>Denmark</country>
+    
+      <age>33</age>
+      <record>50-14-1</record>
     </fighter>
     <fighter id="fighter-daniel-bonner">
       <name>Daniel Bonner</name>
       <country>England</country>
+    
+      <age>27</age>
+      <record>30-10-0</record>
     </fighter>
     <fighter id="fighter-nauzet-trujillo">
       <name>Nauzet Trujillo</name>
       <country>Spain</country>
+    
+      <age>28</age>
+      <record>45-12-1</record>
     </fighter>
     <fighter id="fighter-salimkahn-ibrahimov">
       <name>Salimkahn Ibrahimov</name>
       <country>Azerbaijan</country>
+    
+      <age>33</age>
+      <record>42-2-0</record>
     </fighter>
     <fighter id="fighter-harry-purvis">
       <name>Harry Purvis</name>
       <country>England</country>
+    
+      <age>29</age>
+      <record>58-5-0</record>
     </fighter>
     <fighter id="fighter-dylan-meagher">
       <name>Dylan Meagher</name>
       <country>Ireland</country>
+    
+      <age>33</age>
+      <record>40-6-0</record>
     </fighter>
     <fighter id="fighter-paavo-leinonen">
       <name>Paavo Leinonen</name>
       <country>Finland</country>
+    
+      <age>31</age>
+      <record>48-13-0</record>
     </fighter>
     <fighter id="fighter-joe-welch">
       <name>Joe Welch</name>
       <country>England</country>
+    
+      <age>23</age>
+      <record>36-8-0</record>
     </fighter>
     <fighter id="fighter-ciaran-smith">
       <name>Ciaran Smith</name>
       <country>England</country>
+    
+      <age>33</age>
+      <record>38-12-0</record>
     </fighter>
     <fighter id="fighter-samuel-gonzalez">
       <name>Samuel Gonzalez</name>
-      <country>Denmark/Spain</country>
+      <nationalities>
+        <nationality>Denmark</nationality>
+        <nationality>Spain</nationality>
+      </nationalities>
+    
+      <age>23</age>
+      <record>18-8-1</record>
     </fighter>
     <fighter id="fighter-ayoub-bahri">
       <name>Ayoub Bahri</name>
       <country>Algeria</country>
+    
+      <age>32</age>
+      <record>15-10-0</record>
     </fighter>
     <fighter id="fighter-lamin-souayah">
       <name>Lamin Souayah</name>
       <country>Libya</country>
+    
+      <age>33</age>
+      <record>28-8-1</record>
     </fighter>
     <fighter id="fighter-ibrahim-fettar">
       <name>Ibrahim Fettar</name>
       <country>France</country>
+    
+      <age>30</age>
+      <record>51-4-0</record>
     </fighter>
     <fighter id="fighter-jake-mc-cowatt">
       <name>Jake Mc Cowatt</name>
       <country>New Zealand</country>
+    
+      <age>28</age>
+      <record>29-6-0</record>
     </fighter>
     <fighter id="fighter-leroy-luperon">
       <name>Leroy Luperon</name>
       <country>Switzerland</country>
+    
+      <age>26</age>
+      <record>27-10-0</record>
     </fighter>
     <fighter id="fighter-charlie-guest">
       <name>Charlie Guest</name>
       <country>England</country>
+    
+      <age>26</age>
+      <record>41-3-0</record>
     </fighter>
     <fighter id="fighter-petchmorakot-petchyindee">
       <name>Petchmorakot Petchyindee</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>40-13-0</record>
     </fighter>
     <fighter id="fighter-james-honey">
       <name>James Honey</name>
       <country>Australia</country>
+    
+      <age>35</age>
+      <record>22-13-0</record>
     </fighter>
     <fighter id="fighter-thananchai-sitsongpeenong">
       <name>Thananchai Sitsongpeenong</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>35-10-0</record>
     </fighter>
     <fighter id="fighter-garrett-smylie">
       <name>Garrett Smylie</name>
       <country>Ireland</country>
+    
+      <age>28</age>
+      <record>21-12-0</record>
     </fighter>
     <fighter id="fighter-ruslan-naghiyev">
       <name>Ruslan Naghiyev</name>
       <country>Azerbaijan</country>
+    
+      <age>26</age>
+      <record>25-10-1</record>
     </fighter>
     <fighter id="fighter-victor-hugo">
       <name>Victor Hugo</name>
       <country>Brazil</country>
+    
+      <age>26</age>
+      <record>37-12-1</record>
     </fighter>
     <fighter id="fighter-tristan-stauffer">
       <name>Tristan Stauffer</name>
       <country>Switzerland</country>
+    
+      <age>31</age>
+      <record>22-10-1</record>
     </fighter>
     <fighter id="fighter-kongjak-por-paoin">
       <name>Kongjak Por Paoin</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>43-5-1</record>
     </fighter>
     <fighter id="fighter-petchmai-sorkor-lekthaweewattana">
       <name>Petchmai SorKor Lekthaweewattana</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>15-7-0</record>
     </fighter>
     <fighter id="fighter-martin-pranjkovic">
       <name>Martin Pranjkovic</name>
-      <country>Germany/Croatia</country>
+      <nationalities>
+        <nationality>Germany</nationality>
+        <nationality>Croatia</nationality>
+      </nationalities>
+    
+      <age>34</age>
+      <record>27-13-0</record>
     </fighter>
     <fighter id="fighter-joe-craven">
       <name>Joe Craven</name>
       <country>England</country>
+    
+      <age>27</age>
+      <record>40-11-0</record>
     </fighter>
     <fighter id="fighter-david-pennimpede">
       <name>David Pennimpede</name>
       <country>Australia</country>
+    
+      <age>25</age>
+      <record>34-10-0</record>
     </fighter>
     <fighter id="fighter-michael-lynch">
       <name>Michael Lynch</name>
       <country>New Zealand</country>
+    
+      <age>27</age>
+      <record>18-3-0</record>
     </fighter>
     <fighter id="fighter-jonathan-mayezo">
       <name>Jonathan Mayezo</name>
       <country>Reunion Islands</country>
+    
+      <age>24</age>
+      <record>23-12-0</record>
     </fighter>
     <fighter id="fighter-nayanesh-ayman">
       <name>Nayanesh Ayman</name>
       <country>Spain</country>
+    
+      <age>29</age>
+      <record>58-12-1</record>
     </fighter>
     <fighter id="fighter-alex-bublea">
       <name>Alex Bublea</name>
       <country>Romania</country>
+    
+      <age>27</age>
+      <record>20-15-1</record>
     </fighter>
     <fighter id="fighter-quinton-smith">
       <name>Quinton Smith</name>
       <country>Australia</country>
+    
+      <age>29</age>
+      <record>26-10-0</record>
     </fighter>
     <fighter id="fighter-abdallah-keita">
       <name>Abdallah Keita</name>
       <country>France</country>
+    
+      <age>31</age>
+      <record>32-9-0</record>
     </fighter>
     <fighter id="fighter-jackson-barkhouse">
       <name>Jackson Barkhouse</name>
       <country>England</country>
+    
+      <age>25</age>
+      <record>42-10-0</record>
     </fighter>
     <fighter id="fighter-dylan-salvador">
       <name>Dylan Salvador</name>
       <country>France</country>
+    
+      <age>26</age>
+      <record>49-15-1</record>
     </fighter>
     <fighter id="fighter-phuaeathai-sirilukmuaythai">
       <name>Phuaeathai SirilukMuayThai</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>18-10-0</record>
     </fighter>
-    <fighter id="fighter-daniel-rodrigues">
-      <name>Daniel Rodrigues</name>
+    <fighter id="fighter-daniel-rodriguez">
+      <name>Daniel Rodriguez</name>
       <country>Switzerland</country>
+    
+      <age>28</age>
+      <record>35-7-1</record>
     </fighter>
     <fighter id="fighter-boonlert-sor-boonmerit">
       <name>Boonlert Sor Boonmerit</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>46-6-0</record>
     </fighter>
     <fighter id="fighter-nontachai-jitmuangnon">
       <name>Nontachai Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>44-6-0</record>
     </fighter>
     <fighter id="fighter-rittewada-petchyindee">
       <name>Rittewada Petchyindee</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>26-6-0</record>
     </fighter>
     <fighter id="fighter-pentor-paedminburi">
       <name>Pentor Paedminburi</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>47-15-0</record>
     </fighter>
     <fighter id="fighter-mohammad-siasarani">
       <name>Mohammad Siasarani</name>
       <country>Iran</country>
+    
+      <age>31</age>
+      <record>36-6-0</record>
     </fighter>
     <fighter id="fighter-hercules-wor-jakawut">
       <name>Hercules Wor Jakawut</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>28-6-1</record>
     </fighter>
     <fighter id="fighter-jonathan-aiulu">
       <name>Jonathan Aiulu</name>
       <country>Australia</country>
+    
+      <age>33</age>
+      <record>58-12-0</record>
     </fighter>
     <fighter id="fighter-tom-keogh">
       <name>Tom Keogh</name>
       <country>Ireland</country>
+    
+      <age>30</age>
+      <record>59-6-0</record>
     </fighter>
     <fighter id="fighter-james-kelly">
       <name>James Kelly</name>
       <country>Ireland</country>
+    
+      <age>23</age>
+      <record>56-15-1</record>
     </fighter>
     <fighter id="fighter-levi-bailey">
       <name>Levi Bailey</name>
       <country>England</country>
+    
+      <age>28</age>
+      <record>35-15-0</record>
     </fighter>
     <fighter id="fighter-hakim-bah">
       <name>Hakim Bah</name>
       <country>Switzerland</country>
+    
+      <age>31</age>
+      <record>30-3-0</record>
     </fighter>
     <fighter id="fighter-sam-fitzgerald">
       <name>Sam Fitzgerald</name>
       <country>New Zealand</country>
+    
+      <age>29</age>
+      <record>26-5-0</record>
     </fighter>
     <fighter id="fighter-soufian-touti">
       <name>Soufian Touti</name>
       <country>Denmark</country>
+    
+      <age>22</age>
+      <record>31-3-1</record>
     </fighter>
     <fighter id="fighter-daniel-matthews">
       <name>Daniel Matthews</name>
       <country>Australia</country>
+    
+      <age>24</age>
+      <record>51-4-1</record>
     </fighter>
     <fighter id="fighter-damien-cazambo">
       <name>Damien Cazambo</name>
-      <country>France/Reunion</country>
+      <nationalities>
+        <nationality>France</nationality>
+        <nationality>Reunion</nationality>
+      </nationalities>
+    
+      <age>27</age>
+      <record>38-12-1</record>
     </fighter>
     <fighter id="fighter-quinn-wasylak">
       <name>Quinn Wasylak</name>
       <country>Canada</country>
+    
+      <age>25</age>
+      <record>48-6-1</record>
     </fighter>
     <fighter id="fighter-finn-welch">
       <name>Finn Welch</name>
       <country>England</country>
+    
+      <age>28</age>
+      <record>27-5-1</record>
     </fighter>
     <fighter id="fighter-niall-mcgreevy">
       <name>Niall McGreevy</name>
       <country>Ireland</country>
+    
+      <age>24</age>
+      <record>41-15-0</record>
     </fighter>
     <fighter id="fighter-elias-naji">
       <name>Elias Naji</name>
       <country>France</country>
+    
+      <age>24</age>
+      <record>55-2-0</record>
     </fighter>
     <fighter id="fighter-lee-walton">
       <name>Lee Walton</name>
       <country>Ireland</country>
+    
+      <age>29</age>
+      <record>18-13-0</record>
     </fighter>
     <fighter id="fighter-tapaokaew-singmawyn">
       <name>Tapaokaew Singmawyn</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>47-2-0</record>
     </fighter>
     <fighter id="fighter-capitan-petchyindee">
       <name>Capitan Petchyindee</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>31-3-0</record>
     </fighter>
     <fighter id="fighter-pornpitak-tor-jakkasi">
       <name>Pornpitak Tor Jakkasi</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>41-10-0</record>
     </fighter>
     <fighter id="fighter-sajad-sattari">
       <name>Sajad Sattari</name>
       <country>Iran</country>
+    
+      <age>25</age>
+      <record>48-11-1</record>
     </fighter>
     <fighter id="fighter-nabil-anane">
       <name>Nabil Anane</name>
-      <country>Algeria/Thailand</country>
+      <nationalities>
+        <nationality>Algeria</nationality>
+        <nationality>Thailand</nationality>
+      </nationalities>
+    
+      <age>31</age>
+      <record>52-8-0</record>
     </fighter>
     <fighter id="fighter-khunhanlek-kiatcharoenchai">
       <name>Khunhanlek Kiatcharoenchai</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>48-7-0</record>
     </fighter>
     <fighter id="fighter-yodiq-or-pimonsri">
       <name>YodIQ Or Pimonsri</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>24-2-0</record>
     </fighter>
     <fighter id="fighter-alessandro-sara">
       <name>Alessandro Sara</name>
       <country>Italy</country>
+    
+      <age>33</age>
+      <record>34-5-1</record>
     </fighter>
     <fighter id="fighter-julio-lobo">
       <name>Julio Lobo</name>
       <country>Brazil</country>
+    
+      <age>29</age>
+      <record>44-5-0</record>
     </fighter>
     <fighter id="fighter-paulo-d-antoni">
       <name>Paulo D’Antoni</name>
       <country>Italy</country>
+    
+      <age>29</age>
+      <record>30-6-1</record>
     </fighter>
     <fighter id="fighter-dzmitry-varats">
       <name>Dzmitry Varats</name>
-      <country>Belarus/USA</country>
+      <nationalities>
+        <nationality>Belarus</nationality>
+        <nationality>USA</nationality>
+      </nationalities>
+    
+      <age>28</age>
+      <record>37-9-1</record>
     </fighter>
     <fighter id="fighter-max-mcvicker">
       <name>Max McVicker</name>
       <country>Australia</country>
+    
+      <age>22</age>
+      <record>29-3-0</record>
     </fighter>
     <fighter id="fighter-erik-hehir">
       <name>Erik Hehir</name>
-      <country>Ireland/Sweden</country>
+      <nationalities>
+        <nationality>Ireland</nationality>
+        <nationality>Sweden</nationality>
+      </nationalities>
+    
+      <age>31</age>
+      <record>44-7-0</record>
     </fighter>
     <fighter id="fighter-arjan-hajdari">
       <name>Arjan Hajdari</name>
-      <country>Albania/Germany</country>
+      <nationalities>
+        <nationality>Albania</nationality>
+        <nationality>Germany</nationality>
+      </nationalities>
+    
+      <age>33</age>
+      <record>24-14-0</record>
     </fighter>
     <fighter id="fighter-mo-abdurahman">
       <name>Mo Abdurahman</name>
       <country>England</country>
+    
+      <age>27</age>
+      <record>56-11-1</record>
     </fighter>
     <fighter id="fighter-daniel-zhou">
       <name>Daniel Zhou</name>
       <country>Canada</country>
+    
+      <age>23</age>
+      <record>22-14-0</record>
     </fighter>
     <fighter id="fighter-louie-doherty">
       <name>Louie Doherty</name>
       <country>England</country>
+    
+      <age>27</age>
+      <record>28-11-0</record>
     </fighter>
     <fighter id="fighter-tayro-muru">
       <name>Tayro Muru</name>
       <country>Italy</country>
+    
+      <age>26</age>
+      <record>25-13-0</record>
     </fighter>
     <fighter id="fighter-karl-ryan">
       <name>Karl Ryan</name>
       <country>England</country>
+    
+      <age>24</age>
+      <record>29-7-1</record>
     </fighter>
     <fighter id="fighter-worapon-lukjaoporongtom">
       <name>Worapon Lukjaoporongtom</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>28-15-0</record>
     </fighter>
     <fighter id="fighter-kongsuk-sitsarawatsuea">
       <name>Kongsuk Sitsarawatsuea</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>22-9-1</record>
     </fighter>
     <fighter id="fighter-petchwichai-dechdechdo">
       <name>Petchwichai Dechdechdo</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>59-12-1</record>
     </fighter>
     <fighter id="fighter-duangsompong-jitmaungnon">
       <name>Duangsompong Jitmaungnon</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>49-7-1</record>
     </fighter>
     <fighter id="fighter-kimluay-wanhongohm">
       <name>Kimluay Wanhongohm</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>47-13-0</record>
     </fighter>
     <fighter id="fighter-dam-parunchai">
       <name>Dam Parunchai</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>56-12-0</record>
     </fighter>
     <fighter id="fighter-maemot-sor-salacheap">
       <name>Maemot Sor Salacheap</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>53-3-0</record>
     </fighter>
     <fighter id="fighter-parahatnoi-sor-sommai">
       <name>Parahatnoi Sor Sommai</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>19-9-0</record>
     </fighter>
     <fighter id="fighter-hamza-rachid">
       <name>Hamza Rachid</name>
       <country>Morocco</country>
+    
+      <age>32</age>
+      <record>35-14-1</record>
     </fighter>
     <fighter id="fighter-tadhg-gannon">
       <name>Tadhg Gannon</name>
       <country>Ireland</country>
+    
+      <age>27</age>
+      <record>32-6-0</record>
     </fighter>
     <fighter id="fighter-chadd-collins">
       <name>Chadd Collins</name>
       <country>Australia</country>
+    
+      <age>22</age>
+      <record>53-4-1</record>
     </fighter>
     <fighter id="fighter-majid-ahmadi">
       <name>Majid Ahmadi</name>
       <country>Germany</country>
+    
+      <age>35</age>
+      <record>38-3-0</record>
     </fighter>
     <fighter id="fighter-mohammad-dahlan">
       <name>Mohammad Dahlan</name>
       <country>Australia</country>
+    
+      <age>28</age>
+      <record>39-5-1</record>
     </fighter>
     <fighter id="fighter-josh-king">
       <name>Josh King</name>
       <country>Australia</country>
+    
+      <age>29</age>
+      <record>34-12-0</record>
     </fighter>
     <fighter id="fighter-craig-coakley">
       <name>Craig Coakley</name>
       <country>Ireland</country>
+    
+      <age>28</age>
+      <record>39-5-0</record>
     </fighter>
     <fighter id="fighter-yota-shigemori">
       <name>Yota Shigemori</name>
       <country>Japan</country>
+    
+      <age>30</age>
+      <record>27-3-0</record>
     </fighter>
     <fighter id="fighter-brooks-sowerby">
       <name>Brooks Sowerby</name>
       <country>England</country>
+    
+      <age>29</age>
+      <record>48-13-0</record>
     </fighter>
     <fighter id="fighter-sebastian-tello">
       <name>Sebastian Tello</name>
       <country>Chile</country>
+    
+      <age>32</age>
+      <record>23-15-0</record>
     </fighter>
     <fighter id="fighter-federico-mazza">
       <name>Federico Mazza</name>
       <country>Italy</country>
+    
+      <age>30</age>
+      <record>59-10-1</record>
     </fighter>
     <fighter id="fighter-shimon-eiwasports">
       <name>Shimon EiwaSports</name>
       <country>Japan</country>
+    
+      <age>33</age>
+      <record>16-14-0</record>
     </fighter>
     <fighter id="fighter-samingdetch-bangmudklongton">
       <name>Samingdetch Bangmudklongton</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>26-9-0</record>
     </fighter>
     <fighter id="fighter-decho-por-borirak">
       <name>Decho Por Borirak</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>50-14-1</record>
     </fighter>
     <fighter id="fighter-dedduanglek-tded99">
       <name>Dedduanglek Tded99</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>20-6-0</record>
     </fighter>
     <fighter id="fighter-jaradchai-maxjandee">
       <name>Jaradchai Maxjandee</name>
       <country>Thailad</country>
+    
+      <age>32</age>
+      <record>35-4-1</record>
     </fighter>
     <fighter id="fighter-petchchonlaton-gor-adisak">
       <name>Petchchonlaton Gor Adisak</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>45-10-0</record>
     </fighter>
     <fighter id="fighter-michael-savvas">
       <name>Michael Savvas</name>
       <country>Cyprus</country>
+    
+      <age>27</age>
+      <record>18-7-0</record>
     </fighter>
     <fighter id="fighter-somraknoi-muayded789">
       <name>Somraknoi Muayded789</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>53-12-0</record>
     </fighter>
     <fighter id="fighter-nongbiew-jitmuangnon">
       <name>Nongbiew Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>54-13-0</record>
     </fighter>
     <fighter id="fighter-sangmanee-jitmangnon">
       <name>Sangmanee Jitmangnon</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>45-9-0</record>
     </fighter>
     <fighter id="fighter-buakaew-sorsor-pakorn">
       <name>Buakaew SorSor Pakorn</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>49-13-0</record>
     </fighter>
     <fighter id="fighter-alfie-pearse">
       <name>Alfie Pearse</name>
       <country>England</country>
+    
+      <age>33</age>
+      <record>38-6-0</record>
     </fighter>
     <fighter id="fighter-karl-tannion">
       <name>Karl Tannion</name>
       <country>Ireland</country>
+    
+      <age>31</age>
+      <record>24-12-0</record>
     </fighter>
     <fighter id="fighter-craig-marshall">
       <name>Craig Marshall</name>
       <country>Scotland</country>
+    
+      <age>30</age>
+      <record>51-7-1</record>
     </fighter>
     <fighter id="fighter-santiago-lalane">
       <name>Santiago Lalane</name>
       <country>Argentina</country>
+    
+      <age>25</age>
+      <record>46-8-0</record>
     </fighter>
     <fighter id="fighter-tagir-khalilov">
       <name>Tagir Khalilov</name>
       <country>Azerbaijan</country>
+    
+      <age>29</age>
+      <record>54-4-0</record>
     </fighter>
     <fighter id="fighter-jhonta-farias-silva">
       <name>Jhonta Farias Silva</name>
       <country>Brazil</country>
+    
+      <age>28</age>
+      <record>35-8-1</record>
     </fighter>
     <fighter id="fighter-muga">
       <name>Muga</name>
       <country>Japan</country>
+    
+      <age>31</age>
+      <record>52-6-1</record>
     </fighter>
     <fighter id="fighter-renta-wor-wanchai">
       <name>Renta Wor Wanchai</name>
       <country>Japan</country>
+    
+      <age>30</age>
+      <record>31-7-0</record>
     </fighter>
     <fighter id="fighter-nico-antolinez">
       <name>Nico Antolinez</name>
       <country>Spain</country>
+    
+      <age>33</age>
+      <record>50-7-0</record>
     </fighter>
     <fighter id="fighter-miki-ghazali">
       <name>Miki Ghazali</name>
-      <country>Malaysia/USA</country>
+      <nationalities>
+        <nationality>Malaysia</nationality>
+        <nationality>USA</nationality>
+      </nationalities>
+    
+      <age>22</age>
+      <record>33-3-0</record>
     </fighter>
     <fighter id="fighter-chaila-por-lakboon">
       <name>Chaila Por Lakboon</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>37-10-1</record>
     </fighter>
     <fighter id="fighter-thongnoi-wor-sungprapai">
       <name>Thongnoi Wor Sungprapai</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>24-6-0</record>
     </fighter>
     <fighter id="fighter-chalam-parunchai">
       <name>Chalam Parunchai</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>54-6-0</record>
     </fighter>
     <fighter id="fighter-samingdaeng-sor-sonnatet">
       <name>Samingdaeng Sor Sonnatet</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>52-2-1</record>
     </fighter>
     <fighter id="fighter-wukong-sitcharoensub">
       <name>Wukong Sitcharoensub</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>20-8-1</record>
     </fighter>
     <fighter id="fighter-yodet-ptt-tongtawee">
       <name>YodET PTT Tongtawee</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>21-4-0</record>
     </fighter>
     <fighter id="fighter-panpadetch-nf-luksuan">
       <name>Panpadetch NF Luksuan</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>19-6-0</record>
     </fighter>
     <fighter id="fighter-plaipayak-sor-sommai">
       <name>Plaipayak Sor Sommai</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>54-10-1</record>
     </fighter>
     <fighter id="fighter-ratchasai-golita-muaythai">
       <name>Ratchasai Golita MuayThai</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>22-7-0</record>
     </fighter>
     <fighter id="fighter-failaeng-chor-haypayak">
       <name>Failaeng Chor Haypayak</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>23-4-0</record>
     </fighter>
     <fighter id="fighter-jalil-barnes">
       <name>Jalil Barnes</name>
       <country>USA</country>
+    
+      <age>33</age>
+      <record>20-10-0</record>
     </fighter>
     <fighter id="fighter-ubaid-hussain">
       <name>Ubaid Hussain</name>
       <country>England</country>
+    
+      <age>24</age>
+      <record>21-9-0</record>
     </fighter>
     <fighter id="fighter-stephen-irvine">
       <name>Stephen Irvine</name>
       <country>Scotland</country>
+    
+      <age>30</age>
+      <record>31-10-1</record>
     </fighter>
     <fighter id="fighter-wanchaloem-sitshoothon">
       <name>Wanchaloem Sitshoothon</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>56-6-0</record>
     </fighter>
     <fighter id="fighter-noelisson-silva">
       <name>Noelisson Silva</name>
       <country>Brazil</country>
+    
+      <age>31</age>
+      <record>34-8-0</record>
     </fighter>
     <fighter id="fighter-maxi-caballero">
       <name>Maxi Caballero</name>
       <country>Spain</country>
+    
+      <age>24</age>
+      <record>19-7-0</record>
     </fighter>
     <fighter id="fighter-james-kostic">
       <name>James Kostic</name>
       <country>Australia</country>
+    
+      <age>35</age>
+      <record>54-15-0</record>
     </fighter>
     <fighter id="fighter-darren-roland">
       <name>Darren Roland</name>
       <country>France</country>
+    
+      <age>26</age>
+      <record>31-4-1</record>
     </fighter>
     <fighter id="fighter-mbaye-samb">
       <name>Mbaye Samb</name>
       <country>France</country>
+    
+      <age>29</age>
+      <record>42-4-0</record>
     </fighter>
     <fighter id="fighter-jacob-thomson">
       <name>Jacob Thomson</name>
       <country>England</country>
+    
+      <age>29</age>
+      <record>38-8-1</record>
     </fighter>
     <fighter id="fighter-dominic-reed">
       <name>Dominic Reed</name>
       <country>New Zealand</country>
+    
+      <age>29</age>
+      <record>30-3-0</record>
     </fighter>
     <fighter id="fighter-antonio-orden">
       <name>Antonio Orden</name>
       <country>Spain</country>
+    
+      <age>28</age>
+      <record>27-4-1</record>
     </fighter>
     <fighter id="fighter-adam-messaoud">
       <name>Adam Messaoud</name>
       <country>France</country>
+    
+      <age>24</age>
+      <record>29-7-1</record>
     </fighter>
     <fighter id="fighter-tam-mccourt">
       <name>Tam McCourt</name>
       <country>Scotland</country>
+    
+      <age>27</age>
+      <record>44-4-0</record>
     </fighter>
     <fighter id="fighter-pornsanae-sor-phumpat">
       <name>Pornsanae Sor Phumpat</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>50-2-0</record>
     </fighter>
     <fighter id="fighter-takuma-ota">
       <name>Takuma Ota</name>
       <country>Japan</country>
+    
+      <age>33</age>
+      <record>28-10-0</record>
     </fighter>
     <fighter id="fighter-kritpetch-pk-saenchai">
       <name>Kritpetch PK Saenchai</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>37-5-1</record>
     </fighter>
     <fighter id="fighter-chujai-sor-chomklin">
       <name>Chujai Sor Chomklin</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>59-12-0</record>
     </fighter>
     <fighter id="fighter-chiebkad-por-phongsawang">
       <name>Chiebkad Por Phongsawang</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>55-3-0</record>
     </fighter>
     <fighter id="fighter-petchsiam-jor-pattreya">
       <name>Petchsiam Jor Pattreya</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>55-11-0</record>
     </fighter>
     <fighter id="fighter-khunsuknoi-boomdeksian">
       <name>Khunsuknoi Boomdeksian</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>60-9-0</record>
     </fighter>
     <fighter id="fighter-kaimookao-bestchauad">
       <name>Kaimookao BestChauad</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>28-5-0</record>
     </fighter>
     <fighter id="fighter-mangkonlek-pernnakorn">
       <name>Mangkonlek Pernnakorn</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>50-15-0</record>
     </fighter>
     <fighter id="fighter-hikaru-furumura">
       <name>Hikaru Furumura</name>
       <country>Japan</country>
+    
+      <age>33</age>
+      <record>60-15-1</record>
     </fighter>
     <fighter id="fighter-pol-pascal">
       <name>Pol Pascal</name>
       <country>Spain</country>
+    
+      <age>35</age>
+      <record>60-15-0</record>
     </fighter>
     <fighter id="fighter-shanteng-lan">
       <name>Shanteng Lan</name>
       <country>China</country>
+    
+      <age>25</age>
+      <record>48-8-0</record>
     </fighter>
     <fighter id="fighter-asahi-shinagawa">
       <name>Asahi Shinagawa</name>
       <country>Japan</country>
+    
+      <age>33</age>
+      <record>48-9-1</record>
     </fighter>
     <fighter id="fighter-owen-gillis">
       <name>Owen Gillis</name>
       <country>England</country>
+    
+      <age>35</age>
+      <record>30-15-0</record>
     </fighter>
     <fighter id="fighter-mario-alvarez">
       <name>Mario Alvarez</name>
       <country>Spain</country>
+    
+      <age>25</age>
+      <record>46-3-0</record>
     </fighter>
     <fighter id="fighter-kaito-fukuda">
       <name>Kaito Fukuda</name>
       <country>Japan</country>
+    
+      <age>24</age>
+      <record>41-5-1</record>
     </fighter>
     <fighter id="fighter-walid-snoussi">
       <name>Walid Snoussi</name>
       <country>USA</country>
+    
+      <age>31</age>
+      <record>32-10-1</record>
     </fighter>
     <fighter id="fighter-saoaek-or-atchariya">
       <name>Saoaek Or Atchariya</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>19-5-0</record>
     </fighter>
     <fighter id="fighter-alex-usieto">
       <name>Alex Usieto</name>
       <country>Spain</country>
+    
+      <age>25</age>
+      <record>58-15-0</record>
     </fighter>
     <fighter id="fighter-dokmaipa-topfairtex">
       <name>Dokmaipa TopFairtex</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>21-11-0</record>
     </fighter>
     <fighter id="fighter-teerapong-kraisirapob">
       <name>Teerapong Kraisirapob</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>55-3-1</record>
     </fighter>
     <fighter id="fighter-petchthailand-or-kitkasem">
       <name>Petchthailand Or Kitkasem</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>35-8-0</record>
     </fighter>
     <fighter id="fighter-petchsila-auracha">
       <name>Petchsila Auracha</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>51-14-1</record>
     </fighter>
     <fighter id="fighter-kongtoranee-santiubon">
       <name>Kongtoranee SantiUbon</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>41-8-0</record>
     </fighter>
     <fighter id="fighter-kohtao-golita-muaythai">
       <name>Kohtao Golita MuayThai</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>54-5-0</record>
     </fighter>
     <fighter id="fighter-petchsaman-sor-samangarment">
       <name>Petchsaman Sor Samangarment</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>40-6-1</record>
     </fighter>
     <fighter id="fighter-atchai-kelasport">
       <name>Atchai KelaSport</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>16-7-1</record>
     </fighter>
     <fighter id="fighter-diontha-tobias">
       <name>Diontha Tobias</name>
       <country>Brazil</country>
+    
+      <age>23</age>
+      <record>46-4-1</record>
     </fighter>
     <fighter id="fighter-issei-wor-wanchai">
       <name>Issei Wor Wanchai</name>
       <country>Japan</country>
+    
+      <age>35</age>
+      <record>58-15-1</record>
     </fighter>
     <fighter id="fighter-elmehdi-el-jamari">
       <name>Elmehdi El Jamari</name>
       <country>Morocco</country>
+    
+      <age>34</age>
+      <record>15-2-0</record>
     </fighter>
     <fighter id="fighter-ryan-sheehan">
       <name>Ryan Sheehan</name>
       <country>Ireland</country>
+    
+      <age>32</age>
+      <record>17-3-1</record>
     </fighter>
     <fighter id="fighter-che-bradley">
       <name>Che Bradley</name>
       <country>England</country>
+    
+      <age>23</age>
+      <record>44-14-0</record>
     </fighter>
     <fighter id="fighter-thai-barlow">
       <name>Thai Barlow</name>
       <country>England</country>
+    
+      <age>31</age>
+      <record>20-13-0</record>
     </fighter>
     <fighter id="fighter-mikel-fernandez">
       <name>Mikel Fernandez</name>
       <country>Spain</country>
+    
+      <age>35</age>
+      <record>60-15-1</record>
     </fighter>
     <fighter id="fighter-ikko-ota">
       <name>Ikko Ota</name>
       <country>Japan</country>
+    
+      <age>34</age>
+      <record>45-13-0</record>
     </fighter>
     <fighter id="fighter-akram-ouchibi">
       <name>Akram Ouchibi</name>
       <country>Morocco</country>
+    
+      <age>29</age>
+      <record>58-5-0</record>
     </fighter>
     <fighter id="fighter-mario-fernandez">
       <name>Mario Fernandez</name>
       <country>Spain</country>
+    
+      <age>33</age>
+      <record>34-11-1</record>
     </fighter>
     <fighter id="fighter-ichi-saenchai-gym">
       <name>Ichi Saenchai Gym</name>
       <country>Japan</country>
+    
+      <age>25</age>
+      <record>42-15-0</record>
     </fighter>
     <fighter id="fighter-gianny-de-leu">
       <name>Gianny De Leu</name>
       <country>Belgium</country>
+    
+      <age>22</age>
+      <record>45-7-1</record>
     </fighter>
     <fighter id="fighter-imrane-iklil">
       <name>Imrane Iklil</name>
       <country>Netherlands</country>
+    
+      <age>29</age>
+      <record>60-11-0</record>
     </fighter>
     <fighter id="fighter-pangtor-por-lakboon">
       <name>Pangtor Por Lakboon</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>30-6-0</record>
     </fighter>
     <fighter id="fighter-puenyai-por-lakboon">
       <name>Puenyai Por Lakboon</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>44-8-0</record>
     </fighter>
     <fighter id="fighter-petchneung-petchmuaythai">
       <name>Petchneung PetchMuayThai</name>
       <country>Algeria</country>
+    
+      <age>23</age>
+      <record>54-5-0</record>
     </fighter>
     <fighter id="fighter-methee-sorsor-toipidrew">
       <name>Methee SorSor Toipidrew</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>23-4-1</record>
     </fighter>
     <fighter id="fighter-paeyim-sor-boonmerit">
       <name>Paeyim Sor Boonmerit</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>38-12-0</record>
     </fighter>
     <fighter id="fighter-charoensuk-boonlannamuaythai">
       <name>Charoensuk BoonlannaMuayThai</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>56-3-0</record>
     </fighter>
     <fighter id="fighter-petaek-singklongluang">
       <name>Petaek Singklongluang</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>32-2-1</record>
     </fighter>
     <fighter id="fighter-koko-mor-rattanabandit">
       <name>KoKo Mor Rattanabandit</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>23-13-0</record>
     </fighter>
     <fighter id="fighter-fergus-smith">
       <name>Fergus Smith</name>
       <country>England</country>
+    
+      <age>27</age>
+      <record>24-3-1</record>
     </fighter>
     <fighter id="fighter-marc-campbell">
       <name>Marc Campbell</name>
       <country>England</country>
+    
+      <age>35</age>
+      <record>40-6-1</record>
     </fighter>
     <fighter id="fighter-sandro-bosi">
       <name>Sandro Bosi</name>
       <country>France</country>
+    
+      <age>28</age>
+      <record>33-9-0</record>
     </fighter>
     <fighter id="fighter-peyman-zolfaghari">
       <name>Peyman Zolfaghari</name>
       <country>Iran</country>
+    
+      <age>29</age>
+      <record>16-4-1</record>
     </fighter>
     <fighter id="fighter-andrii-mezentsev">
       <name>Andrii Mezentsev</name>
       <country>Ukraine</country>
+    
+      <age>22</age>
+      <record>33-4-1</record>
     </fighter>
     <fighter id="fighter-tyree-stevens">
       <name>Tyree Stevens</name>
       <country>England</country>
+    
+      <age>29</age>
+      <record>36-4-0</record>
     </fighter>
     <fighter id="fighter-patrick-padovani-biliato">
       <name>Patrick Padovani Biliato</name>
       <country>Brazil</country>
+    
+      <age>27</age>
+      <record>58-10-0</record>
     </fighter>
     <fighter id="fighter-ryusei-matsuda">
       <name>Ryusei Matsuda</name>
       <country>Japan</country>
+    
+      <age>30</age>
+      <record>57-12-0</record>
     </fighter>
     <fighter id="fighter-ayoub-elamghari">
       <name>Ayoub Elamghari</name>
       <country>Morocco</country>
+    
+      <age>26</age>
+      <record>17-12-0</record>
     </fighter>
     <fighter id="fighter-imad-salhi">
       <name>Imad Salhi</name>
-      <country>Morocco/Spain</country>
+      <nationalities>
+        <nationality>Morocco</nationality>
+        <nationality>Spain</nationality>
+      </nationalities>
+    
+      <age>30</age>
+      <record>15-6-1</record>
     </fighter>
     <fighter id="fighter-takumi-hoshi">
       <name>Takumi Hoshi</name>
       <country>Japan</country>
+    
+      <age>28</age>
+      <record>39-15-0</record>
     </fighter>
     <fighter id="fighter-fung-tsz-yeung">
       <name>Fung Tsz Yeung</name>
-      <country>Hong Kong/China</country>
+      <nationalities>
+        <nationality>Hong Kong</nationality>
+        <nationality>China</nationality>
+      </nationalities>
+    
+      <age>34</age>
+      <record>31-4-0</record>
     </fighter>
     <fighter id="fighter-pech-suanluang-rodyok">
       <name>Pech Suanluang Rodyok</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>22-9-0</record>
     </fighter>
     <fighter id="fighter-petchtechin-bangsaenfightclub">
       <name>Petchtechin BangsaenFightClub</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>27-3-0</record>
     </fighter>
     <fighter id="fighter-talumpuk-sor-sasiwat">
       <name>Talumpuk Sor Sasiwat</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>57-2-0</record>
     </fighter>
     <fighter id="fighter-thapna-sor-prembut">
       <name>Thapna Sor Prembut</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>39-5-0</record>
     </fighter>
     <fighter id="fighter-davinci-luckymuaythai">
       <name>Davinci LuckyMuayThai</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>47-2-1</record>
     </fighter>
     <fighter id="fighter-petchanuwat-taikubon">
       <name>Petchanuwat Taikubon</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>22-10-0</record>
     </fighter>
     <fighter id="fighter-petchdetch-petchyindee">
       <name>Petchdetch Petchyindee</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>25-4-0</record>
     </fighter>
     <fighter id="fighter-hern-nf-looksuan">
       <name>Hern NF Looksuan</name>
       <country>Thailand</country>
+    
+      <age>34</age>
+      <record>39-2-1</record>
     </fighter>
     <fighter id="fighter-petchniphon-bor-rungrot">
       <name>Petchniphon Bor Rungrot</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>34-11-1</record>
     </fighter>
     <fighter id="fighter-sontanong-tk-yuttana">
       <name>Sontanong TK Yuttana</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>58-13-1</record>
     </fighter>
     <fighter id="fighter-ryuya-okuwaki">
       <name>Ryuya Okuwaki</name>
       <country>Japan</country>
+    
+      <age>33</age>
+      <record>20-4-0</record>
     </fighter>
     <fighter id="fighter-nittikorn-jp-power">
       <name>Nittikorn JP Power</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>55-5-1</record>
     </fighter>
     <fighter id="fighter-singdam-kiatfufueng">
       <name>Singdam Kiatfufueng</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>33-5-0</record>
     </fighter>
     <fighter id="fighter-kampanthong-chor-haypayak">
       <name>Kampanthong Chor Haypayak</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>36-11-0</record>
     </fighter>
     <fighter id="fighter-mankonpetch-saimaun-snookerclub">
       <name>Mankonpetch Saimaun SnookerClub</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>25-7-0</record>
     </fighter>
     <fighter id="fighter-yodpetchchake-boomdeksian">
       <name>Yodpetchchake Boomdeksian</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>43-13-0</record>
     </fighter>
     <fighter id="fighter-nuathoranee-jitmuangnon">
       <name>Nuathoranee Jitmuangnon</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>45-11-0</record>
     </fighter>
     <fighter id="fighter-detchphichai-navyandaman">
       <name>Detchphichai Navyandaman</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>45-7-0</record>
     </fighter>
     <fighter id="fighter-petchbaanrai-singmawyn">
       <name>Petchbaanrai Singmawyn</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>60-13-0</record>
     </fighter>
     <fighter id="fighter-pek-krapaolinky">
       <name>Pek Krapaolinky</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>60-9-0</record>
     </fighter>
     <fighter id="fighter-suaphoom-teenoikachin">
       <name>Suaphoom Teenoikachin</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>55-7-0</record>
     </fighter>
     <fighter id="fighter-wanpadetch-kaitkaonoi">
       <name>Wanpadetch Kaitkaonoi</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>20-15-0</record>
     </fighter>
     <fighter id="fighter-chikara-petchyindee">
       <name>Chikara Petchyindee</name>
       <country>Japan</country>
+    
+      <age>25</age>
+      <record>30-7-1</record>
     </fighter>
     <fighter id="fighter-domaifai-topfairygym">
       <name>Domaifai TopFairyGym</name>
       <country>Thailand</country>
+    
+      <age>31</age>
+      <record>52-3-0</record>
     </fighter>
     <fighter id="fighter-thapthai-sor-prembutd">
       <name>Thapthai Sor Prembutd</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>46-11-0</record>
     </fighter>
     <fighter id="fighter-plaitongkam-sitthailand">
       <name>Plaitongkam Sitthailand</name>
       <country>Thailand</country>
+    
+      <age>32</age>
+      <record>45-14-0</record>
     </fighter>
     <fighter id="fighter-petchduet-golita-muaythai">
       <name>Petchduet Golita MuayThai</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>40-7-1</record>
     </fighter>
     <fighter id="fighter-petchsam-petchmuaythai">
       <name>Petchsam PetchMuayThai</name>
       <country>Algeria</country>
+    
+      <age>25</age>
+      <record>30-4-0</record>
     </fighter>
     <fighter id="fighter-phanaek-pk-saenchai">
       <name>Phanaek PK Saenchai</name>
       <country>Thailand</country>
+    
+      <age>26</age>
+      <record>33-4-0</record>
     </fighter>
     <fighter id="fighter-payak-saksatul">
       <name>Payak Saksatul</name>
       <country>Thailand</country>
+    
+      <age>28</age>
+      <record>47-5-1</record>
     </fighter>
     <fighter id="fighter-duan99-tor-thanthai">
       <name>Duan99 Tor Thanthai</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>30-11-0</record>
     </fighter>
     <fighter id="fighter-homura-abe">
       <name>Homura Abe</name>
       <country>Japan</country>
+    
+      <age>30</age>
+      <record>25-10-0</record>
     </fighter>
     <fighter id="fighter-wanheng-kaitchutthai">
       <name>Wanheng Kaitchutthai</name>
       <country>Thailand</country>
+    
+      <age>23</age>
+      <record>30-3-0</record>
     </fighter>
     <fighter id="fighter-yodpetchto-boomdeksian">
       <name>Yodpetchto Boomdeksian</name>
       <country>Thailand</country>
+    
+      <age>27</age>
+      <record>52-11-0</record>
     </fighter>
     <fighter id="fighter-petch25-tn-diamondhome">
       <name>Petch25 TN Diamondhome</name>
       <country>Thailand</country>
+    
+      <age>25</age>
+      <record>60-10-0</record>
     </fighter>
     <fighter id="fighter-laostar-kiatthongyot">
       <name>Laostar Kiatthongyot</name>
       <country>Thailand</country>
+    
+      <age>29</age>
+      <record>20-13-0</record>
     </fighter>
     <fighter id="fighter-monpraram-sitpetchchalukan">
       <name>Monpraram Sitpetchchalukan</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>31-5-0</record>
     </fighter>
     <fighter id="fighter-petchmuangsing-tai-petchburi">
       <name>Petchmuangsing Tai Petchburi</name>
       <country>Thailand</country>
+    
+      <age>24</age>
+      <record>33-10-0</record>
     </fighter>
     <fighter id="fighter-yodmanee-suanjakcafe">
       <name>Yodmanee Suanjakcafe</name>
       <country>Thailand</country>
+    
+      <age>22</age>
+      <record>37-2-1</record>
     </fighter>
     <fighter id="fighter-singasurat-or-aodudon">
       <name>Singasurat Or Aodudon</name>
       <country>Thailand</country>
+    
+      <age>35</age>
+      <record>18-10-0</record>
     </fighter>
     <fighter id="fighter-jongangdam-singmawyn">
       <name>Jongangdam Singmawyn</name>
       <country>Thailand</country>
+    
+      <age>33</age>
+      <record>42-5-1</record>
     </fighter>
     <fighter id="fighter-petchkongfah-pk-saenchai-gym">
       <name>Petchkongfah PK Saenchai Gym</name>
       <country>Thailand</country>
+    
+      <age>30</age>
+      <record>53-5-0</record>
     </fighter>
   </fighters>
   <rankings>
@@ -1469,7 +2444,7 @@
       <sourceUrl>https://www.wbcmuaythai.com/male</sourceUrl>
       <entry position="World Champion" fighterId="fighter-dylan-salvador" />
       <entry position="1" fighterId="fighter-phuaeathai-sirilukmuaythai" />
-      <entry position="2" fighterId="fighter-daniel-rodrigues" />
+      <entry position="2" fighterId="fighter-daniel-rodriguez" />
       <entry position="3" fighterId="fighter-boonlert-sor-boonmerit" />
       <entry position="4" fighterId="fighter-nontachai-jitmuangnon" />
       <entry position="5" fighterId="fighter-rittewada-petchyindee" />

@@ -211,11 +211,19 @@ def build_xml(scraped: list[tuple[dict, dict]]) -> Element:
         if not name:
             return
         fid = fighter_id(name)
-        if fid not in seen_ids:
-            seen_ids.add(fid)
-            f_el = SubElement(fighters_el, "fighter", id=fid)
-            SubElement(f_el, "name").text = name
-            if country:
+        if fid in seen_ids:
+            return
+        seen_ids.add(fid)
+        f_el = SubElement(fighters_el, "fighter", id=fid)
+        SubElement(f_el, "name").text = name
+        if country:
+            # "Algeria/Thailand" → multiple <nationality> entries
+            parts = [p.strip() for p in country.split("/") if p.strip()]
+            if len(parts) > 1:
+                nats_el = SubElement(f_el, "nationalities")
+                for part in parts:
+                    SubElement(nats_el, "nationality").text = part
+            else:
                 SubElement(f_el, "country").text = country
 
     for _, data in scraped:
