@@ -56,12 +56,14 @@ export const load = async ({ locals }) => {
 			getUsersCollection()
 		]);
 
-		const [fighterCount, rankingCount, userCount, wbcLastSync, rwsLastSync] = await Promise.all([
+		const [fighterCount, rankingCount, userCount, wbcLastSync, rwsLastSync, wbcFighterCount, rwsFighterCount] = await Promise.all([
 			fightersCol.countDocuments(),
 			rankingsCol.countDocuments(),
 			usersCol.countDocuments(),
 			getLastSyncForOrg(rankingsCol, 'org-wbc'),
-			getLastSyncForOrg(rankingsCol, 'org-rws')
+			getLastSyncForOrg(rankingsCol, 'org-rws'),
+			fightersCol.countDocuments({ _id: { $regex: /^fighter-/ } }),
+			fightersCol.countDocuments({ _id: { $regex: /^rws-/ } })
 		]);
 
 		return {
@@ -71,7 +73,9 @@ export const load = async ({ locals }) => {
 			rankingCount,
 			userCount,
 			wbcLastSync,
-			rwsLastSync
+			rwsLastSync,
+			wbcFighterCount,
+			rwsFighterCount
 		};
 	}
 

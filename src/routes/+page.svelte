@@ -31,6 +31,34 @@
 			? (data.user?.firstName || data.user?.username || 'there')
 			: ''
 	);
+
+	// ── Admin visualisations ───────────────────────────────────────────────────
+	const CIRC = 2 * Math.PI * 40;
+	const wbcFighters = $derived(data.wbcFighterCount ?? 0);
+	const rwsFighters = $derived(data.rwsFighterCount ?? 0);
+	const donutTotal  = $derived(wbcFighters + rwsFighters);
+	const wbcArc = $derived(donutTotal > 0 ? (wbcFighters / donutTotal) * CIRC : 0);
+	const rwsArc = $derived(donutTotal > 0 ? (rwsFighters / donutTotal) * CIRC : 0);
+
+	function timeAgo(iso) {
+		if (!iso) return 'Never synced';
+		const ms = Date.now() - new Date(iso).getTime();
+		const h = ms / 3_600_000;
+		if (h < 1) return 'just now';
+		if (h < 24) return `${Math.floor(h)}h ago`;
+		const d = Math.floor(h / 24);
+		if (d < 30) return `${d} day${d !== 1 ? 's' : ''} ago`;
+		const mo = Math.floor(d / 30);
+		return `${mo} month${mo !== 1 ? 's' : ''} ago`;
+	}
+
+	function dotColor(iso) {
+		if (!iso) return '#7a7062';
+		const d = (Date.now() - new Date(iso).getTime()) / 86_400_000;
+		if (d < 7)  return '#4caf73';
+		if (d < 30) return '#d6a33d';
+		return '#e05555';
+	}
 </script>
 
 <!-- ══════════════════════════════════════════════════════════════ GUEST ══ -->
@@ -207,39 +235,118 @@
 
 <!-- ════════════════════════════════════════════════════════════ ADMIN ══ -->
 {:else}
-	<section class="page admin-view">
+	<section class="admin-page">
 		<div class="admin-header">
 			<h1>Admin Dashboard</h1>
 			<p class="admin-sub">Overview of database state and sync status.</p>
 		</div>
 
+		<!-- ── Stat cards ── -->
 		<div class="stat-cards">
 			<div class="stat-card">
+				<span class="stat-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+					</svg>
+				</span>
 				<span class="stat-value">{data.fighterCount}</span>
 				<span class="stat-label">Fighters</span>
 			</div>
 			<div class="stat-card">
+				<span class="stat-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="10" y1="6" x2="21" y2="6"/>
+						<line x1="10" y1="12" x2="21" y2="12"/>
+						<line x1="10" y1="18" x2="21" y2="18"/>
+						<path d="M4 6h1v4M4 10h2"/>
+						<path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"/>
+					</svg>
+				</span>
 				<span class="stat-value">{data.rankingCount}</span>
-				<span class="stat-label">Ranking documents</span>
+				<span class="stat-label">Ranking lists</span>
 			</div>
 			<div class="stat-card">
+				<span class="stat-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+						<circle cx="9" cy="7" r="4"/>
+						<path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+					</svg>
+				</span>
 				<span class="stat-value">{data.userCount}</span>
 				<span class="stat-label">Users</span>
 			</div>
 		</div>
 
-		<div class="sync-cards">
-			<div class="sync-card">
-				<span class="sync-org">WBC</span>
-				<span class="sync-ts">
-					{#if data.wbcLastSync}Last sync: {fmt(data.wbcLastSync)}{:else}Never synced{/if}
-				</span>
+		<!-- ── Donut chart ── -->
+		<div class="viz-card">
+			<h2 class="viz-title">Fighter distribution</h2>
+			<div class="donut-row">
+				<svg viewBox="0 0 120 120" class="donut-svg" role="img" aria-label="Fighter distribution by organisation">
+					<!-- Background track -->
+					<circle cx="60" cy="60" r="40" fill="none" stroke="#1e1c14" stroke-width="14"/>
+					<!-- WBC arc -->
+					{#if wbcArc > 0}
+						<circle
+							cx="60" cy="60" r="40"
+							fill="none" stroke="#d6a33d" stroke-width="14"
+							stroke-dasharray={`${wbcArc} ${CIRC}`}
+							stroke-dashoffset={0}
+							transform="rotate(-90 60 60)"
+						/>
+					{/if}
+					<!-- RWS arc -->
+					{#if rwsArc > 0}
+						<circle
+							cx="60" cy="60" r="40"
+							fill="none" stroke="#5b9ecf" stroke-width="14"
+							stroke-dasharray={`${rwsArc} ${CIRC}`}
+							stroke-dashoffset={-wbcArc}
+							transform="rotate(-90 60 60)"
+						/>
+					{/if}
+					<!-- Center labels -->
+					<text x="60" y="58" text-anchor="middle" dominant-baseline="middle" fill="#f4efe4" font-size="24" font-weight="700">{data.fighterCount}</text>
+					<text x="60" y="73" text-anchor="middle" fill="#7a7062" font-size="9">fighters</text>
+				</svg>
+
+				<div class="donut-legend">
+					<div class="legend-item">
+						<span class="legend-dot" style="background: #d6a33d"></span>
+						<span class="legend-label">WBC</span>
+						<span class="legend-count">{data.wbcFighterCount ?? 0} fighters</span>
+					</div>
+					<div class="legend-item">
+						<span class="legend-dot" style="background: #5b9ecf"></span>
+						<span class="legend-label">RWS</span>
+						<span class="legend-count">{data.rwsFighterCount ?? 0} fighters</span>
+					</div>
+					{#if (data.fighterCount ?? 0) > (data.wbcFighterCount ?? 0) + (data.rwsFighterCount ?? 0)}
+						<div class="legend-item">
+							<span class="legend-dot" style="background: #3a321f"></span>
+							<span class="legend-label">Other</span>
+							<span class="legend-count">{(data.fighterCount ?? 0) - (data.wbcFighterCount ?? 0) - (data.rwsFighterCount ?? 0)} fighters</span>
+						</div>
+					{/if}
+				</div>
 			</div>
-			<div class="sync-card">
-				<span class="sync-org">RWS</span>
-				<span class="sync-ts">
-					{#if data.rwsLastSync}Last sync: {fmt(data.rwsLastSync)}{:else}Never synced{/if}
-				</span>
+		</div>
+
+		<!-- ── Sync timeline ── -->
+		<div class="viz-card">
+			<h2 class="viz-title">Sync status</h2>
+			<div class="sync-timeline">
+				<span class="stl-org">WBC Muay Thai</span>
+				<span></span>
+				<span class="stl-org stl-right">Rajadamnern WS</span>
+
+				<div class="stl-dot stl-dot-l" style="background: {dotColor(data.wbcLastSync)}"></div>
+				<div class="stl-line"></div>
+				<div class="stl-dot stl-dot-r" style="background: {dotColor(data.rwsLastSync)}"></div>
+
+				<span class="stl-ago">{timeAgo(data.wbcLastSync)}</span>
+				<span></span>
+				<span class="stl-ago stl-right">{timeAgo(data.rwsLastSync)}</span>
 			</div>
 		</div>
 
@@ -603,10 +710,9 @@
 	}
 
 	/* ══════════════════════════════════════════════════════ ADMIN ══ */
-	.page {
+	.admin-page {
 		display: grid;
 		gap: 1.25rem;
-		margin: 0 auto;
 		max-width: 900px;
 	}
 
@@ -622,6 +728,7 @@
 		margin: 0.25rem 0 0;
 	}
 
+	/* Stat cards */
 	.stat-cards {
 		display: grid;
 		gap: 0.75rem;
@@ -629,12 +736,26 @@
 	}
 
 	.stat-card {
+		align-items: flex-start;
 		background: #111111;
 		border: 1px solid #2b2415;
 		border-radius: 8px;
 		display: grid;
 		gap: 0.3rem;
 		padding: 1rem 1.1rem;
+	}
+
+	.stat-icon {
+		color: #d6a33d;
+		display: block;
+		height: 24px;
+		margin-bottom: 0.2rem;
+		width: 24px;
+	}
+
+	.stat-icon svg {
+		height: 100%;
+		width: 100%;
 	}
 
 	.stat-value {
@@ -649,29 +770,103 @@
 		font-size: 0.82rem;
 	}
 
-	.sync-cards {
-		display: grid;
-		gap: 0.75rem;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.sync-card {
-		align-items: center;
+	/* Shared viz card */
+	.viz-card {
 		background: #111111;
 		border: 1px solid #2b2415;
 		border-radius: 8px;
-		display: flex;
+		display: grid;
 		gap: 1rem;
-		justify-content: space-between;
-		padding: 0.85rem 1rem;
+		padding: 1rem 1.1rem;
 	}
 
-	.sync-org {
+	.viz-title {
 		color: #d6a33d;
-		font-size: 0.82rem;
+		font-size: 0.8rem;
 		font-weight: 700;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.06em;
+		margin: 0;
 		text-transform: uppercase;
+	}
+
+	/* Donut chart */
+	.donut-row {
+		align-items: center;
+		display: flex;
+		gap: 2rem;
+	}
+
+	.donut-svg {
+		flex-shrink: 0;
+		height: 120px;
+		width: 120px;
+	}
+
+	.donut-legend {
+		display: grid;
+		gap: 0.6rem;
+	}
+
+	.legend-item {
+		align-items: center;
+		display: grid;
+		column-gap: 0.5rem;
+		grid-template-columns: 10px auto 1fr;
+	}
+
+	.legend-dot {
+		border-radius: 50%;
+		height: 10px;
+		width: 10px;
+	}
+
+	.legend-label {
+		color: #f4efe4;
+		font-size: 0.85rem;
+		font-weight: 600;
+	}
+
+	.legend-count {
+		color: #7a7062;
+		font-size: 0.8rem;
+	}
+
+	/* Sync timeline */
+	.sync-timeline {
+		align-items: center;
+		display: grid;
+		gap: 0.4rem 0;
+		grid-template-columns: auto 1fr auto;
+		padding: 0.25rem 0;
+	}
+
+	.stl-org {
+		color: #bdb4a1;
+		font-size: 0.82rem;
+		font-weight: 600;
+		white-space: nowrap;
+	}
+
+	.stl-right { text-align: right; }
+
+	.stl-dot {
+		border-radius: 50%;
+		height: 14px;
+		width: 14px;
+	}
+
+	.stl-dot-l { justify-self: end; }
+	.stl-dot-r { justify-self: start; }
+
+	.stl-line {
+		background: #2b2415;
+		height: 2px;
+	}
+
+	.stl-ago {
+		color: #7a7062;
+		font-size: 0.75rem;
+		white-space: nowrap;
 	}
 
 	.admin-link {
@@ -694,9 +889,14 @@
 			grid-template-columns: 1fr;
 		}
 
-		.sync-cards,
 		.action-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.donut-row {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 1rem;
 		}
 	}
 
