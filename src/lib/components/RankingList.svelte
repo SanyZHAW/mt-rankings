@@ -8,7 +8,7 @@
 	<div class="heading">
 		<div>
 			<p class="eyebrow">Ranking list</p>
-			<h2 id="ranking-title">{ranking.organisation.name} - {ranking.weightClass.name}</h2>
+			<h2 id="ranking-title">{ranking.organisation?.name ?? 'Unknown'} - {ranking.weightClass?.name ?? 'Unknown'}</h2>
 		</div>
 		{#if ranking.updatedAt}
 			<p class="updated">Updated {ranking.updatedAt}</p>
@@ -16,7 +16,7 @@
 	</div>
 
 	{#if ranking.entries.length > 0}
-		<div class="table" role="table" aria-label={`${ranking.organisation.name} ${ranking.weightClass.name}`}>
+		<div class="table" role="table" aria-label={`${ranking.organisation?.name ?? ''} ${ranking.weightClass?.name ?? ''}`}>
 			<div class="table-head" role="row">
 				<span role="columnheader">Position</span>
 				<span role="columnheader">Fighter</span>

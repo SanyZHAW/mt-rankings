@@ -1,33 +1,45 @@
 <script>
-	let { rankingEntries = [] } = $props();
+	let { rankings = [] } = $props();
 
-	const isChampionPosition = (position) => Number.isNaN(Number(position));
+	const isChampion = (pos) => Number.isNaN(Number(pos));
+
+	// Group entries by organisation display name, preserving insertion order
+	const byOrg = $derived(
+		rankings.reduce((acc, entry) => {
+			if (!acc[entry.org]) acc[entry.org] = [];
+			acc[entry.org].push(entry);
+			return acc;
+		}, {})
+	);
 </script>
 
 <section class="ranking-table" aria-labelledby="fighter-rankings-title">
 	<h2 id="fighter-rankings-title">Ranking entries</h2>
 
-	{#if rankingEntries.length > 0}
-		<div class="table" role="table" aria-label="Fighter ranking entries">
-			<div class="table-head" role="row">
-				<span role="columnheader">Organisation</span>
-				<span role="columnheader">Weight class</span>
-				<span role="columnheader">Position</span>
-			</div>
-			{#each rankingEntries as entry}
-				<div class="table-row" role="row">
-					<span role="cell" data-label="Organisation">{entry.organisation?.name || 'Unknown'}</span>
-					<span role="cell" data-label="Weight class">{entry.weightClass?.name || 'Unknown'}</span>
-					<span
-						class:champion={isChampionPosition(entry.position)}
-						role="cell"
-						data-label="Position"
-					>
-						{entry.position}
-					</span>
+	{#if rankings.length > 0}
+		{#each Object.entries(byOrg) as [orgName, entries]}
+			<div class="org-group">
+				<h3>{orgName}</h3>
+				<div class="table" role="table" aria-label="{orgName} ranking entries">
+					<div class="table-head" role="row">
+						<span role="columnheader">Weight class</span>
+						<span role="columnheader">Position</span>
+					</div>
+					{#each entries as entry}
+						<div class="table-row" role="row">
+							<span role="cell" data-label="Weight class">{entry.weightClassName || 'Unknown'}</span>
+							<span
+								class:champion={isChampion(entry.position)}
+								role="cell"
+								data-label="Position"
+							>
+								{entry.position}
+							</span>
+						</div>
+					{/each}
 				</div>
-			{/each}
-		</div>
+			</div>
+		{/each}
 	{:else}
 		<p class="empty">No ranking entries are available for this fighter.</p>
 	{/if}
@@ -49,6 +61,25 @@
 		padding: 1rem;
 	}
 
+	.org-group {
+		border-top: 1px solid #2b2415;
+	}
+
+	.org-group:first-of-type {
+		border-top: none;
+	}
+
+	h3 {
+		background: #1b1812;
+		color: #d6a33d;
+		font-size: 0.88rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		margin: 0;
+		padding: 0.6rem 1rem;
+		text-transform: uppercase;
+	}
+
 	.table {
 		display: grid;
 	}
@@ -57,14 +88,14 @@
 	.table-row {
 		display: grid;
 		gap: 1rem;
-		grid-template-columns: minmax(10rem, 1fr) minmax(10rem, 1fr) minmax(8rem, 0.8fr);
+		grid-template-columns: minmax(10rem, 1fr) minmax(8rem, 0.8fr);
 		padding: 0.85rem 1rem;
 	}
 
 	.table-head {
-		background: #1b1812;
-		color: #d6a33d;
-		font-size: 0.82rem;
+		background: #161616;
+		color: #bdb4a1;
+		font-size: 0.8rem;
 		font-weight: 700;
 		text-transform: uppercase;
 	}

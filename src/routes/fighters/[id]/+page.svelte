@@ -34,7 +34,7 @@
 		<div class="content-grid">
 			<div class="main-content">
 				<FighterDetail fighter={data.fighter} />
-				<FighterRankingTable rankingEntries={data.rankingEntries} />
+				<FighterRankingTable rankings={data.rankings} />
 			</div>
 
 			<aside>
