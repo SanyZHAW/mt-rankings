@@ -1,89 +1,19 @@
 import { json } from '@sveltejs/kit';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { getOrganisationsCollection, getFightersCollection, getRankingsCollection } from '$lib/server/db.js';
+import {
+	getOrganisationsCollection,
+	getFightersCollection,
+	getRankingsCollection
+} from '$lib/server/db.js';
+import {
+	parseOrganisations,
+	parseFighters,
+	parseRankings,
+	normalizeForDedup
+} from '$lib/server/xmlParser.js';
 
 const RWS_XML = join(process.cwd(), 'static', 'data', 'rws_rankings.xml');
-
-// ── XML helpers ───────────────────────────────────────────────────────────────
-
-const getAttribute = (text, name) => {
-	const match = text.match(new RegExp(`${name}="([^"]*)"`, 'u'));
-	return match?.[1] ?? '';
-};
-
-const getTagBlocks = (text, tagName) =>
-	[...text.matchAll(new RegExp(`<${tagName}(?:\\s[^>]*)?>[\\s\\S]*?<\\/${tagName}>`, 'gu'))].map(
-		(m) => m[0]
-	);
-
-const getSelfClosingTags = (text, tagName) =>
-	[...text.matchAll(new RegExp(`<${tagName}\\s+([^>]*)\\/>`, 'gu'))].map((m) => m[1]);
-
-const getTagValueRaw = (text, tagName) => {
-	const m = text.match(new RegExp(`<${tagName}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tagName}>`, 'u'));
-	return m?.[1] ?? '';
-};
-
-const decodeXml = (value) =>
-	value
-		.replaceAll('&apos;', "'")
-		.replaceAll('&quot;', '"')
-		.replaceAll('&gt;', '>')
-		.replaceAll('&lt;', '<')
-		.replaceAll('&amp;', '&');
-
-const getTagValue = (text, tagName) => decodeXml(getTagValueRaw(text, tagName).trim());
-
-// ── parsers ───────────────────────────────────────────────────────────────────
-
-const parseLimits = (block) =>
-	[...block.matchAll(/<limit\s+([^>]*)>([\s\S]*?)<\/limit>/gu)].map((m) => ({
-		unit: getAttribute(m[1], 'unit'),
-		value: decodeXml(m[2].trim())
-	}));
-
-const parseOrganisations = (xml) =>
-	getTagBlocks(getTagValueRaw(xml, 'organisations'), 'organisation').map((block) => {
-		const id = getAttribute(block, 'id');
-		const wcBlock = getTagValueRaw(block, 'weightClasses');
-		return {
-			_id: id,
-			name: getTagValue(block, 'name'),
-			website: getTagValue(block, 'website'),
-			weightClasses: getTagBlocks(wcBlock, 'weightClass').map((wc) => ({
-				id: getAttribute(wc, 'id'),
-				name: getTagValue(wc, 'name'),
-				limits: parseLimits(wc)
-			}))
-		};
-	});
-
-const parseFighters = (xml) =>
-	getTagBlocks(getTagValueRaw(xml, 'fighters'), 'fighter').map((block) => {
-		const fighter = {
-			_id: getAttribute(block, 'id'),
-			name: getTagValue(block, 'name'),
-			country: getTagValue(block, 'country')
-		};
-		const age = getTagValue(block, 'age');
-		const record = getTagValue(block, 'record');
-		if (age) fighter.age = Number(age) || age;
-		if (record) fighter.record = record;
-		return fighter;
-	});
-
-const parseRankings = (xml) =>
-	getTagBlocks(getTagValueRaw(xml, 'rankings'), 'ranking').map((block) => ({
-		organisationId: getAttribute(block, 'organisationId'),
-		weightClassId: getAttribute(block, 'weightClassId'),
-		updatedAt: getAttribute(block, 'updatedAt'),
-		sourceUrl: getTagValue(block, 'sourceUrl'),
-		entries: getSelfClosingTags(block, 'entry').map((attrs) => ({
-			position: getAttribute(attrs, 'position'),
-			fighterId: getAttribute(attrs, 'fighterId')
-		}))
-	}));
 
 // ── sync ──────────────────────────────────────────────────────────────────────
 
@@ -99,14 +29,87 @@ const syncToMongo = async (xml) => {
 	for (const org of organisations) {
 		await orgsCol.replaceOne({ _id: org._id }, org, { upsert: true });
 	}
+
+	// ── Fighter dedup + upsert ─────────────────────────────────────────────────
+	// idMap: XML id → canonical MongoDB _id. When a fighter already exists under
+	// the other org's prefix (e.g. "fighter-emerson-bento" matched via normalizedName)
+	// ranking entries are attached to the canonical document instead.
+	const idMap = new Map();
+
 	for (const fighter of fighters) {
-		await fightersCol.replaceOne({ _id: fighter._id }, fighter, { upsert: true });
+		const normalized = normalizeForDedup(fighter.name);
+
+		// Search by own _id (re-sync), normalizedName (cross-org match), or alias
+		const existing = await fightersCol.findOne({
+			$or: [{ _id: fighter._id }, { normalizedName: normalized }, { aliases: fighter._id }]
+		});
+
+		if (existing) {
+			idMap.set(fighter._id, existing._id);
+			await fightersCol.updateOne(
+				{ _id: existing._id },
+				{
+					$addToSet: { aliases: fighter._id },
+					$set: {
+						normalizedName: normalizeForDedup(existing.name),
+						...(fighter.nationalities?.length && { nationalities: fighter.nationalities }),
+						...(fighter.age != null && { age: fighter.age }),
+						...(fighter.record && { record: fighter.record })
+					}
+				}
+			);
+		} else {
+			idMap.set(fighter._id, fighter._id);
+			await fightersCol.replaceOne(
+				{ _id: fighter._id },
+				{ ...fighter, normalizedName: normalized, aliases: [fighter._id] },
+				{ upsert: true }
+			);
+		}
 	}
+
+	// ── Rankings upsert ────────────────────────────────────────────────────────
 	for (const ranking of rankings) {
 		await rankingsCol.replaceOne(
 			{ organisationId: ranking.organisationId, weightClassId: ranking.weightClassId },
 			ranking,
 			{ upsert: true }
+		);
+	}
+
+	// ── Embed rankings on canonical fighter documents ──────────────────────────
+	// $pull removes stale entries for this org; $addToSet writes the current ones.
+	// Entries from the other org are never touched.
+	const org = organisations[0];
+	const orgId = org?._id;
+	const orgName = org?.name ?? orgId ?? '';
+	const wcByClassId = new Map(
+		organisations.flatMap((o) => o.weightClasses.map((wc) => [wc.id, wc.name]))
+	);
+
+	const fighterRankingsMap = new Map();
+	for (const ranking of rankings) {
+		const weightClassName = wcByClassId.get(ranking.weightClassId) ?? '';
+		for (const entry of ranking.entries) {
+			const canonicalId = idMap.get(entry.fighterId) ?? entry.fighterId;
+			if (!fighterRankingsMap.has(canonicalId)) fighterRankingsMap.set(canonicalId, []);
+			fighterRankingsMap.get(canonicalId).push({
+				orgId,
+				org: orgName,
+				weightClassId: ranking.weightClassId,
+				weightClassName,
+				position: entry.position
+			});
+		}
+	}
+
+	if (orgId) {
+		await fightersCol.updateMany({}, { $pull: { rankings: { orgId } } });
+	}
+	for (const [canonicalId, entries] of fighterRankingsMap) {
+		await fightersCol.updateOne(
+			{ _id: canonicalId },
+			{ $addToSet: { rankings: { $each: entries } } }
 		);
 	}
 
