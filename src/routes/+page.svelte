@@ -276,6 +276,32 @@
 				<span class="stat-value">{data.userCount}</span>
 				<span class="stat-label">Users</span>
 			</div>
+			<div class="stat-card">
+				<span class="stat-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M20 11a8.1 8.1 0 0 0-15.5-2m-.5-4v4h4"/>
+						<path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"/>
+					</svg>
+				</span>
+				<span class="stat-sync-row">
+					<span class="stat-dot" style="background: {dotColor(data.wbcLastSync)}"></span>
+					<span class="stat-sync-val">{timeAgo(data.wbcLastSync)}</span>
+				</span>
+				<span class="stat-label">Last WBC Sync</span>
+			</div>
+			<div class="stat-card">
+				<span class="stat-icon" aria-hidden="true">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M20 11a8.1 8.1 0 0 0-15.5-2m-.5-4v4h4"/>
+						<path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"/>
+					</svg>
+				</span>
+				<span class="stat-sync-row">
+					<span class="stat-dot" style="background: {dotColor(data.rwsLastSync)}"></span>
+					<span class="stat-sync-val">{timeAgo(data.rwsLastSync)}</span>
+				</span>
+				<span class="stat-label">Last RWS Sync</span>
+			</div>
 		</div>
 
 		<!-- ── Donut chart ── -->
@@ -329,24 +355,6 @@
 						</div>
 					{/if}
 				</div>
-			</div>
-		</div>
-
-		<!-- ── Sync timeline ── -->
-		<div class="viz-card">
-			<h2 class="viz-title">Sync status</h2>
-			<div class="sync-timeline">
-				<span class="stl-org">WBC Muay Thai</span>
-				<span></span>
-				<span class="stl-org stl-right">Rajadamnern WS</span>
-
-				<div class="stl-dot stl-dot-l" style="background: {dotColor(data.wbcLastSync)}"></div>
-				<div class="stl-line"></div>
-				<div class="stl-dot stl-dot-r" style="background: {dotColor(data.rwsLastSync)}"></div>
-
-				<span class="stl-ago">{timeAgo(data.wbcLastSync)}</span>
-				<span></span>
-				<span class="stl-ago stl-right">{timeAgo(data.rwsLastSync)}</span>
 			</div>
 		</div>
 
@@ -732,7 +740,7 @@
 	.stat-cards {
 		display: grid;
 		gap: 0.75rem;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
 
 	.stat-card {
@@ -768,6 +776,26 @@
 	.stat-label {
 		color: #bdb4a1;
 		font-size: 0.82rem;
+	}
+
+	.stat-sync-row {
+		align-items: center;
+		display: flex;
+		gap: 0.45rem;
+	}
+
+	.stat-dot {
+		border-radius: 50%;
+		flex-shrink: 0;
+		height: 10px;
+		width: 10px;
+	}
+
+	.stat-sync-val {
+		color: #f4efe4;
+		font-size: 1rem;
+		font-weight: 700;
+		line-height: 1.1;
 	}
 
 	/* Shared viz card */
@@ -831,44 +859,6 @@
 		font-size: 0.8rem;
 	}
 
-	/* Sync timeline */
-	.sync-timeline {
-		align-items: center;
-		display: grid;
-		gap: 0.4rem 0;
-		grid-template-columns: auto 1fr auto;
-		padding: 0.25rem 0;
-	}
-
-	.stl-org {
-		color: #bdb4a1;
-		font-size: 0.82rem;
-		font-weight: 600;
-		white-space: nowrap;
-	}
-
-	.stl-right { text-align: right; }
-
-	.stl-dot {
-		border-radius: 50%;
-		height: 14px;
-		width: 14px;
-	}
-
-	.stl-dot-l { justify-self: end; }
-	.stl-dot-r { justify-self: start; }
-
-	.stl-line {
-		background: #2b2415;
-		height: 2px;
-	}
-
-	.stl-ago {
-		color: #7a7062;
-		font-size: 0.75rem;
-		white-space: nowrap;
-	}
-
 	.admin-link {
 		background: #d6a33d;
 		border-radius: 8px;
@@ -882,11 +872,20 @@
 	.admin-link:hover { background: #efbf58; }
 
 	/* ── Responsive ── */
+	@media (max-width: 860px) {
+		.stat-cards {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+
 	@media (max-width: 700px) {
 		.feature-cards,
-		.stat-cards,
 		.fav-grid {
 			grid-template-columns: 1fr;
+		}
+
+		.stat-cards {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
 		.action-grid {
