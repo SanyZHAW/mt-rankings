@@ -52,6 +52,11 @@ export const getRankingsCollection = async () => {
 	return db.collection('rankings');
 };
 
+export const getAnnouncementsCollection = async () => {
+	const db = await getDb();
+	return db.collection('announcements');
+};
+
 export const testDbConnection = async () => {
 	const db = await getDb();
 	await db.command({ ping: 1 });

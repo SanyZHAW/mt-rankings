@@ -28,9 +28,10 @@
 	}
 
 	const tabs = [
-		{ id: 'fighters', label: 'Fighters' },
-		{ id: 'users',    label: 'Users'    },
-		{ id: 'sync',     label: 'Sync'     }
+		{ id: 'fighters',     label: 'Fighters'     },
+		{ id: 'users',        label: 'Users'        },
+		{ id: 'sync',         label: 'Sync'         },
+		{ id: 'announcement', label: 'Announcement' }
 	];
 </script>
 
@@ -147,6 +148,36 @@
 			{:else if rwsResult?.error}
 				<StatusMessage type="error" message="Sync failed: {rwsResult.error}" />
 			{/if}
+		</div>
+
+	<!-- ── Announcement tab ──────────────────────────────────────────────────── -->
+	{:else if activeTab === 'announcement'}
+		{#if form?.action === 'announcement'}
+			{#if form.success}
+				<StatusMessage type="success" message="Announcement saved." />
+			{:else}
+				<StatusMessage type="error" message={form.message} />
+			{/if}
+		{/if}
+
+		<div class="panel">
+			<div class="panel-header">
+				<span class="panel-title">Current Announcement</span>
+			</div>
+			<p class="workflow-note">
+				This text scrolls as a banner on the home page for logged-in users. Save an empty field to disable the banner.
+			</p>
+			<form method="POST" action="?/saveAnnouncement" class="ann-form">
+				<label class="ann-label" for="ann-text">Announcement text</label>
+				<textarea
+					id="ann-text"
+					name="text"
+					rows="3"
+					class="ann-textarea"
+					placeholder="e.g. Fight of the Month: Saenchai vs. Superlek — 15 July"
+				>{data.announcement?.text ?? ''}</textarea>
+				<button type="submit" class="btn-save">Save</button>
+			</form>
 		</div>
 	{/if}
 </section>
@@ -342,4 +373,34 @@
 	}
 
 	@keyframes spin { to { transform: rotate(360deg); } }
+
+	/* ── announcement form ── */
+	.ann-form {
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.ann-label {
+		color: #d6a33d;
+		font-size: 0.85rem;
+		font-weight: 700;
+	}
+
+	.ann-textarea {
+		background: #0b0b0b;
+		border: 1px solid #3a321f;
+		border-radius: 6px;
+		color: #f4efe4;
+		font: inherit;
+		line-height: 1.6;
+		min-height: 4.5rem;
+		padding: 0.6rem 0.75rem;
+		resize: vertical;
+		width: 100%;
+	}
+
+	.ann-textarea:focus {
+		border-color: #d6a33d;
+		outline: none;
+	}
 </style>

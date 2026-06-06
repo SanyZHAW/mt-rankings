@@ -46,7 +46,9 @@ export const getFighterById = async (fighterId) => {
 		name: doc.name,
 		country: doc.country,
 		nationalities: doc.nationalities ?? [],
-		rankings: doc.rankings ?? []
+		rankings: doc.rankings ?? [],
+		age: doc.age ?? null,
+		record: doc.record ?? null
 	};
 };
 

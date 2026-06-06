@@ -1,16 +1,19 @@
 import { fail } from '@sveltejs/kit';
 import { getAllUsers, updateUser, deleteUser } from '$lib/server/auth.js';
 import { getFightersCollection, getOrganisationsCollection } from '$lib/server/db.js';
+import { getCurrentAnnouncement, upsertAnnouncement } from '$lib/server/announcements.js';
 
 export const load = async () => {
-	const [users, fighterDocs, orgDocs] = await Promise.all([
+	const [users, fighterDocs, orgDocs, announcement] = await Promise.all([
 		getAllUsers(),
 		getFightersCollection().then((col) => col.find({}).sort({ name: 1 }).toArray()),
-		getOrganisationsCollection().then((col) => col.find({}).toArray())
+		getOrganisationsCollection().then((col) => col.find({}).toArray()),
+		getCurrentAnnouncement()
 	]);
 
 	return {
 		users,
+		announcement,
 		fighters: fighterDocs.map((f) => ({
 			id: f._id,
 			name: f.name,
@@ -76,5 +79,16 @@ export const actions = {
 		const col = await getFightersCollection();
 		await col.deleteOne({ _id: id });
 		return { action: 'deleteFighter', success: true };
+	},
+
+	saveAnnouncement: async ({ locals, request }) => {
+		const data = await request.formData();
+		const text = String(data.get('text') ?? '').trim();
+
+		if (!text) return fail(400, { action: 'announcement', message: 'Announcement text is required.' });
+
+		const updatedBy = locals.user?.username || locals.user?.email || 'admin';
+		await upsertAnnouncement({ text, updatedBy });
+		return { action: 'announcement', success: true };
 	}
 };
