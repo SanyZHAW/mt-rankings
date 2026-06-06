@@ -1,134 +1,152 @@
 <script>
+	import FighterBrowser from '$lib/components/FighterBrowser.svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import StatusMessage from '$lib/components/StatusMessage.svelte';
 
 	let { data, form } = $props();
 
-	let scrapeLoading = $state(false);
-	let scrapeResult = $state(null);
+	let activeTab = $state('fighters');
+
+	// ── Sync state ────────────────────────────────────────────────────────────
+	let wbcLoading = $state(false);
+	let wbcResult  = $state(null);
 	let rwsLoading = $state(false);
-	let rwsResult = $state(null);
+	let rwsResult  = $state(null);
 
-	async function syncRankings() {
-		scrapeLoading = true;
-		scrapeResult = null;
-		try {
-			const res = await fetch('/api/admin/scrape', { method: 'POST' });
-			scrapeResult = await res.json();
-		} catch (e) {
-			scrapeResult = { error: e.message };
-		} finally {
-			scrapeLoading = false;
-		}
+	async function syncWbc() {
+		wbcLoading = true; wbcResult = null;
+		try { wbcResult = await fetch('/api/admin/scrape', { method: 'POST' }).then((r) => r.json()); }
+		catch (e) { wbcResult = { error: e.message }; }
+		finally { wbcLoading = false; }
 	}
 
-	async function syncRwsRankings() {
-		rwsLoading = true;
-		rwsResult = null;
-		try {
-			const res = await fetch('/api/admin/scrape/rws', { method: 'POST' });
-			rwsResult = await res.json();
-		} catch (e) {
-			rwsResult = { error: e.message };
-		} finally {
-			rwsLoading = false;
-		}
+	async function syncRws() {
+		rwsLoading = true; rwsResult = null;
+		try { rwsResult = await fetch('/api/admin/scrape/rws', { method: 'POST' }).then((r) => r.json()); }
+		catch (e) { rwsResult = { error: e.message }; }
+		finally { rwsLoading = false; }
 	}
+
+	const tabs = [
+		{ id: 'fighters', label: 'Fighters' },
+		{ id: 'users',    label: 'Users'    },
+		{ id: 'sync',     label: 'Sync'     }
+	];
 </script>
 
 <section class="admin-page">
-	<PageHeader title="Admin" subtitle="Manage all registered user accounts." />
+	<PageHeader title="Admin" subtitle="Manage fighters, users, and data sync." />
 
-	<div class="panel">
-		<div class="panel-header">
-			<span class="panel-title">WBC Rankings</span>
-			<button class="btn-scrape" onclick={syncRankings} disabled={scrapeLoading}>
-				{#if scrapeLoading}
-					<span class="spinner" aria-hidden="true"></span>
-					Syncing…
-				{:else}
-					Sync Rankings from XML
-				{/if}
-			</button>
-		</div>
-		<p class="workflow-note">
-			To update rankings: run <code>python static/scripts/scrape_wbc.py</code> locally, commit
-			<code>static/data/wbc_rankings.xml</code>, then click <strong>Sync Rankings from XML</strong>
-			to push the changes to the database.
-		</p>
-		{#if scrapeResult?.success}
-			<StatusMessage type="success" message="Synced — {scrapeResult.updatedAt} ({scrapeResult.fighters} fighters, {scrapeResult.rankings} weight classes)" />
-		{:else if scrapeResult?.error}
-			<StatusMessage type="error" message="Sync failed: {scrapeResult.error}" />
+	<nav class="tab-nav" aria-label="Admin sections">
+		{#each tabs as tab}
+			<button
+				class="tab-btn"
+				class:active={activeTab === tab.id}
+				onclick={() => { activeTab = tab.id; }}
+				type="button"
+			>{tab.label}</button>
+		{/each}
+	</nav>
+
+	<!-- ── Fighters tab ──────────────────────────────────────────────────────── -->
+	{#if activeTab === 'fighters'}
+		{#if form?.action === 'updateFighter' && !form?.success}
+			<StatusMessage type="error" message={form.message} />
 		{/if}
-	</div>
-
-	<div class="panel">
-		<div class="panel-header">
-			<span class="panel-title">RWS Rankings</span>
-			<button class="btn-scrape" onclick={syncRwsRankings} disabled={rwsLoading}>
-				{#if rwsLoading}
-					<span class="spinner" aria-hidden="true"></span>
-					Syncing…
-				{:else}
-					Sync RWS Rankings from XML
-				{/if}
-			</button>
-		</div>
-		<p class="workflow-note">
-			To update rankings: run <code>python static/scripts/scrape_rws.py</code> locally, commit
-			<code>static/data/rws_rankings.xml</code>, then click <strong>Sync RWS Rankings from XML</strong>
-			to push the changes to the database.
-		</p>
-		{#if rwsResult?.success}
-			<StatusMessage type="success" message="Synced — {rwsResult.updatedAt} ({rwsResult.fighters} fighters, {rwsResult.rankings} weight classes)" />
-		{:else if rwsResult?.error}
-			<StatusMessage type="error" message="Sync failed: {rwsResult.error}" />
+		{#if form?.action === 'deleteFighter' && !form?.success}
+			<StatusMessage type="error" message={form.message} />
 		{/if}
-	</div>
+		<FighterBrowser
+			fighters={data.fighters}
+			organisations={data.organisations}
+			isAdmin={true}
+			{form}
+		/>
 
-	{#if form?.message}
-		<StatusMessage type="error" message={form.message} />
-	{/if}
-	{#if form?.success}
-		<StatusMessage type="success" message="Changes saved." />
-	{/if}
+	<!-- ── Users tab ─────────────────────────────────────────────────────────── -->
+	{:else if activeTab === 'users'}
+		{#if form?.action === 'user'}
+			{#if form.success}
+				<StatusMessage type="success" message="Changes saved." />
+			{:else}
+				<StatusMessage type="error" message={form.message} />
+			{/if}
+		{/if}
 
-	{#if data.users.length === 0}
-		<StatusMessage type="info" message="No users registered yet." />
-	{:else}
-		<div class="user-list">
-			{#each data.users as u}
-				<div class="user-row">
-					<form method="POST" action="?/update" class="update-form">
-						<input type="hidden" name="id" value={u.id} />
+		{#if data.users.length === 0}
+			<StatusMessage type="info" message="No users registered yet." />
+		{:else}
+			<div class="user-list">
+				{#each data.users as u}
+					<div class="user-row">
+						<form method="POST" action="?/update" class="update-form">
+							<input type="hidden" name="id" value={u.id} />
 
-						<label class="field">
-							<span>Email</span>
-							<input type="email" name="email" value={u.email} required />
-						</label>
+							<label class="field">
+								<span>Email</span>
+								<input type="email" name="email" value={u.email} required />
+							</label>
 
-						<label class="field">
-							<span>Role</span>
-							<select name="role">
-								<option value="user" selected={u.role === 'user'}>User</option>
-								<option value="admin" selected={u.role === 'admin'}>Admin</option>
-							</select>
-						</label>
+							<label class="field">
+								<span>Role</span>
+								<select name="role">
+									<option value="user"  selected={u.role === 'user'}>User</option>
+									<option value="admin" selected={u.role === 'admin'}>Admin</option>
+								</select>
+							</label>
 
-						<button type="submit" class="btn-save">Save</button>
-					</form>
+							<button type="submit" class="btn-save">Save</button>
+						</form>
 
-					<form method="POST" action="?/delete" class="delete-form">
-						<input type="hidden" name="id" value={u.id} />
-						<button
-							type="submit"
-							class="btn-delete"
-							onclick={(e) => { if (!confirm('Permanently delete this user?')) e.preventDefault(); }}
-						>Delete</button>
-					</form>
-				</div>
-			{/each}
+						<form method="POST" action="?/delete" class="delete-form">
+							<input type="hidden" name="id" value={u.id} />
+							<button
+								type="submit"
+								class="btn-delete"
+								onclick={(e) => { if (!confirm('Permanently delete this user?')) e.preventDefault(); }}
+							>Delete</button>
+						</form>
+					</div>
+				{/each}
+			</div>
+		{/if}
+
+	<!-- ── Sync tab ──────────────────────────────────────────────────────────── -->
+	{:else if activeTab === 'sync'}
+		<div class="panel">
+			<div class="panel-header">
+				<span class="panel-title">WBC Rankings</span>
+				<button class="btn-scrape" onclick={syncWbc} disabled={wbcLoading}>
+					{#if wbcLoading}<span class="spinner" aria-hidden="true"></span>Syncing…{:else}Sync WBC from XML{/if}
+				</button>
+			</div>
+			<p class="workflow-note">
+				Run <code>python static/scripts/scrape_wbc.py</code> locally, commit
+				<code>static/data/wbc_rankings.xml</code>, then click <strong>Sync WBC from XML</strong>.
+			</p>
+			{#if wbcResult?.success}
+				<StatusMessage type="success" message="Synced {wbcResult.updatedAt} — {wbcResult.fighters} fighters, {wbcResult.rankings} weight classes" />
+			{:else if wbcResult?.error}
+				<StatusMessage type="error" message="Sync failed: {wbcResult.error}" />
+			{/if}
+		</div>
+
+		<div class="panel">
+			<div class="panel-header">
+				<span class="panel-title">RWS Rankings</span>
+				<button class="btn-scrape" onclick={syncRws} disabled={rwsLoading}>
+					{#if rwsLoading}<span class="spinner" aria-hidden="true"></span>Syncing…{:else}Sync RWS from XML{/if}
+				</button>
+			</div>
+			<p class="workflow-note">
+				Run <code>python static/scripts/scrape_rws.py</code> locally, commit
+				<code>static/data/rws_rankings.xml</code>, then click <strong>Sync RWS from XML</strong>.
+			</p>
+			{#if rwsResult?.success}
+				<StatusMessage type="success" message="Synced {rwsResult.updatedAt} — {rwsResult.fighters} fighters, {rwsResult.rankings} weight classes" />
+			{:else if rwsResult?.error}
+				<StatusMessage type="error" message="Sync failed: {rwsResult.error}" />
+			{/if}
 		</div>
 	{/if}
 </section>
@@ -136,10 +154,45 @@
 <style>
 	.admin-page {
 		display: grid;
-		gap: 1.5rem;
-		max-width: 860px;
+		gap: 1.25rem;
+		max-width: 1000px;
 	}
 
+	/* ── tabs ── */
+	.tab-nav {
+		display: flex;
+		gap: 0.25rem;
+		border-bottom: 1px solid #2b2415;
+		padding-bottom: 0;
+	}
+
+	.tab-btn {
+		background: transparent;
+		border: 1px solid transparent;
+		border-bottom: none;
+		border-radius: 6px 6px 0 0;
+		color: #bdb4a1;
+		cursor: pointer;
+		font: inherit;
+		font-size: 0.9rem;
+		padding: 0.5rem 1.1rem;
+		position: relative;
+		bottom: -1px;
+	}
+
+	.tab-btn:hover {
+		color: #f4efe4;
+	}
+
+	.tab-btn.active {
+		background: #111111;
+		border-color: #2b2415;
+		border-bottom-color: #111111;
+		color: #d6a33d;
+		font-weight: 700;
+	}
+
+	/* ── user list ── */
 	.user-list {
 		display: grid;
 		gap: 0.75rem;
@@ -178,17 +231,14 @@
 		font-weight: 700;
 	}
 
-	input,
-	select,
-	button {
+	input, select, button {
 		border-radius: 6px;
 		font: inherit;
 		min-height: 2.5rem;
 		padding: 0.5rem 0.65rem;
 	}
 
-	input,
-	select {
+	input, select {
 		background: #0b0b0b;
 		border: 1px solid #3a321f;
 		color: #f4efe4;
@@ -204,8 +254,8 @@
 	}
 
 	.delete-form {
-		display: flex;
 		align-items: flex-end;
+		display: flex;
 	}
 
 	.btn-delete {
@@ -221,6 +271,7 @@
 		color: #f4efe4;
 	}
 
+	/* ── sync panels ── */
 	.panel {
 		background: #111111;
 		border: 1px solid #2b2415;
@@ -259,9 +310,7 @@
 		padding: 0.1em 0.35em;
 	}
 
-	.workflow-note strong {
-		color: #d6a33d;
-	}
+	.workflow-note strong { color: #d6a33d; }
 
 	.btn-scrape {
 		align-items: center;
@@ -278,14 +327,8 @@
 		white-space: nowrap;
 	}
 
-	.btn-scrape:hover:not(:disabled) {
-		background: #1e3d22;
-	}
-
-	.btn-scrape:disabled {
-		cursor: not-allowed;
-		opacity: 0.6;
-	}
+	.btn-scrape:hover:not(:disabled) { background: #1e3d22; }
+	.btn-scrape:disabled { cursor: not-allowed; opacity: 0.6; }
 
 	.spinner {
 		animation: spin 0.8s linear infinite;
@@ -298,9 +341,5 @@
 		width: 0.85rem;
 	}
 
-	@keyframes spin {
-		to {
-			transform: rotate(360deg);
-		}
-	}
+	@keyframes spin { to { transform: rotate(360deg); } }
 </style>

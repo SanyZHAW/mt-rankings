@@ -3,11 +3,27 @@
 
 	const isChampion = (pos) => Number.isNaN(Number(pos));
 
+	// For WBC: merge multiple entries of the same weight class into one row,
+	// combining their positions comma-separated (e.g. "International Champion, 10").
+	// Other orgs are left untouched.
+	const mergeByWeightClass = (entries, orgId) => {
+		if (orgId !== 'org-wbc') return entries;
+		const map = new Map();
+		for (const e of entries) {
+			if (map.has(e.weightClassId)) {
+				map.get(e.weightClassId).position += `, ${e.position}`;
+			} else {
+				map.set(e.weightClassId, { ...e });
+			}
+		}
+		return [...map.values()];
+	};
+
 	// Group entries by organisation display name, preserving insertion order
 	const byOrg = $derived(
 		rankings.reduce((acc, entry) => {
-			if (!acc[entry.org]) acc[entry.org] = [];
-			acc[entry.org].push(entry);
+			if (!acc[entry.org]) acc[entry.org] = { orgId: entry.orgId, entries: [] };
+			acc[entry.org].entries.push(entry);
 			return acc;
 		}, {})
 	);
@@ -17,7 +33,7 @@
 	<h2 id="fighter-rankings-title">Ranking entries</h2>
 
 	{#if rankings.length > 0}
-		{#each Object.entries(byOrg) as [orgName, entries]}
+		{#each Object.entries(byOrg) as [orgName, { orgId, entries }]}
 			<div class="org-group">
 				<h3>{orgName}</h3>
 				<div class="table" role="table" aria-label="{orgName} ranking entries">
@@ -25,7 +41,7 @@
 						<span role="columnheader">Weight class</span>
 						<span role="columnheader">Position</span>
 					</div>
-					{#each entries as entry}
+					{#each mergeByWeightClass(entries, orgId) as entry}
 						<div class="table-row" role="row">
 							<span role="cell" data-label="Weight class">{entry.weightClassName || 'Unknown'}</span>
 							<span
