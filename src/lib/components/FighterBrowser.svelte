@@ -1,4 +1,6 @@
 <script>
+	import CountrySelect from '$lib/components/CountrySelect.svelte';
+
 	/**
 	 * Reusable fighter search / filter / sort list.
 	 * isAdmin=true adds inline edit + delete forms.
@@ -128,9 +130,42 @@
 							<span>Name</span>
 							<input type="text" name="name" value={f.name} required />
 						</label>
-						<label class="edit-field">
-							<span>Country</span>
-							<input type="text" name="country" value={f.country ?? ''} />
+						<div class="edit-field">
+							<span class="edit-label">Primary nationality</span>
+							<CountrySelect
+								name="nat1"
+								value={f.nationalities?.[0] ?? f.country ?? ''}
+								required
+								placeholder="Select country"
+							/>
+						</div>
+						<div class="edit-field">
+							<span class="edit-label">Second nationality <em>optional</em></span>
+							<CountrySelect
+								name="nat2"
+								value={f.nationalities?.[1] ?? ''}
+								clearable
+								placeholder="None"
+							/>
+						</div>
+						<label class="edit-field edit-field-sm">
+							<span>Age</span>
+							<input
+								type="number"
+								name="age"
+								value={f.age ?? ''}
+								min="1"
+								placeholder="—"
+							/>
+						</label>
+						<label class="edit-field edit-field-sm">
+							<span>Record</span>
+							<input
+								type="text"
+								name="record"
+								value={f.record ?? ''}
+								placeholder="W-L-D"
+							/>
 						</label>
 						<div class="edit-actions">
 							<button type="submit" class="btn-save">Save</button>
@@ -308,11 +343,24 @@
 		gap: 0.25rem;
 	}
 
-	.edit-field span {
+	.edit-field-sm {
+		flex: 0 1 110px;
+	}
+
+	.edit-field span,
+	.edit-label {
 		color: #d6a33d;
 		font-size: 0.78rem;
 		font-weight: 700;
 		text-transform: uppercase;
+	}
+
+	.edit-field span em,
+	.edit-label em {
+		color: #7a7062;
+		font-style: normal;
+		font-weight: 400;
+		text-transform: none;
 	}
 
 	.edit-field input {

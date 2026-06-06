@@ -19,7 +19,9 @@ export const load = async () => {
 			name: f.name,
 			country: f.country ?? '',
 			nationalities: f.nationalities ?? [],
-			rankings: f.rankings ?? []
+			rankings: f.rankings ?? [],
+			age: f.age ?? null,
+			record: f.record ?? null
 		})),
 		organisations: orgDocs.map((o) => ({
 			id: o._id,
@@ -59,15 +61,39 @@ export const actions = {
 	// ── Fighter actions ────────────────────────────────────────────────────────
 
 	updateFighter: async ({ request }) => {
-		const data    = await request.formData();
-		const id      = data.get('id')?.toString().trim();
-		const name    = data.get('name')?.toString().trim();
-		const country = data.get('country')?.toString().trim() ?? '';
+		const data         = await request.formData();
+		const id        = data.get('id')?.toString().trim();
+		const name      = data.get('name')?.toString().trim();
+		const nat1      = data.get('nat1')?.toString().trim() ?? '';
+		const nat2      = data.get('nat2')?.toString().trim() ?? '';
+		const ageRaw    = data.get('age')?.toString().trim() ?? '';
+		const recordRaw = data.get('record')?.toString().trim() ?? '';
 
 		if (!id || !name) return fail(400, { action: 'updateFighter', message: 'Name is required.' });
+		if (!nat1) return fail(400, { action: 'updateFighter', message: 'Primary nationality is required.' });
+
+		let age = null;
+		if (ageRaw !== '') {
+			const n = Number(ageRaw);
+			if (!Number.isInteger(n) || n <= 0) {
+				return fail(400, { action: 'updateFighter', message: 'Age must be a positive integer.' });
+			}
+			age = n;
+		}
+
+		let record = null;
+		if (recordRaw !== '') {
+			if (!/^\d+-\d+-\d+$/.test(recordRaw)) {
+				return fail(400, { action: 'updateFighter', message: 'Record must be in W-L-D format (e.g. 45-5-2).' });
+			}
+			record = recordRaw;
+		}
+
+		const nationalities = nat2 ? [nat1, nat2] : [nat1];
+		const country = nat1;
 
 		const col = await getFightersCollection();
-		await col.updateOne({ _id: id }, { $set: { name, country } });
+		await col.updateOne({ _id: id }, { $set: { name, country, nationalities, age, record } });
 		return { action: 'updateFighter', success: true };
 	},
 
