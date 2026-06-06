@@ -9,8 +9,6 @@
 </script>
 
 <section class="fighter-page">
-	<a class="back-link" href="/rankings">Back to rankings</a>
-
 	{#if data.validationErrors.length > 0}
 		<StatusMessage
 			type="error"
@@ -58,17 +56,6 @@
 		display: grid;
 		gap: 1.5rem;
 		max-width: 1100px;
-	}
-
-	.back-link {
-		color: #d6a33d;
-		font-weight: 700;
-		text-decoration: none;
-		width: fit-content;
-	}
-
-	.back-link:hover {
-		color: #efbf58;
 	}
 
 	.content-grid {
