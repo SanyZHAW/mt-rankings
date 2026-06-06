@@ -134,7 +134,7 @@
 
 	// ── State ──────────────────────────────────────────────────────────────────
 	// Normalize incoming value (may be name or code) to ISO code immediately
-	const initCountry  = findByValue(value);
+	const initCountry  = $derived(findByValue(value));
 	let selectedCode   = $state(initCountry?.code ?? '');
 	let searchText     = $state(displayFor(initCountry?.code ?? ''));
 	let open           = $state(false);
@@ -212,6 +212,7 @@
 			spellcheck="false"
 			role="combobox"
 			aria-expanded={open}
+			aria-controls="country-listbox"
 			aria-autocomplete="list"
 		/>
 		{#if clearable && selectedCode}
@@ -228,7 +229,7 @@
 
 	<!-- Dropdown list -->
 	{#if open}
-		<ul class="cs-list" role="listbox">
+		<ul class="cs-list" id="country-listbox" role="listbox">
 			{#if filtered().length === 0}
 				<li class="cs-empty">No countries found</li>
 			{:else}

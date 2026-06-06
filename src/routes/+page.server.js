@@ -79,7 +79,6 @@ export const load = async ({ locals }) => {
 		};
 	}
 
-	// Regular user
 	const [recentFavorites, rankingsCol] = await Promise.all([
 		getRecentFavorites(locals.user.id),
 		getRankingsCollection()

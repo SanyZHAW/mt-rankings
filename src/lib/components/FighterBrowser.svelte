@@ -16,7 +16,6 @@
 	// ── admin inline-edit state ────────────────────────────────────────────────
 	let editingId   = $state(null);
 
-	// Clear edit mode on successful admin action
 	$effect(() => {
 		if (form?.action === 'updateFighter' && form?.success) editingId = null;
 	});

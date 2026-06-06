@@ -36,7 +36,6 @@
 	];
 
 	// ── P4P editor state ──────────────────────────────────────────────────────
-	// Each row: { fighterId, note }
 	let p4pRows = $state(
 		Array.from({ length: 10 }, (_, i) => {
 			const existing = data.p4p?.entries?.[i];
